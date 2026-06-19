@@ -1,22 +1,19 @@
 const express = require("express");
 const axios = require("axios");
 const authMiddleware = require("../middleware/authMiddleware");
+const ML_URL = process.env.ML_SERVICE_URL;
 
 const {
   savePrediction,
   getPredictionHistory,
-  getPricePredictionCount
+  getPricePredictionCount,
 } = require("../controllers/pricePredictionController");
 
 const router = express.Router();
 
 router.post("/predict", async (req, res) => {
   try {
-    const response = await axios.post(
-      "http://localhost:8000/price/predict",
-      req.body,
-    );
-
+    const response = await axios.post(`${ML_URL}/price/predict`, req.body);
     res.json(response.data);
   } catch (error) {
     console.error(error);
@@ -29,7 +26,7 @@ router.post("/predict", async (req, res) => {
 
 router.get("/crops", async (req, res) => {
   try {
-    const response = await axios.get("http://localhost:8000/price/crops");
+    const response = await axios.post(`${ML_URL}/price/predict`, req.body);
 
     res.json(response.data);
   } catch (error) {
@@ -42,7 +39,7 @@ router.get("/crops", async (req, res) => {
 router.get("/states/:crop", async (req, res) => {
   try {
     const response = await axios.get(
-      `http://localhost:8000/price/states/${req.params.crop}`,
+      `${ML_URL}/price/states/${req.params.crop}`,
     );
 
     res.json(response.data);
@@ -56,7 +53,7 @@ router.get("/states/:crop", async (req, res) => {
 router.get("/districts/:crop/:state", async (req, res) => {
   try {
     const response = await axios.get(
-      `http://localhost:8000/price/districts/${req.params.crop}/${req.params.state}`,
+      `${ML_URL}/price/states/${req.params.crop}`,
     );
 
     res.json(response.data);
@@ -75,7 +72,6 @@ router.post("/save", authMiddleware, savePrediction);
 
 router.get("/history", authMiddleware, getPredictionHistory);
 
-router.get("/stats",authMiddleware,getPricePredictionCount);
-
+router.get("/stats", authMiddleware, getPricePredictionCount);
 
 module.exports = router;
