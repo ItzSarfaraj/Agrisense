@@ -7,10 +7,12 @@ const {
   generateWeatherAdvisory,
 } = require("../services/weatherAdvisoryService");
 
+const ML_URL = process.env.ML_SERVICE_URL;
+
 const getQuickRecommendation = async (req, res) => {
   try {
     const response = await axios.post(
-      "http://127.0.0.1:8000/recommend/quick",
+      `${ML_URL}/recommend/quick`,
       req.body,
     );
 
@@ -42,7 +44,7 @@ const getQuickRecommendation = async (req, res) => {
 const getSoilRecommendation = async (req, res) => {
   try {
     const response = await axios.post(
-      "http://127.0.0.1:8000/recommend/soil",
+     `${ML_URL}/recommend/soil`,
       req.body,
     );
 
