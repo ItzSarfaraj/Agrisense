@@ -26,10 +26,14 @@ router.post("/predict", async (req, res) => {
 
 router.get("/crops", async (req, res) => {
   try {
-    const response = await axios.post(`${ML_URL}/price/predict`, req.body);
+    const response = await axios.get(
+      `${ML_URL}/price/crops`
+    );
 
     res.json(response.data);
   } catch (error) {
+    console.error(error.response?.data || error.message);
+
     res.status(500).json({
       error: "Failed to fetch crops",
     });
@@ -53,7 +57,7 @@ router.get("/states/:crop", async (req, res) => {
 router.get("/districts/:crop/:state", async (req, res) => {
   try {
     const response = await axios.get(
-      `${ML_URL}/price/states/${req.params.crop}`,
+      `${ML_URL}/price/districts/${req.params.crop}/${req.params.state}`
     );
 
     res.json(response.data);
