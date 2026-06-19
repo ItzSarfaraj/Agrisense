@@ -1,0 +1,115 @@
+import {
+  MapPin,
+  Calendar,
+  Brain,
+  Sprout,
+  IndianRupee,
+  Bot,
+} from "lucide-react";
+
+const HowItWorks = () => {
+  const steps = [
+    {
+      icon: MapPin,
+      title: "Select Location",
+      description:
+        "Choose your state and district for localized recommendations.",
+    },
+    {
+      icon: Calendar,
+      title: "Choose Season",
+      description: "Select the current farming season for accurate analysis.",
+    },
+    {
+      icon: Brain,
+      title: "AI Analysis",
+      description: "AgriSense analyzes soil, weather, and crop suitability.",
+    },
+    {
+      icon: Sprout,
+      title: "Crop Recommendations",
+      description: "Receive the most suitable crops ranked by performance.",
+    },
+    {
+      icon: IndianRupee,
+      title: "Profit Prediction",
+      description: "Estimate expected profit and profitability range.",
+    },
+    {
+      icon: Bot,
+      title: "AI Insights",
+      description: "Get smart farming advice and actionable recommendations.",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-to-b from-green-50 to-white">
+      <div className="max-w-7xl mx-auto px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+            Simple Process
+          </span>
+
+          <h2 className="text-5xl font-bold text-gray-800 mt-6">
+            How AgriSense Works
+          </h2>
+
+          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+            From crop recommendation to profit forecasting, AgriSense helps
+            farmers make smarter decisions using AI and real-world agricultural
+            data.
+          </p>
+        </div>
+
+        {/* Steps */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+
+            return (
+              <div
+                key={index}
+                className="
+                  relative
+                  bg-white
+                  rounded-3xl
+                  p-8
+                  shadow-sm
+                  border
+                  border-green-100
+                  hover:shadow-xl
+                  hover:-translate-y-2
+                  transition-all
+                  duration-300
+                "
+              >
+                {/* Step Number */}
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold">
+                  {index + 1}
+                </div>
+
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mb-6">
+                  <Icon className="w-8 h-8 text-green-600" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-800">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-500 mt-3 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorks;

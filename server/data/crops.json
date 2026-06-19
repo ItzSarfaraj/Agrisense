@@ -1,0 +1,4747 @@
+[
+  {
+    "name": "Banana",
+    "scientificName": "Musa paradisiaca",
+    "category": "Fruit Crop",
+    "overview": "Banana is a major fruit crop of India grown extensively for its energy-rich fruit, used both as a table fruit and in processing. It is a perennial herbaceous crop cultivated through tissue-cultured or sucker planting material, valued for year-round availability and high nutritional content.",
+    "season": "Year-round (Kharif and Rabi planting possible)",
+    "cropDuration": "11-13 months",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "May",
+      "June",
+      "September",
+      "October"
+    ],
+    "soil": {
+      "type": "Deep, fertile loamy soil rich in organic matter",
+      "phRange": "6.0-7.5",
+      "drainage": "Well-drained with good water-holding capacity"
+    },
+    "climate": {
+      "temperature": "15-35°C, optimum 26-30°C",
+      "rainfall": "1200-2200 mm annually or equivalent irrigation",
+      "humidity": "High humidity (75-85%) preferred"
+    },
+    "waterRequirement": "1800-2200 mm per crop cycle; drip irrigation recommended at 2-3 day intervals",
+    "yield": {
+      "perHectare": "35-60 tonnes",
+      "profitability": "High profitability due to year-round demand and processing value"
+    },
+    "marketDemand": "Consistently high demand across domestic and export markets; used fresh and in chips, flour, and fiber industries",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil organic matter and water retention",
+        "applicationStage": "Basal application during pit preparation"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Promotes vegetative growth and bunch development",
+        "applicationStage": "Split doses at 2, 4, 6 months after planting"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development and flowering",
+        "applicationStage": "Basal dose at planting"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves fruit quality and bunch weight",
+        "applicationStage": "Split application during vegetative and bunching stage"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Panama Wilt (Fusarium wilt)",
+        "symptoms": "Yellowing of older leaves, splitting of pseudostem, internal vascular discoloration",
+        "management": "Use resistant varieties, avoid waterlogging, soil drenching with Carbendazim, crop rotation"
+      },
+      {
+        "name": "Sigatoka Leaf Spot",
+        "symptoms": "Brown to black streaks on leaves leading to leaf drying",
+        "management": "Spray Mancozeb or Propiconazole, remove infected leaves, ensure proper spacing"
+      },
+      {
+        "name": "Bunchy Top Virus",
+        "symptoms": "Stunted growth, bunched narrow leaves at top",
+        "management": "Use virus-free planting material, control aphid vectors, uproot infected plants"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Banana Weevil Borer",
+        "damage": "Bores into pseudostem and rhizome causing plant collapse",
+        "control": "Field sanitation, pheromone traps, application of Chlorpyrifos around base"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Transmit bunchy top virus and suck plant sap",
+        "control": "Spray Imidacloprid or neem-based insecticides"
+      },
+      {
+        "name": "Nematodes",
+        "damage": "Root damage leading to toppling of plants",
+        "control": "Soil application of Carbofuran, use of nematode-free suckers"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Deep ploughing followed by harrowing to achieve fine tilth; pits of 45x45x45 cm dug at recommended spacing and filled with FYM and topsoil mixture."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select disease-free tissue-cultured plantlets or healthy sword suckers from virus-free mother plants, ensuring uniform growth and high yield potential."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant suckers or tissue-culture plants in pits at spacing of 1.8x1.8 m to 2x2 m depending on variety, during onset of monsoon or post-monsoon period."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Maintain consistent soil moisture through drip irrigation; banana is highly sensitive to water stress especially during flowering and bunch formation."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply recommended NPK in split doses along with micronutrients like zinc and boron; fertigation through drip system improves nutrient use efficiency."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Practice regular interculturing and mulching to suppress weeds; remove excess suckers to maintain single stem per mat."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor regularly for weevils, nematodes and fungal diseases; adopt integrated pest management combining cultural, biological and chemical control."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest bunches when fingers turn plump and angular at 75% maturity, typically 11-13 months after planting, using sharp tools to avoid bruising."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Handle bunches carefully to avoid mechanical injury, ripen using controlled ethylene treatment, grade and pack in ventilated cartons for transport."
+      }
+    ],
+    "advantages": [
+      "Year-round income potential",
+      "High nutritional and caloric value",
+      "Multiple by-products (fiber, flour, chips)",
+      "Suitable for intercropping in early stages"
+    ],
+    "challenges": [
+      "High susceptibility to wind damage",
+      "Vulnerable to Panama wilt",
+      "High water and nutrient requirement",
+      "Post-harvest handling sensitivity"
+    ],
+    "suitableStates": [
+      "Maharashtra",
+      "Tamil Nadu",
+      "Gujarat",
+      "Andhra Pradesh",
+      "Karnataka",
+      "Bihar"
+    ],
+    "intercroppingOptions": [
+      "Turmeric",
+      "Ginger",
+      "Vegetables",
+      "Marigold"
+    ],
+    "storageGuidelines": "Store green bananas at 13-14°C with 85-90% relative humidity; avoid storage below 12°C to prevent chilling injury; use controlled ripening chambers for uniform color development.",
+    "image": "/crops/banana.png"
+  },
+  {
+    "name": "Coconut",
+    "scientificName": "Cocos nucifera",
+    "category": "Plantation Crop",
+    "overview": "Coconut is a versatile plantation crop grown predominantly in coastal regions of India, valued for its multiple products including copra, oil, fiber, and tender nut water. It is a long-duration perennial palm crop with significant commercial and subsistence value.",
+    "season": "Year-round; planting done at onset of monsoon",
+    "cropDuration": "6-8 years to bear fruit, productive for 60+ years",
+    "bestSowingMonths": [
+      "May",
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "Year-round harvesting once mature"
+    ],
+    "soil": {
+      "type": "Sandy loam to laterite soil with good aeration",
+      "phRange": "5.5-8.0",
+      "drainage": "Well-drained, deep soil profile"
+    },
+    "climate": {
+      "temperature": "20-32°C, optimum 27°C",
+      "rainfall": "1500-2300 mm annually",
+      "humidity": "High humidity above 70% preferred"
+    },
+    "waterRequirement": "40-50 litres per tree per week during dry periods; basin irrigation common",
+    "yield": {
+      "perHectare": "10,000-14,000 nuts annually from 175 palms",
+      "profitability": "Stable long-term income with low annual input cost once established"
+    },
+    "marketDemand": "Strong demand for copra, coconut oil, desiccated coconut, tender coconut water, and coir products",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Soil organic matter improvement",
+        "applicationStage": "Annual basal application around tree basin"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative and crown growth",
+        "applicationStage": "Split application twice a year"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and flower development",
+        "applicationStage": "Applied with monsoon onset"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves nut size and copra content",
+        "applicationStage": "Applied in two split doses annually"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Bud Rot",
+        "symptoms": "Rotting of central spindle leaves with foul smell",
+        "management": "Remove affected tissue, apply Bordeaux paste, drench with Metalaxyl"
+      },
+      {
+        "name": "Root Wilt Disease",
+        "symptoms": "Yellowing of leaflets, reduced nut size, bending of leaves",
+        "management": "Balanced fertilization, removal of severely affected palms, resistant varieties"
+      },
+      {
+        "name": "Leaf Blight",
+        "symptoms": "Brown spots on leaflets coalescing into blighted patches",
+        "management": "Spray Mancozeb, improve drainage and aeration"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Rhinoceros Beetle",
+        "damage": "Bores into crown causing damage to growing point",
+        "control": "Use of pheromone traps, insertion of naphthalene balls in crown"
+      },
+      {
+        "name": "Red Palm Weevil",
+        "damage": "Larvae bore into trunk causing palm collapse",
+        "control": "Avoid injury to trunk, apply Chlorpyrifos in leaf axils, pheromone trapping"
+      },
+      {
+        "name": "Eriophyid Mite",
+        "damage": "Causes triangular patches and shedding of immature nuts",
+        "control": "Spray neem oil or sulphur-based acaricides"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Dig pits of 1x1x1 m at spacing of 7.5x7.5 m; fill with topsoil, FYM, and sand mixture for proper drainage and root establishment."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select disease-free, high-yielding hybrid or local tall/dwarf variety seedlings aged 9-12 months with at least 6 leaves and collar girth."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant seedlings at the onset of monsoon, ensuring the collar region remains slightly above ground level to prevent collar rot."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide basin irrigation during dry months, especially in first 3 years of establishment; mature palms need irrigation during summer."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply organic manure and balanced NPK fertilizers annually in basins; include micronutrients like magnesium and boron for healthy crown growth."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Maintain weed-free basins through regular hoeing; grow leguminous cover crops to suppress weeds and fix nitrogen."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Regularly inspect crown and trunk for beetle and weevil infestation; remove and destroy bud rot affected tissue promptly."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest mature nuts (11-12 months after pollination) by climbing or using mechanical harvesters; tender nuts harvested at 7-8 months for water."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested nuts for copra extraction, dehusk for coir processing, and grade nuts based on size and maturity for market sale."
+      }
+    ],
+    "advantages": [
+      "Long productive lifespan",
+      "Multiple commercial products",
+      "Low recurring cultivation cost",
+      "Suitable for coastal and inland regions"
+    ],
+    "challenges": [
+      "Long gestation period before bearing",
+      "Vulnerable to cyclones and strong winds",
+      "Susceptible to root wilt disease",
+      "Labor-intensive harvesting"
+    ],
+    "suitableStates": [
+      "Kerala",
+      "Tamil Nadu",
+      "Karnataka",
+      "Andhra Pradesh",
+      "Goa",
+      "West Bengal"
+    ],
+    "intercroppingOptions": [
+      "Banana",
+      "Pineapple",
+      "Cocoa",
+      "Black Pepper",
+      "Turmeric"
+    ],
+    "storageGuidelines": "Store mature dried nuts in well-ventilated areas; copra should be dried to below 6% moisture and stored in jute bags to prevent fungal contamination.",
+    "image": "/crops/coconut.png"
+  },
+  {
+    "name": "Rice",
+    "scientificName": "Oryza sativa",
+    "category": "Cereal Crop",
+    "overview": "Rice is the staple food crop of India and the most important Kharif cereal, grown extensively in irrigated, rainfed, and deepwater ecosystems. It is highly water-intensive and forms the backbone of food security in eastern and southern India.",
+    "season": "Kharif (main), Rabi (boro in some regions)",
+    "cropDuration": "100-150 days depending on variety",
+    "bestSowingMonths": [
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "October",
+      "November"
+    ],
+    "soil": {
+      "type": "Clayey loam to clay soil with high water retention",
+      "phRange": "5.5-7.0",
+      "drainage": "Poorly drained, puddled fields preferred"
+    },
+    "climate": {
+      "temperature": "20-35°C, optimum 25-30°C",
+      "rainfall": "1000-1500 mm during growing season",
+      "humidity": "High humidity above 70%"
+    },
+    "waterRequirement": "1200-1500 mm; continuous standing water of 5-10 cm during vegetative stage",
+    "yield": {
+      "perHectare": "3.5-6 tonnes (irrigated), higher with hybrid varieties",
+      "profitability": "Moderate profitability, supported by MSP and government procurement"
+    },
+    "marketDemand": "Stable and assured demand through government procurement and strong domestic consumption; export demand for basmati varieties",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Tillering and vegetative growth",
+        "applicationStage": "Split doses at transplanting, tillering, and panicle initiation"
+      },
+      {
+        "name": "Phosphorus (DAP)",
+        "purpose": "Root development and early growth",
+        "applicationStage": "Full dose as basal application"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Grain filling and lodging resistance",
+        "applicationStage": "Split at basal and panicle initiation stage"
+      },
+      {
+        "name": "Zinc Sulphate",
+        "purpose": "Corrects zinc deficiency common in puddled soils",
+        "applicationStage": "Basal application before transplanting"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Blast Disease",
+        "symptoms": "Spindle-shaped lesions on leaves with grey centers, neck rot",
+        "management": "Spray Tricyclazole, use resistant varieties, avoid excess nitrogen"
+      },
+      {
+        "name": "Bacterial Leaf Blight",
+        "symptoms": "Water-soaked lesions turning yellow and drying from leaf tip",
+        "management": "Use resistant varieties, avoid excess nitrogen, spray Copper oxychloride"
+      },
+      {
+        "name": "Sheath Blight",
+        "symptoms": "Oval lesions on leaf sheath near water line",
+        "management": "Spray Validamycin, maintain proper spacing for aeration"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Stem Borer",
+        "damage": "Causes deadheart in vegetative stage and whiteheads in reproductive stage",
+        "control": "Use pheromone traps, apply Cartap hydrochloride granules"
+      },
+      {
+        "name": "Brown Planthopper",
+        "damage": "Sucks sap causing hopperburn and transmits viral diseases",
+        "control": "Avoid excess nitrogen, spray Imidacloprid, maintain field hygiene"
+      },
+      {
+        "name": "Gall Midge",
+        "symptoms": "Forms silver shoot galls",
+        "damage": "Forms silver shoot galls preventing panicle formation",
+        "control": "Use resistant varieties, apply systemic insecticides"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field 2-3 times, puddle with standing water to create soft mud and level the field to ensure uniform water distribution."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding or hybrid seeds suited to local conditions; treat seeds with fungicide before sowing to prevent seed-borne diseases."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Raise nursery for 20-25 days, then transplant seedlings at 2-3 per hill with spacing of 20x15 cm; direct seeding also practiced in some regions."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Maintain 5-10 cm standing water throughout vegetative stage; drain field 7-10 days before harvest to facilitate easy harvesting."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses synchronized with critical growth stages; incorporate green manure or FYM before transplanting for organic matter."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Control weeds through pre-emergence herbicides like Butachlor followed by manual weeding or use of weeders at 20-25 days after transplanting."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for stem borer, planthoppers and blast disease regularly; adopt IPM practices including light traps and need-based pesticide application."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when 80-85% of grains turn golden yellow and moisture content drops to 20-22%, using sickles or combine harvesters."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Thresh promptly, dry grains to 12-14% moisture, clean and store in moisture-proof bags to prevent fungal infestation and insect damage."
+      }
+    ],
+    "advantages": [
+      "Assured government procurement at MSP",
+      "High calorie staple with strong demand",
+      "Multiple variety options for diverse agro-climates",
+      "Well-developed market infrastructure"
+    ],
+    "challenges": [
+      "High water requirement",
+      "Vulnerable to pest and disease outbreaks",
+      "Labor-intensive transplanting",
+      "Methane emissions from flooded fields"
+    ],
+    "suitableStates": [
+      "West Bengal",
+      "Uttar Pradesh",
+      "Punjab",
+      "Andhra Pradesh",
+      "Bihar",
+      "Tamil Nadu"
+    ],
+    "intercroppingOptions": [
+      "Not commonly intercropped; sometimes rotated with pulses or fish (rice-fish culture)"
+    ],
+    "storageGuidelines": "Dry paddy to 12-14% moisture before storage; store in cool, dry, well-ventilated godowns using moisture-proof packaging to prevent weevil infestation.",
+    "image": "/crops/rice.png"
+  },
+  {
+    "name": "Maize",
+    "scientificName": "Zea mays",
+    "category": "Cereal Crop",
+    "overview": "Maize is a versatile cereal crop grown across Kharif, Rabi, and spring seasons in India, used for food, fodder, and industrial purposes including starch and ethanol production. It adapts well to diverse agro-climatic zones.",
+    "season": "Kharif and Rabi",
+    "cropDuration": "80-110 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "October"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October",
+      "January",
+      "February"
+    ],
+    "soil": {
+      "type": "Well-drained loamy to sandy loam soil",
+      "phRange": "5.5-7.5",
+      "drainage": "Good drainage essential, intolerant to waterlogging"
+    },
+    "climate": {
+      "temperature": "21-30°C optimum",
+      "rainfall": "500-800 mm during growing period",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "500-800 mm; critical stages at knee-high, tasseling and grain filling",
+    "yield": {
+      "perHectare": "5-8 tonnes (hybrid varieties)",
+      "profitability": "Good profitability due to dual use as food and fodder/industrial crop"
+    },
+    "marketDemand": "Rising demand from poultry feed, starch, and ethanol industries alongside traditional food use",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and cob development",
+        "applicationStage": "Split doses at sowing, knee-high, and tasseling stage"
+      },
+      {
+        "name": "Phosphorus (DAP)",
+        "purpose": "Root establishment and early vigor",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Stalk strength and grain filling",
+        "applicationStage": "Basal application with phosphorus"
+      },
+      {
+        "name": "Zinc Sulphate",
+        "purpose": "Prevents zinc deficiency causing white bud",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Turcicum Leaf Blight",
+        "symptoms": "Long elliptical grey-green lesions on leaves",
+        "management": "Spray Mancozeb, use resistant hybrids, crop rotation"
+      },
+      {
+        "name": "Maize Stalk Rot",
+        "symptoms": "Softening and rotting of lower stalk causing lodging",
+        "management": "Avoid waterlogging, balanced potassium application, resistant varieties"
+      },
+      {
+        "name": "Downy Mildew",
+        "symptoms": "Chlorotic streaking and stunted growth",
+        "management": "Seed treatment with Metalaxyl, remove infected plants"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Fall Armyworm",
+        "damage": "Feeds on whorl and leaves causing severe defoliation",
+        "control": "Spray Emamectin benzoate, use pheromone traps, early sowing"
+      },
+      {
+        "name": "Stem Borer",
+        "damage": "Bores into stem causing deadheart",
+        "control": "Apply Carbofuran granules in whorl, use resistant hybrids"
+      },
+      {
+        "name": "Shoot Fly",
+        "damage": "Causes wilting of central shoot in seedling stage",
+        "control": "Seed treatment with Imidacloprid, timely sowing"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field deeply followed by 2-3 harrowings to achieve fine tilth; form ridges and furrows for proper drainage and irrigation."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified hybrid seeds suited to season and region with good germination percentage; treat seeds with fungicide and insecticide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 2-3 cm depth with row spacing of 60-75 cm and plant spacing of 20-25 cm, either by dibbling or seed drill."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Irrigate at critical growth stages including knee-high stage, tasseling, silking and grain filling; avoid waterlogging at any stage."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses with nitrogen top-dressed at knee-high and tasseling stages; incorporate organic manure before sowing."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct first weeding at 20-25 days after sowing followed by earthing up; pre-emergence herbicide like Atrazine can be used."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Scout fields regularly for fall armyworm and stem borer; apply recommended insecticides at early larval stages for effective control."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when husk turns brown and kernels harden, typically 90-110 days after sowing; field dry cobs before shelling."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Shell, dry grains to 12-14% moisture, clean and store in moisture-proof containers to prevent weevil and fungal damage."
+      }
+    ],
+    "advantages": [
+      "High yield potential with hybrids",
+      "Dual-purpose use as food and feed",
+      "Adaptable to multiple seasons",
+      "Growing industrial demand"
+    ],
+    "challenges": [
+      "Susceptible to fall armyworm outbreaks",
+      "Sensitive to waterlogging",
+      "Price volatility based on feed industry demand",
+      "High input cost for hybrid seeds"
+    ],
+    "suitableStates": [
+      "Karnataka",
+      "Madhya Pradesh",
+      "Bihar",
+      "Andhra Pradesh",
+      "Maharashtra",
+      "Uttar Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Pulses (urad, moong)",
+      "Soybean",
+      "Pumpkin",
+      "Cowpea"
+    ],
+    "storageGuidelines": "Dry maize grains to below 14% moisture; store in hermetically sealed bags or silos with regular fumigation to prevent weevil infestation.",
+    "image": "/crops/maize.png"
+  },
+  {
+    "name": "Sugarcane",
+    "scientificName": "Saccharum officinarum",
+    "category": "Cash Crop",
+    "overview": "Sugarcane is a major commercial cash crop of India and the primary raw material for sugar and jaggery production. It is a long-duration crop requiring intensive water and nutrient management, supporting a significant agro-industrial economy.",
+    "season": "Year-round planting (Adsali, Pre-seasonal, Suru)",
+    "cropDuration": "10-12 months (12-18 months for Adsali)",
+    "bestSowingMonths": [
+      "February",
+      "March",
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "soil": {
+      "type": "Deep fertile loam to clay loam soil",
+      "phRange": "6.5-7.5",
+      "drainage": "Well-drained with good moisture retention"
+    },
+    "climate": {
+      "temperature": "20-38°C, optimum 30-32°C for growth",
+      "rainfall": "1500-2500 mm or equivalent irrigation",
+      "humidity": "High humidity favorable"
+    },
+    "waterRequirement": "1800-2500 mm; irrigation every 7-10 days depending on season",
+    "yield": {
+      "perHectare": "70-100 tonnes",
+      "profitability": "High profitability with assured procurement by sugar mills"
+    },
+    "marketDemand": "Strong and consistent demand from sugar mills, jaggery units, and ethanol blending programs",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil structure and fertility",
+        "applicationStage": "Basal application before planting"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Promotes tillering and cane elongation",
+        "applicationStage": "Split doses at planting, tillering, and grand growth stage"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and tiller development",
+        "applicationStage": "Full basal dose at planting"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves sucrose content and disease resistance",
+        "applicationStage": "Split application at tillering and grand growth stage"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Red Rot",
+        "symptoms": "Reddening of internal tissue with white patches, hollow sound on tapping",
+        "management": "Use resistant varieties, hot water treatment of setts, avoid waterlogging"
+      },
+      {
+        "name": "Smut",
+        "symptoms": "Black whip-like structure emerging from growing point",
+        "management": "Remove and burn infected clumps, use disease-free setts, resistant varieties"
+      },
+      {
+        "name": "Wilt",
+        "symptoms": "Yellowing and drying of leaves, shrinking of internodes",
+        "management": "Field sanitation, balanced fertilization, resistant varieties"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Early Shoot Borer",
+        "damage": "Bores into young shoots causing deadheart",
+        "control": "Apply Chlorpyrifos in soil, remove and destroy affected shoots"
+      },
+      {
+        "name": "Top Borer",
+        "damage": "Damages growing point causing bunchy top appearance",
+        "control": "Release Trichogramma parasitoids, apply systemic insecticides"
+      },
+      {
+        "name": "Pyrilla (Leafhopper)",
+        "damage": "Sucks sap causing yellowing and reduced sugar content",
+        "control": "Release Epiricania parasitoid, spray Imidacloprid if severe"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Deep plough field followed by harrowing and leveling; form furrows at spacing of 90-120 cm for planting setts."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select healthy 3-budded setts from 8-10 month old disease-free seed crop, treating with fungicide and hot water before planting."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant setts end-to-end in furrows at recommended spacing, covering lightly with soil during February-March or October-November."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Irrigate immediately after planting and maintain regular irrigation cycles, increasing frequency during grand growth phase."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses synchronized with tillering and grand growth stages; earth up after each fertilizer application."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct manual or mechanical weeding at 30, 60 and 90 days; use pre-emergence herbicides like Atrazine for early weed control."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Regularly scout for borers and red rot symptoms; remove and destroy affected clumps, use biological control agents where possible."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest at 10-12 months when cane reaches optimum sucrose content, cutting close to ground level using sickles or harvesters."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Transport cane to mill within 24-48 hours of harvest to minimize sucrose loss; avoid prolonged field storage after cutting."
+      }
+    ],
+    "advantages": [
+      "Assured market through sugar mills",
+      "High biomass and by-product value (bagasse, molasses)",
+      "Supports ethanol blending initiatives",
+      "Long harvesting window"
+    ],
+    "challenges": [
+      "Very high water requirement",
+      "Long crop duration ties up land",
+      "Susceptible to red rot epidemics",
+      "Delayed payments from mills"
+    ],
+    "suitableStates": [
+      "Uttar Pradesh",
+      "Maharashtra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Bihar",
+      "Punjab"
+    ],
+    "intercroppingOptions": [
+      "Onion",
+      "Potato",
+      "Garlic",
+      "Coriander",
+      "Gram"
+    ],
+    "storageGuidelines": "Sugarcane should be processed within 24-48 hours of harvest as sucrose content deteriorates rapidly; not suitable for long-term storage in raw form.",
+    "image": "/crops/sugarcane.png"
+  },
+  {
+    "name": "Papaya",
+    "scientificName": "Carica papaya",
+    "category": "Fruit Crop",
+    "overview": "Papaya is a fast-growing fruit crop valued for its short gestation period, continuous fruiting, and high nutritional value. It is widely cultivated for fresh fruit consumption, papain extraction, and processing into juices and candies.",
+    "season": "Year-round; best planted post-monsoon",
+    "cropDuration": "9-12 months to first harvest",
+    "bestSowingMonths": [
+      "February",
+      "March",
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "November",
+      "December",
+      "January"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam rich in organic matter",
+      "phRange": "6.0-7.0",
+      "drainage": "Excellent drainage essential, sensitive to waterlogging"
+    },
+    "climate": {
+      "temperature": "22-32°C optimum",
+      "rainfall": "1000-1500 mm or irrigated equivalent",
+      "humidity": "Moderate to high humidity"
+    },
+    "waterRequirement": "1200-1500 mm annually; frequent light irrigation preferred",
+    "yield": {
+      "perHectare": "40-60 tonnes",
+      "profitability": "High profitability due to quick returns and continuous harvest"
+    },
+    "marketDemand": "High and steady demand for fresh fruit consumption and processing industry (papain, juices)",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Enhances soil fertility and structure",
+        "applicationStage": "Basal application at planting and annually thereafter"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and fruit development",
+        "applicationStage": "Monthly split application"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development and flowering",
+        "applicationStage": "Basal and quarterly application"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves fruit size and sweetness",
+        "applicationStage": "Monthly split application with nitrogen"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Papaya Ringspot Virus",
+        "symptoms": "Ring-shaped spots on fruit, mosaic mottling on leaves",
+        "management": "Use virus-free seedlings, control aphid vectors, remove infected plants"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery growth on leaves and young fruits",
+        "management": "Spray Wettable sulphur or Dinocap, improve air circulation"
+      },
+      {
+        "name": "Foot Rot",
+        "symptoms": "Rotting at collar region leading to plant collapse",
+        "management": "Avoid waterlogging, drench with Metalaxyl, ensure raised bed planting"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Papaya Mealybug",
+        "damage": "Sucks sap causing curling of leaves and sooty mold",
+        "control": "Release Acerophagus papayae parasitoid, spray neem oil"
+      },
+      {
+        "name": "Fruit Fly",
+        "damage": "Larvae infest ripening fruit causing rotting",
+        "control": "Use methyl eugenol traps, bag fruits, field sanitation"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Transmit ringspot virus and cause leaf curling",
+        "control": "Spray Imidacloprid, remove weed hosts"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Prepare land with deep ploughing and dig pits of 60x60x60 cm at 1.8x1.8 m spacing, filling with FYM and topsoil mixture."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select healthy seeds from high-yielding hermaphrodite or dioecious varieties; raise seedlings in polybags under nursery conditions."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Transplant 45-60 day old seedlings into prepared pits during early morning or evening, maintaining adequate spacing between plants."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide regular light irrigation, especially during flowering and fruiting; install drip irrigation for water-use efficiency."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply balanced fertilizers monthly in split doses, supplemented with micronutrients like boron and zinc for fruit quality."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Maintain weed-free basins through mulching and shallow hoeing; avoid deep cultivation near root zone to prevent root damage."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for mealybug, fruit fly and viral symptoms regularly; remove and destroy infected plants to prevent disease spread."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest fruits when they show slight yellowing at the apex (color break stage), typically 9-12 months after planting."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Handle fruits gently to avoid latex staining and bruising; grade by size and ripeness, pack in ventilated cartons for transport."
+      }
+    ],
+    "advantages": [
+      "Quick returns within a year",
+      "Continuous year-round fruiting",
+      "High nutritional value (vitamin A, C)",
+      "By-product value through papain extraction"
+    ],
+    "challenges": [
+      "Highly susceptible to viral diseases",
+      "Sensitive to waterlogging and strong winds",
+      "Short economic lifespan (2-3 years)",
+      "Fruit fly infestation issues"
+    ],
+    "suitableStates": [
+      "Andhra Pradesh",
+      "Gujarat",
+      "Madhya Pradesh",
+      "Karnataka",
+      "Maharashtra",
+      "West Bengal"
+    ],
+    "intercroppingOptions": [
+      "Marigold (as trap crop)",
+      "Vegetables",
+      "Beans"
+    ],
+    "storageGuidelines": "Store mature green fruits at 10-13°C with 85-90% humidity for transport; ripe fruits should be consumed or processed within a few days at room temperature.",
+    "image": "/crops/papaya.png"
+  },
+  {
+    "name": "Jowar",
+    "scientificName": "Sorghum bicolor",
+    "category": "Cereal Crop (Millet)",
+    "overview": "Jowar, or sorghum, is a drought-tolerant cereal crop widely grown in semi-arid regions of India, valued as both a staple food grain and quality fodder crop. It plays a crucial role in dryland farming systems.",
+    "season": "Kharif and Rabi",
+    "cropDuration": "100-120 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "September",
+      "October"
+    ],
+    "bestHarvestMonths": [
+      "October",
+      "November",
+      "January",
+      "February"
+    ],
+    "soil": {
+      "type": "Medium to deep black soil (vertisols)",
+      "phRange": "6.0-8.0",
+      "drainage": "Moderate drainage, tolerates mild moisture stress"
+    },
+    "climate": {
+      "temperature": "25-32°C optimum",
+      "rainfall": "400-750 mm",
+      "humidity": "Low to moderate humidity, drought tolerant"
+    },
+    "waterRequirement": "350-500 mm; relatively low water requirement compared to other cereals",
+    "yield": {
+      "perHectare": "2.5-4 tonnes grain plus substantial fodder yield",
+      "profitability": "Moderate profitability with strong fodder value addition"
+    },
+    "marketDemand": "Steady demand for food grain in semi-arid regions and growing demand for poultry feed and fodder",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and grain development",
+        "applicationStage": "Split doses at sowing and 30 days after sowing"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Drought tolerance and grain quality",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil moisture retention",
+        "applicationStage": "Applied before sowing during land preparation"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Grain Smut",
+        "symptoms": "Grains replaced by black sooty spore masses",
+        "management": "Seed treatment with Carbendazim, use resistant varieties"
+      },
+      {
+        "name": "Charcoal Rot",
+        "symptoms": "Greying and shredding of stalk tissue, lodging",
+        "management": "Avoid moisture stress at grain filling, balanced fertilization"
+      },
+      {
+        "name": "Anthracnose",
+        "symptoms": "Red to brown lesions on leaves and stalk",
+        "management": "Spray Mancozeb, crop rotation, resistant varieties"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Shoot Fly",
+        "damage": "Causes deadheart in seedling stage",
+        "control": "Seed treatment with Imidacloprid, timely sowing with onset of rains"
+      },
+      {
+        "name": "Stem Borer",
+        "damage": "Bores into stem causing deadheart and reduced yield",
+        "control": "Apply Carbofuran granules, remove and destroy affected plants"
+      },
+      {
+        "name": "Earhead Bug",
+        "damage": "Sucks grain sap causing chaffy grains",
+        "control": "Spray Malathion at ear emergence stage"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field once or twice during pre-monsoon period to conserve moisture; harrow to break clods and create fine seedbed."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified hybrid or improved variety seeds with high germination rate; treat seeds with fungicide and insecticide before sowing."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 3-4 cm depth with row spacing of 45 cm and plant spacing of 12-15 cm using seed drill or dibbling method."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Rely primarily on rainfall in rainfed systems; provide supplemental irrigation at critical stages like flowering in irrigated areas."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply basal fertilizers at sowing followed by top dressing of nitrogen at 30 days after sowing for optimal vegetative growth."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct first weeding at 15-20 days after sowing followed by second weeding at 30-35 days; thinning to maintain optimal plant population."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for shoot fly during early stages and stem borer later; adopt timely sowing as primary cultural control measure."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when grains harden and moisture content drops to around 20%, typically 100-120 days after sowing, using sickles."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested earheads in sun, thresh to separate grains, clean and store at 12% moisture in jute bags or bins."
+      }
+    ],
+    "advantages": [
+      "Drought and heat tolerant",
+      "Dual-purpose grain and fodder crop",
+      "Low input requirement",
+      "Suitable for rainfed marginal lands"
+    ],
+    "challenges": [
+      "Lower market price compared to rice/wheat",
+      "Susceptible to bird damage at grain filling",
+      "Limited processing infrastructure",
+      "Yield sensitive to erratic rainfall"
+    ],
+    "suitableStates": [
+      "Maharashtra",
+      "Karnataka",
+      "Madhya Pradesh",
+      "Telangana",
+      "Rajasthan",
+      "Tamil Nadu"
+    ],
+    "intercroppingOptions": [
+      "Pigeonpea",
+      "Greengram",
+      "Blackgram",
+      "Castor"
+    ],
+    "storageGuidelines": "Dry grains to 12% moisture before storage; store in airtight containers or gunny bags with neem leaves to prevent weevil infestation.",
+    "image": "/crops/jowar.png"
+  },
+  {
+    "name": "Bajra",
+    "scientificName": "Pennisetum glaucum",
+    "category": "Cereal Crop (Millet)",
+    "overview": "Bajra, or pearl millet, is a highly drought-resistant cereal crop predominantly grown in arid and semi-arid regions of India, serving as a vital food and fodder source in low-rainfall zones.",
+    "season": "Kharif",
+    "cropDuration": "75-90 days",
+    "bestSowingMonths": [
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October"
+    ],
+    "soil": {
+      "type": "Sandy to sandy loam soil",
+      "phRange": "6.5-8.0",
+      "drainage": "Well-drained, tolerates low fertility and moisture stress"
+    },
+    "climate": {
+      "temperature": "25-35°C optimum",
+      "rainfall": "300-500 mm",
+      "humidity": "Low humidity, highly drought tolerant"
+    },
+    "waterRequirement": "250-400 mm; among the lowest water requirements of cereal crops",
+    "yield": {
+      "perHectare": "2-3.5 tonnes grain with good fodder yield",
+      "profitability": "Moderate profitability, valuable in low-input dryland systems"
+    },
+    "marketDemand": "Growing demand due to nutritional millet promotion and poultry/cattle feed industry",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and tillering",
+        "applicationStage": "Split dose at sowing and 25-30 days after sowing"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development in early stage",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves sandy soil fertility and moisture retention",
+        "applicationStage": "Applied during land preparation"
+      },
+      {
+        "name": "Zinc Sulphate",
+        "purpose": "Corrects zinc deficiency in sandy soils",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Downy Mildew (Green Ear)",
+        "symptoms": "Conversion of ear into leafy green structure, chlorosis on leaves",
+        "management": "Seed treatment with Metalaxyl, use resistant hybrids, remove infected plants"
+      },
+      {
+        "name": "Ergot",
+        "symptoms": "Honeydew secretion on earheads followed by hardened sclerotia",
+        "management": "Avoid excess nitrogen, use resistant varieties, seed treatment"
+      },
+      {
+        "name": "Smut",
+        "symptoms": "Grain replaced by smut sori containing black spore mass",
+        "management": "Field sanitation, resistant varieties, timely sowing"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Shoot Fly",
+        "damage": "Causes deadheart in seedling stage",
+        "control": "Timely sowing with monsoon onset, seed treatment with Imidacloprid"
+      },
+      {
+        "name": "Stem Borer",
+        "damage": "Larvae bore into stem reducing plant vigor",
+        "control": "Apply Carbofuran granules in whorl region"
+      },
+      {
+        "name": "Earhead Caterpillar",
+        "damage": "Feeds on developing grains in earhead",
+        "control": "Spray Quinalphos at ear emergence"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field once with onset of pre-monsoon showers; harrow lightly to prepare a fine seedbed suited to sandy soils."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select drought-tolerant hybrid or composite varieties with proven performance in local rainfall conditions; treat seeds with fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 2-3 cm depth with row spacing of 45-50 cm using seed drill, ensuring optimal plant population through proper thinning."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely rainfed cultivation; provide one or two supplemental irrigations at flowering and grain filling stage if available."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply basal phosphorus and half nitrogen at sowing, top-dress remaining nitrogen at 25-30 days after sowing during tillering."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Carry out first weeding at 15-20 days after sowing; thinning of excess seedlings to maintain recommended plant spacing."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Scout for shoot fly in early stage and downy mildew during humid conditions; rogue out infected plants showing green ear symptoms."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest earheads when grains harden and turn grey, around 75-90 days after sowing, by cutting panicles or whole plants."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested earheads thoroughly, thresh to separate grain, winnow and store at safe moisture levels in clean containers."
+      }
+    ],
+    "advantages": [
+      "Excellent drought tolerance",
+      "Short crop duration",
+      "Nutrient-dense grain (iron, zinc)",
+      "Low water and input requirement"
+    ],
+    "challenges": [
+      "Susceptible to downy mildew in humid conditions",
+      "Lower yield compared to rice/wheat",
+      "Limited value addition infrastructure",
+      "Bird damage at maturity"
+    ],
+    "suitableStates": [
+      "Rajasthan",
+      "Gujarat",
+      "Haryana",
+      "Maharashtra",
+      "Uttar Pradesh",
+      "Karnataka"
+    ],
+    "intercroppingOptions": [
+      "Moong",
+      "Cluster bean",
+      "Sesame"
+    ],
+    "storageGuidelines": "Dry grains to below 12% moisture; store in airtight bins or jute bags treated with neem-based protectants to prevent storage pest damage.",
+    "image": "/crops/bajra.png"
+  },
+  {
+    "name": "Groundnut",
+    "scientificName": "Arachis hypogaea",
+    "category": "Oilseed Crop",
+    "overview": "Groundnut, also known as peanut, is a major oilseed and food legume crop of India, cultivated for edible oil extraction, confectionery use, and as a nitrogen-fixing legume beneficial for soil health.",
+    "season": "Kharif and Rabi/Summer",
+    "cropDuration": "100-130 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "January",
+      "February"
+    ],
+    "bestHarvestMonths": [
+      "October",
+      "November",
+      "April",
+      "May"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage essential for pod development"
+    },
+    "climate": {
+      "temperature": "25-30°C optimum",
+      "rainfall": "500-750 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "500-600 mm; critical irrigation needed at pegging and pod development stages",
+    "yield": {
+      "perHectare": "1.5-2.5 tonnes (rainfed), up to 3.5 tonnes irrigated",
+      "profitability": "Good profitability driven by edible oil and export demand"
+    },
+    "marketDemand": "Strong demand from edible oil industry, confectionery sector, and export markets",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Gypsum (Calcium Sulphate)",
+        "purpose": "Improves pod filling and kernel development",
+        "applicationStage": "Applied at flowering/pegging stage"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Initial vegetative growth before nodulation",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Tikka Leaf Spot",
+        "symptoms": "Circular brown to black spots on leaves with yellow halo",
+        "management": "Spray Chlorothalonil or Mancozeb, use resistant varieties"
+      },
+      {
+        "name": "Collar Rot",
+        "symptoms": "Rotting at collar region with white fungal growth",
+        "management": "Seed treatment with Carbendazim, avoid waterlogging"
+      },
+      {
+        "name": "Bud Necrosis Virus",
+        "symptoms": "Necrotic streaks and bushy stunted growth",
+        "management": "Control thrips vector, use resistant varieties, remove infected plants"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Leaf Miner",
+        "damage": "Mines into leaf tissue causing serpentine trails and defoliation",
+        "control": "Spray Quinalphos, remove crop residue after harvest"
+      },
+      {
+        "name": "Thrips",
+        "damage": "Sucks sap and transmits bud necrosis virus",
+        "control": "Spray Imidacloprid, use reflective mulch"
+      },
+      {
+        "name": "White Grub",
+        "damage": "Feeds on roots and pods causing wilting",
+        "control": "Soil application of Chlorpyrifos, deep summer ploughing"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field deeply to break hardpan and improve aeration for pod development; harrow to achieve fine, friable tilth."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select bold, disease-free pods of recommended variety; shell carefully to avoid kernel damage, treat with fungicide before sowing."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 3-5 cm depth with spacing of 30x10 cm for bunch types and 45x15 cm for spreading types, using seed drill or dibbling."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide irrigation at flowering, pegging, and pod development stages; avoid water stress during pod filling to ensure good yield."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and gypsum as basal dose; gypsum application at pegging stage significantly improves pod filling and kernel quality."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct early weeding at 20-25 days after sowing; earthing up at flowering stage to facilitate peg penetration into soil."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for leaf spot diseases and thrips regularly; adopt integrated pest management with biological and chemical control measures."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when leaves turn yellow and pods show characteristic net pattern, typically 100-130 days after sowing, by uprooting plants."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants in field, strip pods, further dry to 8-9% moisture, and store in well-ventilated, moisture-proof containers."
+      }
+    ],
+    "advantages": [
+      "Nitrogen-fixing legume improves soil fertility",
+      "High edible oil content",
+      "Strong export and processing demand",
+      "Suitable for rotation with cereals"
+    ],
+    "challenges": [
+      "Susceptible to aflatoxin contamination if improperly dried",
+      "Vulnerable to leaf spot diseases",
+      "Price volatility with international oil markets",
+      "Labor-intensive harvesting"
+    ],
+    "suitableStates": [
+      "Gujarat",
+      "Andhra Pradesh",
+      "Tamil Nadu",
+      "Karnataka",
+      "Rajasthan",
+      "Maharashtra"
+    ],
+    "intercroppingOptions": [
+      "Pigeonpea",
+      "Castor",
+      "Sunflower",
+      "Maize"
+    ],
+    "storageGuidelines": "Dry pods to 8-9% kernel moisture before storage to prevent aflatoxin development; store in cool, dry, well-ventilated conditions away from moisture.",
+    "image": "/crops/groundnut.png"
+  },
+  {
+    "name": "Cotton",
+    "scientificName": "Gossypium hirsutum",
+    "category": "Fiber Crop",
+    "overview": "Cotton is India's most important fiber crop and a key raw material for the textile industry. It is predominantly grown as a Kharif crop with Bt hybrid varieties dominating cultivation across rainfed and irrigated tracts.",
+    "season": "Kharif",
+    "cropDuration": "150-180 days",
+    "bestSowingMonths": [
+      "May",
+      "June"
+    ],
+    "bestHarvestMonths": [
+      "October",
+      "November",
+      "December"
+    ],
+    "soil": {
+      "type": "Deep black cotton soil (regur) or alluvial soil",
+      "phRange": "6.0-8.0",
+      "drainage": "Well-drained, moisture-retentive deep soils"
+    },
+    "climate": {
+      "temperature": "21-35°C optimum",
+      "rainfall": "600-1200 mm",
+      "humidity": "Moderate humidity, clear sky needed at boll opening"
+    },
+    "waterRequirement": "700-1200 mm; critical stages at squaring, flowering and boll development",
+    "yield": {
+      "perHectare": "15-25 quintals of seed cotton (kapas)",
+      "profitability": "High profitability with Bt hybrids but input-intensive"
+    },
+    "marketDemand": "Strong and consistent demand from domestic textile mills and export markets for raw cotton and yarn",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and boll development",
+        "applicationStage": "Split doses at sowing, squaring, and flowering"
+      },
+      {
+        "name": "Phosphorus (DAP)",
+        "purpose": "Root development and early establishment",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Boll development and fiber quality",
+        "applicationStage": "Split application at squaring and boll formation"
+      },
+      {
+        "name": "Magnesium Sulphate",
+        "purpose": "Prevents reddening of leaves and improves photosynthesis",
+        "applicationStage": "Foliar spray during boll development"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Bacterial Blight",
+        "symptoms": "Angular water-soaked lesions on leaves turning brown",
+        "management": "Use resistant varieties, seed treatment with Streptocycline, avoid overhead irrigation"
+      },
+      {
+        "name": "Fusarium Wilt",
+        "symptoms": "Yellowing and wilting of plants, vascular browning",
+        "management": "Crop rotation, resistant varieties, soil drenching with Carbendazim"
+      },
+      {
+        "name": "Grey Mildew",
+        "symptoms": "Grey powdery patches on lower leaf surface",
+        "management": "Spray Wettable sulphur, ensure proper spacing"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Pink Bollworm",
+        "damage": "Bores into bolls causing rosette flowers and damaged lint",
+        "control": "Use pheromone traps, timely destruction of crop residue, Bt cotton with refuge"
+      },
+      {
+        "name": "Whitefly",
+        "damage": "Sucks sap and transmits leaf curl virus",
+        "control": "Spray Imidacloprid, use yellow sticky traps"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Causes curling of leaves and honeydew secretion leading to sooty mold",
+        "control": "Spray Thiamethoxam, conserve natural predators"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Deep plough field in summer to expose soil to sunlight and reduce pest carryover; harrow to prepare fine, weed-free seedbed."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified Bt hybrid seeds suited to region with built-in bollworm resistance; treat seeds with recommended fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 4-5 cm depth with spacing of 90-120 cm between rows and 45-60 cm between plants, maintaining recommended population density."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide irrigation at critical stages including squaring, flowering, and boll development; avoid moisture stress during boll filling."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses synchronized with vegetative, squaring and flowering stages; foliar nutrition during boll development."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct timely weeding at 20-25 and 45 days after sowing; use pre-emergence herbicide followed by inter-cultivation."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for pink bollworm and whitefly through regular field scouting and pheromone traps; follow refuge crop guidelines for Bt cotton."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest bolls in 3-4 pickings as they mature and open, typically starting 150-160 days after sowing, picking only opened bolls."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry picked kapas in sun, remove trash and contamination, store in clean, dry conditions before ginning to maintain fiber quality."
+      }
+    ],
+    "advantages": [
+      "High commercial value",
+      "Strong domestic textile industry demand",
+      "Suitable for export markets",
+      "By-product value from cottonseed oil"
+    ],
+    "challenges": [
+      "Pink bollworm resistance to Bt technology",
+      "High water and input requirement",
+      "Price fluctuation with international markets",
+      "Labor-intensive picking"
+    ],
+    "suitableStates": [
+      "Gujarat",
+      "Maharashtra",
+      "Telangana",
+      "Andhra Pradesh",
+      "Madhya Pradesh",
+      "Punjab"
+    ],
+    "intercroppingOptions": [
+      "Pigeonpea",
+      "Greengram",
+      "Blackgram",
+      "Soybean"
+    ],
+    "storageGuidelines": "Store picked cotton in dry, well-ventilated godowns away from moisture to prevent fiber discoloration; avoid contamination with foreign matter before ginning.",
+    "image": "/crops/cotton.png"
+  },
+  {
+    "name": "Tomato",
+    "scientificName": "Solanum lycopersicum",
+    "category": "Vegetable Crop",
+    "overview": "Tomato is one of the most widely cultivated vegetable crops in India, grown for fresh consumption and processing into sauces, ketchup, and paste. It is a high-value crop with year-round cultivation potential across diverse climatic zones.",
+    "season": "Year-round (Kharif, Rabi, Summer)",
+    "cropDuration": "90-120 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October",
+      "January",
+      "February"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to loamy soil rich in organic matter",
+      "phRange": "6.0-7.0",
+      "drainage": "Good drainage critical to prevent root diseases"
+    },
+    "climate": {
+      "temperature": "20-27°C optimum",
+      "rainfall": "600-1200 mm or irrigated equivalent",
+      "humidity": "Moderate humidity; high humidity favors disease"
+    },
+    "waterRequirement": "600-800 mm; drip irrigation recommended for water efficiency and disease control",
+    "yield": {
+      "perHectare": "25-40 tonnes",
+      "profitability": "High profitability but with significant price volatility"
+    },
+    "marketDemand": "Very high demand across fresh and processing segments; prices highly volatile based on seasonal supply",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil fertility and structure",
+        "applicationStage": "Basal application during land preparation"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and fruit development",
+        "applicationStage": "Split doses at transplanting, flowering, and fruiting"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development and flowering",
+        "applicationStage": "Full basal dose before transplanting"
+      },
+      {
+        "name": "Calcium Nitrate",
+        "purpose": "Prevents blossom end rot",
+        "applicationStage": "Foliar spray during fruit development"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Early Blight",
+        "symptoms": "Concentric ring spots on lower leaves leading to defoliation",
+        "management": "Spray Mancozeb, crop rotation, remove infected debris"
+      },
+      {
+        "name": "Late Blight",
+        "symptoms": "Water-soaked lesions on leaves turning brown with white mold underneath",
+        "management": "Spray Metalaxyl + Mancozeb, avoid overhead irrigation"
+      },
+      {
+        "name": "Bacterial Wilt",
+        "symptoms": "Sudden wilting of plants despite adequate moisture",
+        "management": "Crop rotation, resistant varieties, soil solarization"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Fruit Borer",
+        "damage": "Bores into fruits causing rotting and yield loss",
+        "control": "Use pheromone traps, spray Spinosad, install bird perches"
+      },
+      {
+        "name": "Whitefly",
+        "damage": "Transmits leaf curl virus and causes sooty mold",
+        "control": "Yellow sticky traps, spray Imidacloprid, use insect-proof nursery nets"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap causing curling and stunted growth",
+        "control": "Spray neem oil or Thiamethoxam"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Prepare raised beds after deep ploughing and incorporation of FYM; ensure proper drainage channels to avoid waterlogging."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select hybrid or improved variety seeds with resistance to wilt and viral diseases; treat seeds with fungicide before sowing."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Raise seedlings in nursery for 25-30 days, then transplant at spacing of 60x45 cm during evening hours to reduce transplant shock."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Install drip irrigation for efficient water use; irrigate at regular intervals avoiding water stress during flowering and fruiting."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses through fertigation or soil application; supplement with calcium and micronutrients to prevent disorders."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Practice mulching with black polythene or organic mulch to suppress weeds and conserve soil moisture around root zone."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Stake plants for support, monitor regularly for fruit borer and viral diseases, adopt IPM with traps and need-based spraying."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest fruits at appropriate maturity stage (green, breaker, or red ripe) depending on market distance, typically starting 60-70 days after transplanting."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Sort and grade fruits by size and color, pack in ventilated crates, and transport quickly to minimize post-harvest losses."
+      }
+    ],
+    "advantages": [
+      "High market value and demand",
+      "Multiple harvests extend income period",
+      "Suitable for both fresh and processing markets",
+      "Adaptable to various growing systems including protected cultivation"
+    ],
+    "challenges": [
+      "High price volatility",
+      "Susceptible to viral and fungal diseases",
+      "Perishable nature requires quick marketing",
+      "Labor-intensive staking and harvesting"
+    ],
+    "suitableStates": [
+      "Andhra Pradesh",
+      "Madhya Pradesh",
+      "Karnataka",
+      "Odisha",
+      "Maharashtra",
+      "West Bengal"
+    ],
+    "intercroppingOptions": [
+      "Onion",
+      "Garlic",
+      "Marigold (trap crop)",
+      "Coriander"
+    ],
+    "storageGuidelines": "Store mature green tomatoes at 12-15°C with 85-90% humidity for extended shelf life; ripe tomatoes should be marketed quickly due to high perishability.",
+    "image": "/crops/tomato.png"
+  },
+  {
+    "name": "Onion",
+    "scientificName": "Allium cepa",
+    "category": "Vegetable Crop",
+    "overview": "Onion is a critical commercial vegetable crop of India, cultivated extensively for both domestic consumption and export, particularly from Maharashtra. It is a bulb crop sensitive to day length and storage conditions.",
+    "season": "Kharif, Late Kharif, and Rabi",
+    "cropDuration": "100-150 days",
+    "bestSowingMonths": [
+      "June",
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "October",
+      "March",
+      "April"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to loamy soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage essential, sensitive to waterlogging"
+    },
+    "climate": {
+      "temperature": "13-28°C optimum, cool for bulb initiation",
+      "rainfall": "650-750 mm or irrigated equivalent",
+      "humidity": "Low humidity favorable at bulb maturity"
+    },
+    "waterRequirement": "350-600 mm; stop irrigation 2-3 weeks before harvest for better storage",
+    "yield": {
+      "perHectare": "20-35 tonnes",
+      "profitability": "High profitability potential but significant price volatility"
+    },
+    "marketDemand": "Major export commodity and domestic staple with frequent price fluctuations based on supply conditions",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil structure for bulb development",
+        "applicationStage": "Basal application during land preparation"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and leaf development",
+        "applicationStage": "Split doses at transplanting and 30-45 days after"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and bulb development",
+        "applicationStage": "Full basal dose at transplanting"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Enhances pungency and bulb quality",
+        "applicationStage": "Basal application before transplanting"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Purple Blotch",
+        "symptoms": "Purple to brown lesions on leaves with concentric rings",
+        "management": "Spray Mancozeb, avoid overhead irrigation, crop rotation"
+      },
+      {
+        "name": "Basal Rot",
+        "symptoms": "Yellowing of leaf tips progressing to base rot",
+        "management": "Use disease-free sets, avoid waterlogging, seed treatment with fungicide"
+      },
+      {
+        "name": "Downy Mildew",
+        "symptoms": "Pale yellow patches on leaves with grey fuzzy growth",
+        "management": "Spray Metalaxyl, ensure proper field drainage"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Thrips",
+        "damage": "Scrapes leaf surface causing silvery streaks and stunted growth",
+        "control": "Spray Fipronil or Imidacloprid, use blue sticky traps"
+      },
+      {
+        "name": "Onion Maggot",
+        "damage": "Larvae feed on bulb causing rotting",
+        "control": "Soil application of Chlorpyrifos, crop rotation"
+      },
+      {
+        "name": "Cutworm",
+        "damage": "Cuts seedlings at base during night",
+        "control": "Apply Chlorpyrifos dust around plant base"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Prepare fine, well-pulverized seedbed through repeated ploughing; form raised beds for nursery and ridges for main field planting."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified disease-free seeds of suitable variety based on season; treat seeds with Thiram before sowing in nursery beds."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Raise seedlings in nursery for 6-8 weeks, then transplant at spacing of 15x10 cm into main field during evening hours."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Irrigate immediately after transplanting and maintain regular shallow irrigation; withhold irrigation 2-3 weeks before harvest."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses with emphasis on phosphorus and sulphur for bulb development; avoid excess nitrogen near maturity."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct regular shallow weeding to avoid damaging shallow root system; mulching helps in moisture conservation and weed control."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for thrips and purple blotch disease regularly; adopt IPM practices with sticky traps and timely fungicide application."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when neck of bulb softens and leaves begin to fall over, typically 100-150 days after transplanting depending on season."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Cure harvested bulbs in field for 3-4 days, then in shade for 10-15 days; cut tops, grade by size, and store in well-ventilated structures."
+      }
+    ],
+    "advantages": [
+      "Major export commodity",
+      "High value in domestic market",
+      "Multiple cropping seasons possible",
+      "Good storage life with proper curing"
+    ],
+    "challenges": [
+      "Extreme price volatility",
+      "Storage losses due to rotting",
+      "Sensitive to excess rainfall at harvest",
+      "High labor requirement for transplanting"
+    ],
+    "suitableStates": [
+      "Maharashtra",
+      "Karnataka",
+      "Madhya Pradesh",
+      "Gujarat",
+      "Bihar",
+      "Rajasthan"
+    ],
+    "intercroppingOptions": [
+      "Garlic",
+      "Coriander",
+      "Fenugreek",
+      "Tomato"
+    ],
+    "storageGuidelines": "Cure bulbs properly before storage; store in well-ventilated structures with low humidity at 25-30°C, avoiding moisture to prevent rotting and sprouting.",
+    "image": "/crops/onion.png"
+  },
+  {
+    "name": "Mango",
+    "scientificName": "Mangifera indica",
+    "category": "Fruit Crop",
+    "overview": "Mango is regarded as the king of fruits in India and is the most widely cultivated fruit crop, valued for fresh consumption, processing into pulp and juices, and significant export potential.",
+    "season": "Flowering in winter, harvest in summer",
+    "cropDuration": "4-6 years to first fruiting, productive for decades",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "August"
+    ],
+    "bestHarvestMonths": [
+      "April",
+      "May",
+      "June"
+    ],
+    "soil": {
+      "type": "Deep, well-drained alluvial to laterite soil",
+      "phRange": "5.5-7.5",
+      "drainage": "Deep well-drained soil essential for root development"
+    },
+    "climate": {
+      "temperature": "24-30°C optimum, frost-sensitive",
+      "rainfall": "750-2500 mm, dry period needed for flowering",
+      "humidity": "Low humidity required during flowering"
+    },
+    "waterRequirement": "Moderate; irrigation critical during flowering and fruit development, avoid irrigation during dormancy",
+    "yield": {
+      "perHectare": "8-15 tonnes (varies by variety and age)",
+      "profitability": "High profitability with strong domestic and export markets"
+    },
+    "marketDemand": "Very strong domestic demand and significant export market, especially for Alphonso, Kesar, and Dasheri varieties",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil organic matter and root health",
+        "applicationStage": "Annual application after harvest"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and flowering",
+        "applicationStage": "Split doses before flowering and after fruit set"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and flower development",
+        "applicationStage": "Annual basal application"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves fruit size and quality",
+        "applicationStage": "Applied during fruit development stage"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Anthracnose",
+        "symptoms": "Black sunken spots on fruits and leaves, twig blight",
+        "management": "Spray Carbendazim, prune affected twigs, post-harvest hot water treatment"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery growth on inflorescence and young leaves",
+        "management": "Spray Wettable sulphur during flowering, avoid excess humidity"
+      },
+      {
+        "name": "Malformation",
+        "symptoms": "Abnormal vegetative or floral growth resembling witches broom",
+        "management": "Prune affected panicles, spray NAA, avoid excess nitrogen"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Mango Hopper",
+        "damage": "Sucks sap from inflorescence causing flower drop",
+        "control": "Spray Imidacloprid at panicle emergence and fruit set stage"
+      },
+      {
+        "name": "Fruit Fly",
+        "damage": "Larvae infest ripening fruits causing rotting",
+        "control": "Methyl eugenol traps, bagging fruits, field sanitation"
+      },
+      {
+        "name": "Mealybug",
+        "damage": "Sucks sap from tender shoots and inflorescence",
+        "control": "Banding trunk with sticky material, spray neem oil"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Dig pits of 1x1x1 m at spacing of 10x10 m for standard varieties; fill with topsoil, FYM and sand mixture, allowing settling before planting."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select grafted saplings of recommended variety from certified nursery, ensuring healthy rootstock and disease-free scion wood."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant grafted saplings during onset of monsoon, ensuring graft union remains above soil level to prevent collar rot."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide regular irrigation during initial establishment years; mature trees need irrigation during flowering and fruit development, with dry spell before flowering."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply organic manure and balanced NPK annually in tree basins after harvest; foliar micronutrient sprays improve flowering and fruit set."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Maintain weed-free basins through mulching and shallow cultivation; avoid deep digging near root zone of mature trees."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for hoppers during flowering and fruit flies during fruiting; adopt integrated management combining traps, sanitation and sprays."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest mature fruits at proper maturity stage (based on variety-specific indicators) using harvesting poles with attached bags to avoid bruising."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Handle harvested fruits carefully, treat with hot water for anthracnose control, grade by size and ripen uniformly before market dispatch."
+      }
+    ],
+    "advantages": [
+      "High domestic and export value",
+      "Long productive lifespan of trees",
+      "Multiple value-added products (pulp, juice, pickle)",
+      "Strong brand value for regional varieties"
+    ],
+    "challenges": [
+      "Alternate bearing tendency",
+      "Susceptible to hopper and anthracnose damage",
+      "Long gestation before fruiting",
+      "Sensitive to untimely rainfall during flowering"
+    ],
+    "suitableStates": [
+      "Uttar Pradesh",
+      "Andhra Pradesh",
+      "Karnataka",
+      "Bihar",
+      "Gujarat",
+      "Maharashtra"
+    ],
+    "intercroppingOptions": [
+      "Vegetables (in initial years)",
+      "Pulses",
+      "Turmeric"
+    ],
+    "storageGuidelines": "Store mature green mangoes at 13°C with 85-90% humidity for transport; ripen using controlled ethylene treatment for uniform color and quality.",
+    "image": "/crops/mango.png"
+  },
+  {
+    "name": "Orange",
+    "scientificName": "Citrus sinensis / Citrus reticulata",
+    "category": "Fruit Crop",
+    "overview": "Orange, including mandarin varieties, is an important citrus fruit crop grown widely in central and northeastern India, valued for fresh consumption and juice processing with significant nutritional benefits.",
+    "season": "Flowering in spring, harvest in winter",
+    "cropDuration": "3-4 years to first fruiting, productive for 20-25 years",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "August"
+    ],
+    "bestHarvestMonths": [
+      "November",
+      "December",
+      "January"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to loamy soil",
+      "phRange": "5.5-7.5",
+      "drainage": "Good drainage critical, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "13-30°C optimum",
+      "rainfall": "1000-1500 mm or irrigated equivalent",
+      "humidity": "Moderate humidity preferred"
+    },
+    "waterRequirement": "900-1200 mm annually; critical irrigation at flowering and fruit development",
+    "yield": {
+      "perHectare": "10-20 tonnes (varies by age and variety)",
+      "profitability": "Good profitability with steady regional demand"
+    },
+    "marketDemand": "Strong regional demand for fresh fruit and growing juice processing industry",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil fertility and root health",
+        "applicationStage": "Annual application before flowering"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and fruit development",
+        "applicationStage": "Split doses during pre-flowering and post fruit-set"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and flower development",
+        "applicationStage": "Annual basal application"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves fruit size and juice quality",
+        "applicationStage": "Applied during fruit development stage"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Citrus Canker",
+        "symptoms": "Raised corky lesions on leaves, twigs and fruit",
+        "management": "Spray Copper oxychloride, prune affected parts, avoid overhead irrigation"
+      },
+      {
+        "name": "Gummosis (Foot Rot)",
+        "symptoms": "Gum exudation from trunk bark with bark cracking",
+        "management": "Avoid waterlogging, apply Bordeaux paste, improve basin drainage"
+      },
+      {
+        "name": "Citrus Greening (Huanglongbing)",
+        "symptoms": "Yellow mottling of leaves, lopsided small fruits",
+        "management": "Control psyllid vector, remove infected trees, use disease-free planting material"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Citrus Psylla",
+        "damage": "Transmits greening disease, damages new shoots",
+        "control": "Spray Imidacloprid on new flush, prune affected shoots"
+      },
+      {
+        "name": "Fruit Sucking Moth",
+        "damage": "Punctures fruit causing rotting and premature drop",
+        "control": "Light traps, field sanitation, bagging of fruits"
+      },
+      {
+        "name": "Citrus Leaf Miner",
+        "damage": "Mines into young leaves causing distorted growth",
+        "control": "Spray neem oil on new flush growth"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Dig pits of 75x75x75 cm at spacing of 6x6 m; fill with topsoil, FYM and sand mixture, allowing settling before planting."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select healthy grafted or budded saplings from certified nursery, free from greening disease and canker symptoms."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant saplings during monsoon onset, ensuring bud union remains above soil level; provide stakes for initial support."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide regular irrigation during establishment and critical flowering/fruiting stages; avoid waterlogging in basins."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply organic manure and balanced NPK annually before flowering; supplement with micronutrients like zinc for healthy foliage."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Maintain weed-free basins through mulching; avoid mechanical damage to trunk and root zone during cultivation."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for psylla and canker regularly, especially on new flush growth; adopt integrated management with timely pruning and spraying."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest fruits when they attain full color and characteristic taste, typically November to January, by clipping with stalk intact."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Handle harvested fruits gently to avoid skin damage, grade by size, and store in cool, ventilated conditions for market dispatch."
+      }
+    ],
+    "advantages": [
+      "Strong regional fresh fruit demand",
+      "Good juice processing potential",
+      "Moderate gestation period",
+      "Multiple harvests over tree lifespan"
+    ],
+    "challenges": [
+      "Highly susceptible to citrus greening disease",
+      "Vulnerable to canker in humid regions",
+      "Sensitive to waterlogging",
+      "Requires consistent disease management"
+    ],
+    "suitableStates": [
+      "Maharashtra",
+      "Madhya Pradesh",
+      "Punjab",
+      "Rajasthan",
+      "Assam",
+      "Andhra Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Vegetables (in initial years)",
+      "Pulses",
+      "Marigold"
+    ],
+    "storageGuidelines": "Store harvested fruits at 4-7°C with 85-90% humidity for extended shelf life; avoid storage near ethylene-producing fruits to prevent quality deterioration.",
+    "image": "/crops/orange.png"
+  },
+  {
+    "name": "Ragi",
+    "scientificName": "Eleusine coracana",
+    "category": "Cereal Crop (Millet)",
+    "overview": "Ragi, or finger millet, is a hardy nutri-cereal crop traditionally grown in hilly and semi-arid regions of India, valued for its high calcium content, drought tolerance, and importance in millet-based nutrition programs.",
+    "season": "Kharif",
+    "cropDuration": "100-120 days",
+    "bestSowingMonths": [
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "October",
+      "November"
+    ],
+    "soil": {
+      "type": "Red loamy to lateritic soil",
+      "phRange": "5.0-7.5",
+      "drainage": "Tolerant of marginal soils with moderate drainage"
+    },
+    "climate": {
+      "temperature": "20-30°C optimum",
+      "rainfall": "500-1000 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "400-600 mm; relatively low water requirement, suited to rainfed conditions",
+    "yield": {
+      "perHectare": "2-3 tonnes",
+      "profitability": "Moderate profitability, rising with millet nutrition initiatives"
+    },
+    "marketDemand": "Growing demand due to health consciousness and government millet promotion programs",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and tillering",
+        "applicationStage": "Split doses at sowing and 30 days after sowing"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves grain filling and disease resistance",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil fertility in marginal lands",
+        "applicationStage": "Applied during land preparation"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Blast Disease",
+        "symptoms": "Spindle-shaped lesions on leaves and neck region",
+        "management": "Spray Tricyclazole, avoid excess nitrogen, use resistant varieties"
+      },
+      {
+        "name": "Smut",
+        "symptoms": "Grain converted into black powdery mass",
+        "management": "Seed treatment with Carbendazim, field sanitation"
+      },
+      {
+        "name": "Mottled Leaf Disease",
+        "symptoms": "Mottling and streaking on leaves",
+        "management": "Use disease-free seed, remove infected plants"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Stem Borer",
+        "damage": "Bores into stem causing deadheart",
+        "control": "Apply Carbofuran granules, timely sowing"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap from earhead causing chaffy grains",
+        "control": "Spray Malathion or neem-based insecticide"
+      },
+      {
+        "name": "Earhead Bug",
+        "damage": "Sucks grain sap reducing grain quality",
+        "control": "Spray recommended insecticide at ear emergence"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field with onset of pre-monsoon rains; prepare fine seedbed suitable for fine-seeded ragi through repeated harrowing."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select improved or local high-yielding variety seeds with good germination; treat seeds with fungicide before sowing."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds either by broadcasting or transplanting nursery-raised seedlings at spacing of 22.5x10 cm for better yield."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely rainfed; provide supplemental irrigation during prolonged dry spells, especially at flowering and grain filling stages."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply basal fertilizers at sowing/transplanting, top-dress nitrogen at active tillering stage approximately 30 days later."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct first weeding at 20-25 days after sowing/transplanting; ensure field remains weed-free during critical growth period."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for blast disease and stem borer; remove and destroy infected plants, use recommended pesticides as needed."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when earheads turn brown and grains harden, typically 100-120 days after sowing, by cutting earheads or whole plants."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested earheads in sun, thresh to separate grain, clean and store at safe moisture levels in airtight containers."
+      }
+    ],
+    "advantages": [
+      "High calcium and nutritional content",
+      "Excellent drought tolerance",
+      "Suitable for marginal and hilly lands",
+      "Growing market due to health trends"
+    ],
+    "challenges": [
+      "Labor-intensive harvesting",
+      "Lower yield potential than major cereals",
+      "Limited processing infrastructure",
+      "Susceptible to blast in humid conditions"
+    ],
+    "suitableStates": [
+      "Karnataka",
+      "Tamil Nadu",
+      "Uttarakhand",
+      "Odisha",
+      "Maharashtra",
+      "Andhra Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Pigeonpea",
+      "Groundnut",
+      "Niger"
+    ],
+    "storageGuidelines": "Dry grains to 12% moisture before storage; store in airtight containers as ragi has good inherent storage life with minimal pest infestation.",
+    "image": "/crops/ragi.png"
+  },
+  {
+    "name": "Soybean",
+    "scientificName": "Glycine max",
+    "category": "Oilseed Crop",
+    "overview": "Soybean is a major oilseed and protein-rich legume crop grown extensively in central India, serving as a key raw material for edible oil and soymeal production for the animal feed industry.",
+    "season": "Kharif",
+    "cropDuration": "90-110 days",
+    "bestSowingMonths": [
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October"
+    ],
+    "soil": {
+      "type": "Well-drained black soil to loamy soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Moderate drainage, sensitive to waterlogging"
+    },
+    "climate": {
+      "temperature": "20-30°C optimum",
+      "rainfall": "600-1000 mm",
+      "humidity": "Moderate to high humidity"
+    },
+    "waterRequirement": "450-700 mm; sensitive to both drought and waterlogging at flowering",
+    "yield": {
+      "perHectare": "2-2.8 tonnes",
+      "profitability": "Good profitability supported by oil and feed industry demand"
+    },
+    "marketDemand": "Strong demand from edible oil extraction industry and soymeal for poultry/cattle feed",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Starter dose before nodulation begins",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Pod development and seed quality",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Yellow Mosaic Virus",
+        "symptoms": "Yellow mosaic patches on leaves, stunted growth",
+        "management": "Control whitefly vector, use resistant varieties, remove infected plants"
+      },
+      {
+        "name": "Rust",
+        "symptoms": "Reddish-brown pustules on leaf undersurface",
+        "management": "Spray Hexaconazole, timely sowing, resistant varieties"
+      },
+      {
+        "name": "Charcoal Rot",
+        "symptoms": "Greying and shredding of stem tissue at base",
+        "management": "Avoid moisture stress, balanced fertilization, crop rotation"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Stem Fly",
+        "damage": "Larvae bore into stem causing wilting of plants",
+        "control": "Seed treatment with Thiamethoxam, timely sowing"
+      },
+      {
+        "name": "Girdle Beetle",
+        "damage": "Girdles stem and petiole causing plant lodging",
+        "control": "Spray Chlorpyrifos, remove and destroy affected plants"
+      },
+      {
+        "name": "Whitefly",
+        "damage": "Transmits yellow mosaic virus",
+        "control": "Spray Imidacloprid, use yellow sticky traps"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field with pre-monsoon showers; harrow to prepare fine, weed-free seedbed with good moisture conservation."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding variety seeds with good germination percentage; treat seeds with Rhizobium and fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 3-4 cm depth with row spacing of 30-45 cm and plant spacing of 5-10 cm using seed drill for uniform stand."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely rainfed; ensure good drainage to avoid waterlogging, provide supplemental irrigation during dry spells at flowering."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and starter nitrogen as basal dose; rely on nodulation for subsequent nitrogen needs through Rhizobium inoculation."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct first weeding at 20-25 days after sowing; pre-emergence herbicide like Pendimethalin can be used for early weed control."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for stem fly, girdle beetle and yellow mosaic virus; adopt integrated pest management with timely insecticide application."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when pods turn brown and leaves begin to shed, typically 90-110 days after sowing, using sickles or combine harvesters."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants, thresh to separate seeds, clean and dry to 10-12% moisture before storage in moisture-proof bags."
+      }
+    ],
+    "advantages": [
+      "Nitrogen-fixing legume improves soil health",
+      "High protein and oil content",
+      "Mechanization-friendly crop",
+      "Strong industrial demand"
+    ],
+    "challenges": [
+      "Highly sensitive to waterlogging",
+      "Vulnerable to yellow mosaic virus",
+      "Price dependent on international oilseed markets",
+      "Limited irrigation infrastructure in growing regions"
+    ],
+    "suitableStates": [
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Rajasthan",
+      "Karnataka",
+      "Telangana"
+    ],
+    "intercroppingOptions": [
+      "Pigeonpea",
+      "Maize",
+      "Sorghum"
+    ],
+    "storageGuidelines": "Dry seeds to 10-12% moisture before storage; store in cool, dry conditions in moisture-proof bags to maintain oil quality and prevent rancidity.",
+    "image": "/crops/soybean.png"
+  },
+  {
+    "name": "Potato",
+    "scientificName": "Solanum tuberosum",
+    "category": "Vegetable Crop",
+    "overview": "Potato is one of the most important tuber crops in India, grown extensively in the Rabi season in the Indo-Gangetic plains, valued for its versatility as a staple food, processing raw material, and export commodity.",
+    "season": "Rabi (main), Kharif in hills",
+    "cropDuration": "90-120 days",
+    "bestSowingMonths": [
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "January",
+      "February",
+      "March"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam soil rich in organic matter",
+      "phRange": "5.5-6.5",
+      "drainage": "Good drainage essential for tuber development"
+    },
+    "climate": {
+      "temperature": "15-25°C optimum",
+      "rainfall": "Moderate; mostly irrigated",
+      "humidity": "Moderate humidity preferred"
+    },
+    "waterRequirement": "500-700 mm; light frequent irrigation through furrows or sprinklers",
+    "yield": {
+      "perHectare": "20-35 tonnes",
+      "profitability": "Good profitability with strong processing and export demand"
+    },
+    "marketDemand": "High and consistent demand for fresh consumption, processing (chips, fries), and seed potato trade",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil structure for tuber development",
+        "applicationStage": "Basal application during land preparation"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and tuber bulking",
+        "applicationStage": "Split doses at planting and 30 days after"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and tuber initiation",
+        "applicationStage": "Full basal dose at planting"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves tuber quality and starch content",
+        "applicationStage": "Basal application with phosphorus"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Late Blight",
+        "symptoms": "Water-soaked lesions on leaves turning brown with white mold underneath",
+        "management": "Spray Metalaxyl + Mancozeb, use resistant varieties, avoid overhead irrigation"
+      },
+      {
+        "name": "Early Blight",
+        "symptoms": "Concentric brown spots on older leaves",
+        "management": "Spray Mancozeb, balanced fertilization, crop rotation"
+      },
+      {
+        "name": "Common Scab",
+        "symptoms": "Rough corky lesions on tuber surface",
+        "management": "Maintain soil pH below 5.5, avoid liming, use disease-free seed tubers"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Potato Tuber Moth",
+        "damage": "Larvae bore into tubers causing tunneling and rotting",
+        "control": "Proper earthing up, store in cool dark conditions, use pheromone traps"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Transmits viral diseases and causes leaf curling",
+        "control": "Spray Imidacloprid, use virus-free seed tubers"
+      },
+      {
+        "name": "Cutworm",
+        "damage": "Cuts young plants at soil level",
+        "control": "Apply Chlorpyrifos dust around plant base"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field deeply followed by harrowing to create fine, loose tilth essential for tuber expansion; form ridges and furrows."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified disease-free seed tubers of recommended variety, treated with fungicide; use tubers of 30-40g weight for planting."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant seed tubers at 5-7 cm depth with spacing of 60x20 cm in furrows, ensuring sprouted eyes face upward."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Irrigate immediately after planting and maintain regular light irrigation; critical stages include tuber initiation and bulking."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply fertilizers in split doses with full phosphorus and potassium at planting; top-dress nitrogen at 30 days followed by earthing up."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct earthing up at 30 and 45 days after planting to cover developing tubers and suppress weeds simultaneously."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for late blight especially during humid winter conditions; spray preventive fungicides and control aphid vectors regularly."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when foliage yellows and dries naturally, typically 90-120 days after planting, using diggers to avoid tuber damage."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Cure harvested tubers in shade for a few days, grade by size, and store in cool, dark, well-ventilated cold storage facilities."
+      }
+    ],
+    "advantages": [
+      "High yield per unit area",
+      "Strong processing industry demand",
+      "Good storage potential with cold storage",
+      "Short crop duration"
+    ],
+    "challenges": [
+      "Highly susceptible to late blight",
+      "Dependent on quality seed tuber availability",
+      "Storage losses without cold chain",
+      "Price volatility due to overproduction years"
+    ],
+    "suitableStates": [
+      "Uttar Pradesh",
+      "West Bengal",
+      "Bihar",
+      "Gujarat",
+      "Punjab",
+      "Madhya Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Mustard",
+      "Marigold",
+      "Peas"
+    ],
+    "storageGuidelines": "Cure tubers before storage; store in cold storage at 2-4°C with 90-95% humidity for long-term storage, or in well-ventilated structures for short-term use.",
+    "image": "/crops/potato.png"
+  },
+  {
+    "name": "Mustard",
+    "scientificName": "Brassica juncea",
+    "category": "Oilseed Crop",
+    "overview": "Mustard is a major Rabi oilseed crop of India, primarily grown for its oil-rich seeds used in cooking oil and condiment production, with strong adaptability to cooler climates of northern India.",
+    "season": "Rabi",
+    "cropDuration": "110-140 days",
+    "bestSowingMonths": [
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "February",
+      "March"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to loamy soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage essential, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "10-25°C optimum",
+      "rainfall": "300-400 mm or irrigated equivalent",
+      "humidity": "Low humidity preferred"
+    },
+    "waterRequirement": "250-400 mm; critical irrigation at flowering and pod formation",
+    "yield": {
+      "perHectare": "1.2-2 tonnes",
+      "profitability": "Good profitability with steady edible oil demand"
+    },
+    "marketDemand": "Strong demand from edible oil industry and condiment manufacturing",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and seed development",
+        "applicationStage": "Split doses at sowing and first irrigation"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development and oil content",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Improves oil content and quality significantly",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves disease resistance and seed quality",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Alternaria Blight",
+        "symptoms": "Dark brown circular spots on leaves and pods",
+        "management": "Spray Mancozeb, use resistant varieties, timely sowing"
+      },
+      {
+        "name": "White Rust",
+        "symptoms": "White pustules on leaf undersurface, distorted inflorescence",
+        "management": "Spray Metalaxyl + Mancozeb, resistant varieties"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery coating on leaves and stems",
+        "management": "Spray Wettable sulphur, avoid dense planting"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Mustard Aphid",
+        "damage": "Sucks sap causing curling of leaves and yield loss",
+        "control": "Spray Imidacloprid or Dimethoate at early infestation"
+      },
+      {
+        "name": "Painted Bug",
+        "damage": "Sucks sap from seedlings causing wilting",
+        "control": "Spray Malathion, deep summer ploughing to destroy eggs"
+      },
+      {
+        "name": "Sawfly",
+        "damage": "Larvae feed on leaves causing defoliation",
+        "control": "Spray Quinalphos at early larval stage"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field after Kharif harvest, followed by harrowing to prepare fine seedbed with adequate residual moisture."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding variety seeds with good oil content; treat seeds with fungicide and insecticide before sowing."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 2-3 cm depth with row spacing of 30-45 cm using seed drill, ensuring optimal plant population through thinning."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide first irrigation at 25-30 days after sowing, with subsequent irrigation at flowering and pod formation stages."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and sulphur as basal dose for enhanced oil content; top-dress nitrogen at first irrigation for vegetative growth."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct thinning and first weeding at 20-25 days after sowing to maintain optimal plant spacing and reduce weed competition."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for aphid infestation regularly, especially during cool weather; adopt timely spraying to prevent population buildup."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when pods turn yellowish-brown and seeds rattle inside, typically 110-140 days after sowing, by cutting plants at base."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants in sun, thresh to separate seeds, clean and store at 8-9% moisture in moisture-proof containers."
+      }
+    ],
+    "advantages": [
+      "Good for rainfed and irrigated rabi systems",
+      "High oil content with industrial value",
+      "Short to medium duration crop",
+      "Tolerant of moderate cold"
+    ],
+    "challenges": [
+      "Susceptible to aphid infestation in cool weather",
+      "Sensitive to terminal heat stress",
+      "Price linked to edible oil import policy",
+      "Requires timely sowing for optimal yield"
+    ],
+    "suitableStates": [
+      "Rajasthan",
+      "Haryana",
+      "Madhya Pradesh",
+      "Uttar Pradesh",
+      "West Bengal",
+      "Gujarat"
+    ],
+    "intercroppingOptions": [
+      "Chickpea",
+      "Lentil",
+      "Wheat (border cropping)"
+    ],
+    "storageGuidelines": "Dry seeds to 8-9% moisture before storage; store in cool, dry conditions in airtight containers to preserve oil quality and prevent rancidity.",
+    "image": "/crops/mustard.png"
+  },
+  {
+    "name": "Sesame",
+    "scientificName": "Sesamum indicum",
+    "category": "Oilseed Crop",
+    "overview": "Sesame, known as til, is an ancient oilseed crop grown across India for its high-quality edible oil and use in confectionery and traditional foods, valued for drought tolerance and short duration.",
+    "season": "Kharif and Summer",
+    "cropDuration": "80-100 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "February"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October",
+      "May"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam soil",
+      "phRange": "5.5-7.5",
+      "drainage": "Good drainage essential, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "25-35°C optimum",
+      "rainfall": "500-650 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "350-500 mm; sensitive to waterlogging especially at germination",
+    "yield": {
+      "perHectare": "0.6-1 tonne",
+      "profitability": "Good profitability due to high oil value and export demand"
+    },
+    "marketDemand": "Strong export demand for sesame seeds and oil, particularly to Asian and Middle Eastern markets",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and capsule development",
+        "applicationStage": "Split doses at sowing and 30 days after sowing"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development and oil synthesis",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil fertility and moisture retention",
+        "applicationStage": "Applied during land preparation"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Enhances oil content and quality",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Phyllody Disease",
+        "symptoms": "Floral parts transformed into leafy structures",
+        "management": "Control leafhopper vector, remove infected plants, use resistant varieties"
+      },
+      {
+        "name": "Charcoal Rot",
+        "symptoms": "Greying and shredding of stem at base",
+        "management": "Avoid moisture stress, crop rotation, balanced fertilization"
+      },
+      {
+        "name": "Leaf Spot (Cercospora)",
+        "symptoms": "Small circular brown spots on leaves",
+        "management": "Spray Mancozeb, field sanitation"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Gall Fly",
+        "damage": "Forms galls on stem affecting plant growth",
+        "control": "Remove and destroy affected stems, spray recommended insecticide"
+      },
+      {
+        "name": "Leafhopper",
+        "damage": "Transmits phyllody disease and sucks sap",
+        "control": "Spray Imidacloprid, remove weed hosts"
+      },
+      {
+        "name": "Capsule Borer",
+        "damage": "Bores into capsules causing seed loss",
+        "control": "Spray Quinalphos at capsule formation stage"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field with onset of season; prepare fine, well-leveled seedbed since sesame seeds are small and require shallow sowing."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding variety seeds with good oil content; treat seeds with fungicide before sowing for disease prevention."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 1-2 cm shallow depth with row spacing of 30-45 cm, either by broadcasting or line sowing using seed drill."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Ensure good drainage as sesame is highly sensitive to waterlogging; provide light irrigation during dry spells if available."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply basal fertilizers at sowing with phosphorus and sulphur for oil content; top-dress nitrogen at 30 days after sowing."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct thinning and first weeding at 15-20 days after sowing; maintain weed-free field during initial growth period."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for leafhopper-transmitted phyllody disease and capsule borer; remove infected plants promptly to prevent spread."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when lower leaves turn yellow and capsules begin to crack, typically 80-100 days after sowing, by cutting plants at base."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Stack harvested plants for sun drying, thresh by beating to release seeds, clean and dry to 6-7% moisture before storage."
+      }
+    ],
+    "advantages": [
+      "High oil content with premium pricing",
+      "Drought tolerant short-duration crop",
+      "Strong export market",
+      "Low input requirement"
+    ],
+    "challenges": [
+      "Highly sensitive to waterlogging",
+      "Capsule shattering causes harvest losses",
+      "Susceptible to phyllody disease",
+      "Limited mechanization options"
+    ],
+    "suitableStates": [
+      "Rajasthan",
+      "West Bengal",
+      "Madhya Pradesh",
+      "Gujarat",
+      "Uttar Pradesh",
+      "Tamil Nadu"
+    ],
+    "intercroppingOptions": [
+      "Pigeonpea",
+      "Groundnut",
+      "Castor"
+    ],
+    "storageGuidelines": "Dry seeds to 6-7% moisture before storage; store in cool, dry conditions in airtight containers to preserve oil quality and prevent rancidity.",
+    "image": "/crops/sesame.png"
+  },
+  {
+    "name": "Jute",
+    "scientificName": "Corchorus olitorius / Corchorus capsularis",
+    "category": "Fiber Crop",
+    "overview": "Jute is the golden fiber crop of India, predominantly cultivated in the eastern Gangetic delta region, valued for its strong natural fiber used in sacking, packaging, and increasingly in eco-friendly textile products.",
+    "season": "Kharif (pre-monsoon)",
+    "cropDuration": "100-120 days",
+    "bestSowingMonths": [
+      "March",
+      "April",
+      "May"
+    ],
+    "bestHarvestMonths": [
+      "July",
+      "August",
+      "September"
+    ],
+    "soil": {
+      "type": "Alluvial loam to clay loam soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Moderate drainage, tolerates temporary waterlogging"
+    },
+    "climate": {
+      "temperature": "25-35°C optimum",
+      "rainfall": "1500-2500 mm",
+      "humidity": "High humidity favorable"
+    },
+    "waterRequirement": "1000-1500 mm during growth, retting requires standing water",
+    "yield": {
+      "perHectare": "2-2.5 tonnes of dry fiber",
+      "profitability": "Moderate profitability, supported by jute industry demand"
+    },
+    "marketDemand": "Steady demand from jute mills for sacking, carpet backing, and growing demand for eco-friendly packaging",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and fiber development",
+        "applicationStage": "Split doses at sowing and 30 days after sowing"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves fiber strength and quality",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil structure",
+        "applicationStage": "Applied during land preparation"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Stem Rot",
+        "symptoms": "Black lesions on stem leading to breakage",
+        "management": "Use resistant varieties, avoid waterlogging at early stage, seed treatment"
+      },
+      {
+        "name": "Anthracnose",
+        "symptoms": "Dark sunken lesions on stem and leaves",
+        "management": "Spray Carbendazim, crop rotation"
+      },
+      {
+        "name": "Leaf Mosaic",
+        "symptoms": "Mottled yellow-green pattern on leaves",
+        "management": "Control insect vectors, use disease-free seed"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Jute Semilooper",
+        "damage": "Defoliates plants reducing fiber yield",
+        "control": "Spray Quinalphos, remove and destroy affected leaves"
+      },
+      {
+        "name": "Stem Weevil",
+        "damage": "Bores into stem causing breakage and poor fiber quality",
+        "control": "Field sanitation, spray Chlorpyrifos at early infestation"
+      },
+      {
+        "name": "Hairy Caterpillar",
+        "damage": "Feeds on leaves causing defoliation",
+        "control": "Hand picking of egg masses, spray recommended insecticide"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field thoroughly with pre-monsoon rains; prepare fine, well-leveled seedbed for uniform germination of small seeds."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-fiber-yielding variety seeds; treat seeds with fungicide before sowing for disease-free establishment."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds by broadcasting or line sowing at shallow depth with row spacing of 25-30 cm, ensuring dense uniform plant stand."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide irrigation if pre-monsoon rains are insufficient; standing water required during retting process after harvest."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply basal fertilizers at sowing followed by top-dressing of nitrogen at 30 days after sowing for vigorous fiber development."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct thinning at 15-20 days after sowing to maintain optimal plant density; weeding done manually in early growth stage."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for semilooper and stem weevil infestation; adopt timely spraying and field sanitation to minimize fiber quality loss."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest at flowering stage when fiber quality is optimal, typically 100-120 days after sowing, by cutting plants close to ground."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Retting of harvested stalks in clean water for 10-15 days, followed by fiber extraction, washing, and sun drying before baling."
+      }
+    ],
+    "advantages": [
+      "Eco-friendly biodegradable fiber",
+      "Strong industrial demand for sacking and packaging",
+      "Suitable for flood-prone delta regions",
+      "By-product use as fuel and fodder"
+    ],
+    "challenges": [
+      "Labor-intensive retting and fiber extraction process",
+      "Quality dependent on retting water cleanliness",
+      "Limited price realization compared to synthetic fibers",
+      "Susceptible to stem rot in poor drainage"
+    ],
+    "suitableStates": [
+      "West Bengal",
+      "Bihar",
+      "Assam",
+      "Odisha",
+      "Meghalaya"
+    ],
+    "intercroppingOptions": [
+      "Not commonly intercropped; rotated with rice or vegetables"
+    ],
+    "storageGuidelines": "Dry extracted fiber thoroughly before baling; store in well-ventilated, dry godowns away from moisture to prevent fungal degradation of fiber quality.",
+    "image": "/crops/jute.png"
+  },
+  {
+    "name": "Wheat",
+    "scientificName": "Triticum aestivum",
+    "category": "Cereal Crop",
+    "overview": "Wheat is the second most important staple food crop of India after rice, predominantly grown in the Rabi season across the Indo-Gangetic plains, forming a critical component of national food security.",
+    "season": "Rabi",
+    "cropDuration": "120-150 days",
+    "bestSowingMonths": [
+      "November",
+      "December"
+    ],
+    "bestHarvestMonths": [
+      "March",
+      "April"
+    ],
+    "soil": {
+      "type": "Well-drained loamy to clay loam soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage with adequate moisture retention"
+    },
+    "climate": {
+      "temperature": "10-25°C optimum, cool during growth, warm at maturity",
+      "rainfall": "300-700 mm or irrigated equivalent",
+      "humidity": "Low to moderate humidity"
+    },
+    "waterRequirement": "450-650 mm; 4-6 irrigations at critical growth stages",
+    "yield": {
+      "perHectare": "3.5-5.5 tonnes (irrigated)",
+      "profitability": "Good profitability supported by government MSP procurement"
+    },
+    "marketDemand": "Assured demand through government procurement and strong domestic flour milling industry",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and tillering",
+        "applicationStage": "Split doses at sowing, first irrigation (CRI stage), and later tillering"
+      },
+      {
+        "name": "Phosphorus (DAP)",
+        "purpose": "Root development and tillering",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Grain filling and disease resistance",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Zinc Sulphate",
+        "purpose": "Corrects zinc deficiency common in wheat belts",
+        "applicationStage": "Basal or foliar application"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Rust (Yellow, Brown, Black)",
+        "symptoms": "Orange to brown pustules on leaves and stems",
+        "management": "Spray Propiconazole, use resistant varieties, timely sowing"
+      },
+      {
+        "name": "Karnal Bunt",
+        "symptoms": "Partial bunting of grains with fishy odor",
+        "management": "Use disease-free seed, seed treatment with fungicide, resistant varieties"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery growth on leaves and stems",
+        "management": "Spray Wettable sulphur, avoid excess nitrogen"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap from leaves and earheads causing reduced grain weight",
+        "control": "Spray Imidacloprid, conserve natural predators like ladybird beetles"
+      },
+      {
+        "name": "Termites",
+        "damage": "Damages roots and stem base causing wilting",
+        "control": "Soil treatment with Chlorpyrifos before sowing"
+      },
+      {
+        "name": "Armyworm",
+        "damage": "Feeds on leaves and earheads in large numbers",
+        "control": "Spray Quinalphos at early larval stage"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field 2-3 times after Kharif harvest, followed by planking to conserve moisture and create fine, firm seedbed."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding variety seeds suited to sowing time and irrigation availability; treat seeds with fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 5-6 cm depth with row spacing of 18-22 cm using seed-cum-fertilizer drill for uniform placement and early vigor."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide first irrigation at crown root initiation stage (20-25 days), followed by irrigations at tillering, flowering, and grain filling."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and potassium as full basal dose; top-dress nitrogen in split doses at CRI and later tillering stages."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct weeding or apply post-emergence herbicide like 2,4-D at 30-35 days after sowing to control broadleaf weeds."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for rust diseases and aphid infestation, especially during humid weather; spray fungicides and insecticides as needed."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when crop turns golden yellow and grains harden, typically 120-150 days after sowing, using sickles or combine harvesters."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Thresh promptly, clean grains, dry to 12% moisture, and store in moisture-proof bags or silos to prevent insect infestation."
+      }
+    ],
+    "advantages": [
+      "Assured MSP-based procurement",
+      "Well-established market and storage infrastructure",
+      "High calorie staple with consistent demand",
+      "Mechanization-friendly crop"
+    ],
+    "challenges": [
+      "Sensitive to terminal heat stress",
+      "Water-intensive in semi-arid regions",
+      "Susceptible to rust epidemics",
+      "Stubble burning environmental concerns"
+    ],
+    "suitableStates": [
+      "Uttar Pradesh",
+      "Punjab",
+      "Haryana",
+      "Madhya Pradesh",
+      "Rajasthan",
+      "Bihar"
+    ],
+    "intercroppingOptions": [
+      "Mustard (border cropping)",
+      "Chickpea",
+      "Sugarcane (companion in some regions)"
+    ],
+    "storageGuidelines": "Dry grains to 12% moisture before storage; store in cool, dry, well-ventilated godowns with regular fumigation to prevent weevil and rodent damage.",
+    "image": "/crops/wheat.png"
+  },
+  {
+    "name": "Chickpea",
+    "scientificName": "Cicer arietinum",
+    "category": "Pulse Crop",
+    "overview": "Chickpea, known as chana, is the most important Rabi pulse crop of India, valued for its high protein content and versatility in culinary use, while also enriching soil fertility through nitrogen fixation.",
+    "season": "Rabi",
+    "cropDuration": "90-120 days",
+    "bestSowingMonths": [
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "February",
+      "March"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to clay loam soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage essential, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "15-25°C optimum, cool growth and warm maturity",
+      "rainfall": "400-600 mm or residual moisture",
+      "humidity": "Low humidity preferred"
+    },
+    "waterRequirement": "250-400 mm; often grown on residual soil moisture with 1-2 irrigations",
+    "yield": {
+      "perHectare": "1.2-2 tonnes",
+      "profitability": "Good profitability supported by MSP and strong domestic demand"
+    },
+    "marketDemand": "High and stable demand as a key protein source in Indian diet, supported by government procurement",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Starter dose before nodulation",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Improves seed quality and yield",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Fusarium Wilt",
+        "symptoms": "Yellowing and wilting of plants, vascular browning",
+        "management": "Use resistant varieties, crop rotation, seed treatment with Trichoderma"
+      },
+      {
+        "name": "Ascochyta Blight",
+        "symptoms": "Dark concentric lesions on leaves, stem and pods",
+        "management": "Spray Mancozeb, use disease-free seed, resistant varieties"
+      },
+      {
+        "name": "Botrytis Grey Mold",
+        "symptoms": "Grey fungal growth on flowers and pods in humid conditions",
+        "management": "Spray Carbendazim, avoid dense planting"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Pod Borer (Helicoverpa)",
+        "damage": "Bores into developing pods causing seed loss",
+        "control": "Use pheromone traps, spray Spinosad or NPV at early larval stage"
+      },
+      {
+        "name": "Cutworm",
+        "damage": "Cuts seedlings at soil level during night",
+        "control": "Apply Chlorpyrifos dust around plant base"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap causing stunted growth",
+        "control": "Spray Imidacloprid at early infestation"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field after Kharif harvest, harrow to prepare fine seedbed that conserves residual moisture for rainfed cultivation."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified disease-resistant variety seeds, particularly wilt-resistant types; treat seeds with Rhizobium and fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 8-10 cm depth with row spacing of 30 cm using seed drill, ensuring good seed-to-soil contact for germination."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely grown on residual moisture; provide one or two light irrigations at branching and pod development stages if available."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and starter nitrogen as basal dose; rely on Rhizobium-mediated nitrogen fixation for crop nitrogen needs."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct one or two weedings at 25-30 and 45 days after sowing; pre-emergence herbicide like Pendimethalin can be used."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for pod borer infestation closely as it causes major yield loss; install pheromone traps and spray at threshold levels."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when plants turn yellowish-brown and pods rattle with dry seeds, typically 90-120 days after sowing, by uprooting or cutting."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants in field, thresh to separate seeds, clean and store at 10-12% moisture in pest-proof containers."
+      }
+    ],
+    "advantages": [
+      "Nitrogen-fixing legume improves soil fertility",
+      "High protein content valuable in vegetarian diets",
+      "Suitable for rainfed residual moisture cultivation",
+      "Strong domestic market with MSP support"
+    ],
+    "challenges": [
+      "Highly susceptible to pod borer damage",
+      "Vulnerable to wilt in continuous cropping",
+      "Sensitive to waterlogging and frost",
+      "Yield variability with erratic winter rains"
+    ],
+    "suitableStates": [
+      "Madhya Pradesh",
+      "Rajasthan",
+      "Maharashtra",
+      "Uttar Pradesh",
+      "Karnataka",
+      "Andhra Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Mustard",
+      "Linseed",
+      "Wheat (border)"
+    ],
+    "storageGuidelines": "Dry seeds to 10-12% moisture before storage; store in cool, dry conditions in pest-proof bags or bins to prevent bruchid beetle infestation.",
+    "image": "/crops/chickpea.png"
+  },
+  {
+    "name": "Lentil",
+    "scientificName": "Lens culinaris",
+    "category": "Pulse Crop",
+    "overview": "Lentil, known as masoor, is an important Rabi pulse crop grown widely in the Indo-Gangetic plains, valued for its high protein content, short duration, and ability to improve soil fertility through nitrogen fixation.",
+    "season": "Rabi",
+    "cropDuration": "100-120 days",
+    "bestSowingMonths": [
+      "October",
+      "November"
+    ],
+    "bestHarvestMonths": [
+      "February",
+      "March"
+    ],
+    "soil": {
+      "type": "Well-drained loamy soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage essential, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "18-25°C optimum, cool growth season",
+      "rainfall": "300-500 mm or residual moisture",
+      "humidity": "Low humidity preferred"
+    },
+    "waterRequirement": "200-350 mm; often grown on residual moisture with minimal irrigation",
+    "yield": {
+      "perHectare": "1-1.5 tonnes",
+      "profitability": "Moderate to good profitability with steady domestic demand"
+    },
+    "marketDemand": "Consistent demand as a key pulse in Indian diet, with growing import substitution focus",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Starter dose before nodulation",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Improves seed quality and oil content",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Rust",
+        "symptoms": "Reddish-brown pustules on leaves and stems",
+        "management": "Spray Mancozeb, use resistant varieties"
+      },
+      {
+        "name": "Wilt",
+        "symptoms": "Yellowing and drooping of plants, root rot",
+        "management": "Crop rotation, seed treatment with Trichoderma, resistant varieties"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery coating on leaves",
+        "management": "Spray Wettable sulphur, avoid dense planting"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap causing stunted growth and reduced pod set",
+        "control": "Spray Imidacloprid at early infestation"
+      },
+      {
+        "name": "Pod Borer",
+        "damage": "Bores into pods causing seed damage",
+        "control": "Spray Spinosad, use pheromone traps"
+      },
+      {
+        "name": "Cutworm",
+        "damage": "Cuts seedlings at soil level",
+        "control": "Soil application of Chlorpyrifos before sowing"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field after Kharif harvest, harrow to prepare fine seedbed that retains residual soil moisture for rainfed growth."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified disease-resistant variety seeds with good germination percentage; treat seeds with Rhizobium and fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 5-6 cm depth with row spacing of 25-30 cm using seed drill, ensuring uniform plant stand for optimal yield."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely grown on residual moisture; provide one light irrigation at flowering/pod formation stage if water is available."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and starter nitrogen as basal dose; nodulation through Rhizobium provides subsequent nitrogen requirement."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct one weeding at 30-35 days after sowing; pre-emergence herbicide application can reduce manual weeding labor."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for aphid and pod borer infestation during flowering and pod development; spray recommended insecticides as needed."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when pods turn brown and plants dry, typically 100-120 days after sowing, by uprooting plants or cutting at base."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants in field, thresh to separate seeds, clean and store at 10-12% moisture in pest-proof containers."
+      }
+    ],
+    "advantages": [
+      "Short duration suited to rabi cropping window",
+      "Nitrogen-fixing improves soil fertility",
+      "High protein content",
+      "Low water requirement"
+    ],
+    "challenges": [
+      "Susceptible to rust in humid conditions",
+      "Sensitive to waterlogging and frost",
+      "Lower yield potential than chickpea",
+      "Vulnerable to pod borer damage"
+    ],
+    "suitableStates": [
+      "Madhya Pradesh",
+      "Uttar Pradesh",
+      "West Bengal",
+      "Bihar",
+      "Rajasthan"
+    ],
+    "intercroppingOptions": [
+      "Mustard",
+      "Linseed",
+      "Barley"
+    ],
+    "storageGuidelines": "Dry seeds to 10-12% moisture before storage; store in cool, dry conditions in pest-proof containers to prevent bruchid beetle infestation.",
+    "image": "/crops/lentil.png"
+  },
+  {
+    "name": "Urad",
+    "scientificName": "Vigna mungo",
+    "category": "Pulse Crop",
+    "overview": "Urad, or black gram, is a short-duration pulse crop grown across Kharif and Rabi seasons in India, valued for its high protein content and traditional use in dal, idli, and dosa preparations.",
+    "season": "Kharif and Rabi/Summer",
+    "cropDuration": "70-90 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "February"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October",
+      "May"
+    ],
+    "soil": {
+      "type": "Well-drained loamy soil",
+      "phRange": "6.5-7.5",
+      "drainage": "Good drainage essential, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "25-35°C optimum",
+      "rainfall": "600-750 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "300-400 mm; sensitive to both drought and excess moisture",
+    "yield": {
+      "perHectare": "0.8-1.2 tonnes",
+      "profitability": "Good profitability supported by strong domestic pulse demand"
+    },
+    "marketDemand": "High and steady demand as a key ingredient in South Indian cuisine and dal preparations",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Starter dose before nodulation begins",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Improves seed quality and yield",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Yellow Mosaic Virus",
+        "symptoms": "Yellow mosaic patches on leaves, stunted growth",
+        "management": "Control whitefly vector, use resistant varieties, remove infected plants"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery coating on leaves",
+        "management": "Spray Wettable sulphur, avoid dense planting"
+      },
+      {
+        "name": "Cercospora Leaf Spot",
+        "symptoms": "Circular brown spots with yellow halo on leaves",
+        "management": "Spray Mancozeb, field sanitation"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Whitefly",
+        "damage": "Transmits yellow mosaic virus and sucks sap",
+        "control": "Spray Imidacloprid, use yellow sticky traps"
+      },
+      {
+        "name": "Pod Borer",
+        "damage": "Bores into pods causing seed loss",
+        "control": "Spray Spinosad, use pheromone traps"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap causing stunted growth",
+        "control": "Spray neem oil or Dimethoate"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field lightly with onset of monsoon; harrow to prepare fine, weed-free seedbed for quick germination."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding variety seeds resistant to yellow mosaic virus; treat seeds with Rhizobium and fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 3-4 cm depth with row spacing of 30 cm using seed drill or broadcasting followed by light covering."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely rainfed; ensure good drainage to avoid waterlogging, provide light irrigation during dry spells if available."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and starter nitrogen as basal dose; rely on Rhizobium nodulation for subsequent nitrogen needs."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct one weeding at 20-25 days after sowing; maintain weed-free field during critical early growth period."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for whitefly-transmitted yellow mosaic virus closely; remove infected plants and spray insecticides at early infestation."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when pods turn black and dry, typically 70-90 days after sowing, by uprooting plants or cutting at base."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants in field, thresh to separate seeds, clean and store at 10-12% moisture in pest-proof containers."
+      }
+    ],
+    "advantages": [
+      "Short duration fits multiple cropping systems",
+      "Nitrogen-fixing improves soil fertility",
+      "High protein content",
+      "Suitable for intercropping with cereals"
+    ],
+    "challenges": [
+      "Highly susceptible to yellow mosaic virus",
+      "Sensitive to waterlogging",
+      "Pod shattering at maturity causes losses",
+      "Yield variability with moisture stress"
+    ],
+    "suitableStates": [
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Tamil Nadu",
+      "Andhra Pradesh",
+      "Uttar Pradesh",
+      "Rajasthan"
+    ],
+    "intercroppingOptions": [
+      "Maize",
+      "Sorghum",
+      "Cotton",
+      "Sugarcane"
+    ],
+    "storageGuidelines": "Dry seeds to 10-12% moisture before storage; store in cool, dry conditions in pest-proof containers to prevent bruchid beetle infestation.",
+    "image": "/crops/urad.png"
+  },
+  {
+    "name": "Sunflower",
+    "scientificName": "Helianthus annuus",
+    "category": "Oilseed Crop",
+    "overview": "Sunflower is an important oilseed crop grown across multiple seasons in India, valued for its high-quality edible oil and adaptability to diverse agro-climatic conditions including dryland farming.",
+    "season": "Kharif, Rabi, and Summer",
+    "cropDuration": "90-110 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "January"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "October",
+      "April"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to black soil",
+      "phRange": "6.0-7.5",
+      "drainage": "Good drainage essential"
+    },
+    "climate": {
+      "temperature": "20-30°C optimum",
+      "rainfall": "500-750 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "400-600 mm; critical irrigation at flowering and seed filling stages",
+    "yield": {
+      "perHectare": "1.2-2 tonnes",
+      "profitability": "Good profitability driven by edible oil demand"
+    },
+    "marketDemand": "Strong demand from edible oil industry, supplementing domestic oilseed production",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and head development",
+        "applicationStage": "Split doses at sowing and 30 days after sowing"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development and oil synthesis",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Seed filling and oil quality",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Boron",
+        "purpose": "Improves seed setting and prevents hollow heads",
+        "applicationStage": "Foliar spray at flower bud stage"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Alternaria Leaf Blight",
+        "symptoms": "Dark brown circular spots on leaves coalescing into blight",
+        "management": "Spray Mancozeb, crop rotation, resistant varieties"
+      },
+      {
+        "name": "Head Rot",
+        "symptoms": "Rotting of flower head in humid conditions",
+        "management": "Avoid excess moisture at flowering, spray Carbendazim"
+      },
+      {
+        "name": "Downy Mildew",
+        "symptoms": "Chlorotic patches on leaves with downy growth underneath",
+        "management": "Seed treatment with Metalaxyl, resistant varieties"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Head Borer",
+        "damage": "Bores into developing head causing seed damage",
+        "control": "Spray Spinosad at flowering stage, use pheromone traps"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap causing stunted growth",
+        "control": "Spray Imidacloprid at early infestation"
+      },
+      {
+        "name": "Capitulum Borer",
+        "damage": "Feeds on developing seeds within head",
+        "control": "Spray recommended insecticide at bud stage"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field deeply followed by harrowing to prepare fine, weed-free seedbed suitable for direct sowing."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified hybrid variety seeds with high oil content; treat seeds with fungicide before sowing for disease prevention."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 4-5 cm depth with row spacing of 45-60 cm and plant spacing of 20-25 cm using seed drill or dibbling."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide irrigation at critical stages including bud formation, flowering, and seed filling; avoid water stress during these phases."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and potassium as basal dose; top-dress nitrogen at 30 days after sowing along with foliar boron at flowering."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct first weeding at 20-25 days after sowing; maintain weed-free field particularly during early vegetative stage."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for head borer and Alternaria blight regularly; adopt timely spraying especially during flowering and head formation."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when back of head turns yellow-brown and seeds harden, typically 90-110 days after sowing, by cutting heads or whole plants."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested heads in sun, thresh to separate seeds, clean and dry to 8-9% moisture before storage in moisture-proof bags."
+      }
+    ],
+    "advantages": [
+      "High-quality edible oil",
+      "Adaptable to multiple seasons",
+      "Suitable for dryland and irrigated cultivation",
+      "Bee-attracting crop benefiting pollination"
+    ],
+    "challenges": [
+      "Susceptible to bird damage at maturity",
+      "Vulnerable to head rot in humid conditions",
+      "Requires manual pollination support in some cases",
+      "Price dependent on edible oil import policy"
+    ],
+    "suitableStates": [
+      "Karnataka",
+      "Maharashtra",
+      "Andhra Pradesh",
+      "Punjab",
+      "Haryana",
+      "Bihar"
+    ],
+    "intercroppingOptions": [
+      "Groundnut",
+      "Soybean",
+      "Pigeonpea"
+    ],
+    "storageGuidelines": "Dry seeds to 8-9% moisture before storage; store in cool, dry conditions in moisture-proof containers to prevent rancidity and pest infestation.",
+    "image": "/crops/sunflower.png"
+  },
+  {
+    "name": "Barley",
+    "scientificName": "Hordeum vulgare",
+    "category": "Cereal Crop",
+    "overview": "Barley is a hardy Rabi cereal crop grown in semi-arid and saline-affected regions of India, valued for malting, animal feed, and traditional food use, with notable tolerance to soil salinity and drought.",
+    "season": "Rabi",
+    "cropDuration": "110-130 days",
+    "bestSowingMonths": [
+      "November",
+      "December"
+    ],
+    "bestHarvestMonths": [
+      "March",
+      "April"
+    ],
+    "soil": {
+      "type": "Sandy loam to saline-alkaline soil",
+      "phRange": "6.5-8.5",
+      "drainage": "Tolerant of moderate salinity and marginal drainage"
+    },
+    "climate": {
+      "temperature": "12-25°C optimum",
+      "rainfall": "300-450 mm or irrigated equivalent",
+      "humidity": "Low humidity preferred"
+    },
+    "waterRequirement": "300-450 mm; lower water requirement than wheat, 2-3 irrigations sufficient",
+    "yield": {
+      "perHectare": "2.5-3.5 tonnes",
+      "profitability": "Moderate profitability with growing malting industry demand"
+    },
+    "marketDemand": "Steady demand from malting and brewing industry alongside traditional food and feed use",
+    "fertilizers": [
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and tillering",
+        "applicationStage": "Split doses at sowing and first irrigation"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Grain quality and disease resistance",
+        "applicationStage": "Basal application at sowing"
+      },
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil structure in marginal lands",
+        "applicationStage": "Applied during land preparation"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Yellow Rust",
+        "symptoms": "Yellow striped pustules on leaves",
+        "management": "Spray Propiconazole, use resistant varieties"
+      },
+      {
+        "name": "Loose Smut",
+        "symptoms": "Grains replaced by black powdery mass at earhead",
+        "management": "Seed treatment with Carboxin, use disease-free seed"
+      },
+      {
+        "name": "Covered Smut",
+        "symptoms": "Grains converted to smut sori covered by membrane",
+        "management": "Seed treatment with systemic fungicide"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap from leaves and earheads",
+        "control": "Spray Imidacloprid, conserve natural predators"
+      },
+      {
+        "name": "Termites",
+        "damage": "Damages roots and stem base",
+        "control": "Soil treatment with Chlorpyrifos before sowing"
+      },
+      {
+        "name": "Armyworm",
+        "damage": "Feeds on leaves and earheads",
+        "control": "Spray Quinalphos at early infestation"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field after Kharif harvest, followed by planking to conserve moisture; suitable even on marginal saline-affected lands."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified variety seeds suited to malting or feed purpose with good germination; treat seeds with fungicide before sowing."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 5-6 cm depth with row spacing of 20-22 cm using seed drill for uniform placement and early establishment."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Provide first irrigation at crown root initiation stage, with subsequent irrigation at tillering and grain filling if needed."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and potassium as basal dose; top-dress nitrogen in split doses at sowing and first irrigation stage."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct weeding at 30-35 days after sowing or apply post-emergence herbicide to control broadleaf and grassy weeds."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for rust and smut diseases regularly; use disease-free certified seed as the primary preventive measure."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when crop turns golden yellow and grains harden, typically 110-130 days after sowing, using sickles or combine harvesters."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Thresh promptly, clean grains, dry to 12% moisture, and store in moisture-proof bags for malting or feed industry supply."
+      }
+    ],
+    "advantages": [
+      "Tolerant of saline and marginal soils",
+      "Lower water requirement than wheat",
+      "Growing malting industry demand",
+      "Suitable for dryland rabi cropping"
+    ],
+    "challenges": [
+      "Lower market price than wheat",
+      "Limited large-scale processing infrastructure outside malting",
+      "Susceptible to rust in humid conditions",
+      "Narrower variety choice for farmers"
+    ],
+    "suitableStates": [
+      "Rajasthan",
+      "Uttar Pradesh",
+      "Haryana",
+      "Punjab",
+      "Madhya Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Mustard",
+      "Chickpea (border cropping)"
+    ],
+    "storageGuidelines": "Dry grains to 12% moisture before storage; store in cool, dry, well-ventilated conditions, particularly maintaining low moisture for malting quality preservation.",
+    "image": "/crops/barley.png"
+  },
+  {
+    "name": "Pigeonpea",
+    "scientificName": "Cajanus cajan",
+    "category": "Pulse Crop",
+    "overview": "Pigeonpea, known as arhar or tur, is a major long-duration pulse crop of India grown extensively in rainfed conditions, valued for its high protein content and deep root system that improves soil structure.",
+    "season": "Kharif",
+    "cropDuration": "150-180 days",
+    "bestSowingMonths": [
+      "June",
+      "July"
+    ],
+    "bestHarvestMonths": [
+      "December",
+      "January"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to black soil",
+      "phRange": "6.5-7.5",
+      "drainage": "Good drainage essential, deep-rooted crop tolerant of moisture stress"
+    },
+    "climate": {
+      "temperature": "20-30°C optimum",
+      "rainfall": "600-1000 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "500-700 mm; deep root system provides drought tolerance, minimal irrigation needed",
+    "yield": {
+      "perHectare": "1-1.8 tonnes",
+      "profitability": "Good profitability with strong domestic pulse demand"
+    },
+    "marketDemand": "High and stable demand as a key pulse (dal) crop with growing import substitution efforts",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Starter dose before nodulation",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Improves seed quality and yield",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Fusarium Wilt",
+        "symptoms": "Yellowing and wilting of plants, vascular discoloration",
+        "management": "Use resistant varieties, crop rotation, seed treatment with Trichoderma"
+      },
+      {
+        "name": "Sterility Mosaic Disease",
+        "symptoms": "Excessive vegetative growth with reduced flowering",
+        "management": "Control mite vector, use resistant varieties, remove infected plants"
+      },
+      {
+        "name": "Phytophthora Blight",
+        "symptoms": "Water-soaked lesions on stem and leaves leading to plant death",
+        "management": "Improve drainage, spray Metalaxyl, resistant varieties"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Pod Borer (Helicoverpa)",
+        "damage": "Bores into pods causing major seed loss",
+        "control": "Use pheromone traps, spray NPV or Spinosad at early larval stage"
+      },
+      {
+        "name": "Pod Fly",
+        "damage": "Larvae feed inside pods damaging developing seeds",
+        "control": "Spray Quinalphos at pod formation stage"
+      },
+      {
+        "name": "Blister Beetle",
+        "damage": "Feeds on flowers reducing pod set",
+        "control": "Hand collection and destruction, spray recommended insecticide"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field with pre-monsoon showers, harrow to prepare seedbed; deep root system benefits from loosened subsoil."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified disease-resistant variety seeds suited to duration requirements; treat seeds with Rhizobium and fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 4-5 cm depth with row spacing of 60-90 cm and plant spacing of 20-30 cm using seed drill or dibbling."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely rainfed due to deep root system providing drought tolerance; supplemental irrigation beneficial during pod development."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and starter nitrogen as basal dose; rely on Rhizobium nodulation for subsequent nitrogen requirements."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct weeding at 20-25 and 45 days after sowing; earthing up beneficial for lodging resistance in tall varieties."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor closely for pod borer infestation which causes major yield loss; install pheromone traps and spray at threshold levels."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when pods turn brown and dry, typically 150-180 days after sowing, by cutting plants at base or picking pods in stages."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested plants/pods in sun, thresh to separate seeds, clean and store at 10-12% moisture in pest-proof containers."
+      }
+    ],
+    "advantages": [
+      "Deep roots improve soil structure",
+      "Drought tolerant with low water needs",
+      "Nitrogen-fixing improves soil fertility",
+      "High protein staple pulse"
+    ],
+    "challenges": [
+      "Long crop duration ties up land",
+      "Highly susceptible to pod borer damage",
+      "Vulnerable to wilt in continuous cropping",
+      "Vulnerable to sterility mosaic disease"
+    ],
+    "suitableStates": [
+      "Maharashtra",
+      "Karnataka",
+      "Madhya Pradesh",
+      "Uttar Pradesh",
+      "Gujarat",
+      "Andhra Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Soybean",
+      "Groundnut",
+      "Sorghum",
+      "Cotton"
+    ],
+    "storageGuidelines": "Dry seeds to 10-12% moisture before storage; store in cool, dry conditions in pest-proof bags to prevent bruchid beetle and weevil infestation.",
+    "image": "/crops/pigeonpea.png"
+  },
+  {
+    "name": "Grapes",
+    "scientificName": "Vitis vinifera",
+    "category": "Fruit Crop",
+    "overview": "Grapes are a high-value horticultural crop grown predominantly in Maharashtra and Karnataka, valued for fresh table consumption, raisin production, and a growing domestic wine industry, requiring intensive management and trellising.",
+    "season": "Pruning in October/April, harvest in winter/summer",
+    "cropDuration": "2-3 years to first commercial harvest, productive for 15-20 years",
+    "bestSowingMonths": [
+      "January",
+      "February"
+    ],
+    "bestHarvestMonths": [
+      "February",
+      "March",
+      "September"
+    ],
+    "soil": {
+      "type": "Well-drained deep loamy to sandy loam soil",
+      "phRange": "6.5-7.5",
+      "drainage": "Excellent drainage critical, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "15-35°C optimum",
+      "rainfall": "Low rainfall preferred, mostly irrigated",
+      "humidity": "Low humidity favorable for fruit quality"
+    },
+    "waterRequirement": "900-1100 mm annually; drip irrigation essential for water-use efficiency and quality",
+    "yield": {
+      "perHectare": "20-35 tonnes",
+      "profitability": "High profitability with strong domestic and export markets"
+    },
+    "marketDemand": "Strong domestic table grape demand and significant export market, particularly for seedless varieties",
+    "fertilizers": [
+      {
+        "name": "Farmyard Manure",
+        "purpose": "Improves soil organic matter and structure",
+        "applicationStage": "Annual application after pruning"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Vegetative growth and shoot development",
+        "applicationStage": "Split doses after pruning and before flowering"
+      },
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and flower development",
+        "applicationStage": "Annual basal application"
+      },
+      {
+        "name": "Potassium (MOP)",
+        "purpose": "Improves berry size, color and sugar content",
+        "applicationStage": "Applied during berry development stage"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Downy Mildew",
+        "symptoms": "Yellow patches on upper leaf surface with white downy growth underneath",
+        "management": "Spray Metalaxyl + Mancozeb, ensure canopy aeration"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery coating on leaves, shoots and berries",
+        "management": "Spray Wettable sulphur, avoid excess nitrogen"
+      },
+      {
+        "name": "Anthracnose",
+        "symptoms": "Dark sunken spots on shoots, leaves and berries",
+        "management": "Spray Carbendazim, prune affected parts"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Thrips",
+        "damage": "Causes scarring and silvering of berry surface",
+        "control": "Spray Fipronil, use blue sticky traps"
+      },
+      {
+        "name": "Mealybug",
+        "damage": "Sucks sap from shoots and bunches, promotes sooty mold",
+        "control": "Spray Chlorpyrifos, release natural predators"
+      },
+      {
+        "name": "Flea Beetle",
+        "damage": "Feeds on buds and young leaves after pruning",
+        "control": "Spray Quinalphos immediately after pruning"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Dig pits of 60x60x60 cm at spacing of 3x2 m; install trellis system (bower or telephone) before planting for vine support."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select disease-free rooted cuttings or grafted vines of high-yielding table or wine variety from certified nursery sources."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Plant rooted cuttings during favorable winter months, training young vines onto trellis wires as they establish and grow."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Install drip irrigation for precise water management; irrigation scheduling closely tied to pruning and fruiting cycles."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply organic manure and balanced NPK after each pruning cycle; foliar micronutrient sprays improve berry quality and color."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Maintain weed-free vine rows through mulching and shallow cultivation; canopy management critical for light penetration."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Conduct two prunings annually (foundation and fruit pruning); monitor closely for downy mildew and thrips throughout season."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest bunches at optimum sugar content (measured by Brix), typically 90-110 days after fruit pruning, using sharp secateurs."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Handle harvested bunches carefully to prevent berry shatter, pre-cool immediately, grade and pack for fresh market or export."
+      }
+    ],
+    "advantages": [
+      "High value crop with strong export potential",
+      "Multiple harvests possible with double pruning",
+      "Long productive vine life",
+      "Value addition through raisins and wine"
+    ],
+    "challenges": [
+      "High initial investment for trellising",
+      "Intensive management and labor requirement",
+      "Susceptible to downy and powdery mildew",
+      "Sensitive to unseasonal rainfall during harvest"
+    ],
+    "suitableStates": [
+      "Maharashtra",
+      "Karnataka",
+      "Andhra Pradesh",
+      "Tamil Nadu",
+      "Punjab"
+    ],
+    "intercroppingOptions": [
+      "Not commonly intercropped due to intensive trellising system"
+    ],
+    "storageGuidelines": "Pre-cool harvested grapes immediately to 0-2°C with 90-95% humidity; use sulphur dioxide pads in packaging for extended shelf life during export transport.",
+    "image": "/crops/grapes.png"
+  },
+  {
+    "name": "Moong",
+    "scientificName": "Vigna radiata",
+    "category": "Pulse Crop",
+    "overview": "Moong, or green gram, is a short-duration pulse crop widely grown across Kharif, summer, and Rabi seasons in India, valued for quick returns, soil-enriching nitrogen fixation, and high nutritional content.",
+    "season": "Kharif, Summer, and Rabi",
+    "cropDuration": "60-75 days",
+    "bestSowingMonths": [
+      "June",
+      "July",
+      "March"
+    ],
+    "bestHarvestMonths": [
+      "September",
+      "May"
+    ],
+    "soil": {
+      "type": "Well-drained sandy loam to loamy soil",
+      "phRange": "6.5-7.5",
+      "drainage": "Good drainage essential, intolerant of waterlogging"
+    },
+    "climate": {
+      "temperature": "25-35°C optimum",
+      "rainfall": "400-600 mm",
+      "humidity": "Moderate humidity"
+    },
+    "waterRequirement": "250-350 mm; sensitive to waterlogging, drought-tolerant once established",
+    "yield": {
+      "perHectare": "0.8-1.2 tonnes",
+      "profitability": "Good profitability due to short duration enabling multiple cropping"
+    },
+    "marketDemand": "High and steady demand as a quick-cooking pulse and popular ingredient in sprouts and traditional dishes",
+    "fertilizers": [
+      {
+        "name": "Phosphorus (SSP)",
+        "purpose": "Root and nodule development",
+        "applicationStage": "Full basal dose at sowing"
+      },
+      {
+        "name": "Rhizobium Culture",
+        "purpose": "Enhances biological nitrogen fixation",
+        "applicationStage": "Seed treatment before sowing"
+      },
+      {
+        "name": "Nitrogen (Urea)",
+        "purpose": "Starter dose before nodulation begins",
+        "applicationStage": "Small basal dose at sowing"
+      },
+      {
+        "name": "Sulphur",
+        "purpose": "Improves seed quality and yield",
+        "applicationStage": "Basal application at sowing"
+      }
+    ],
+    "majorDiseases": [
+      {
+        "name": "Yellow Mosaic Virus",
+        "symptoms": "Yellow mosaic patches on leaves, stunted growth",
+        "management": "Control whitefly vector, use resistant varieties, remove infected plants"
+      },
+      {
+        "name": "Cercospora Leaf Spot",
+        "symptoms": "Circular brown spots with yellow halo on leaves",
+        "management": "Spray Mancozeb, field sanitation"
+      },
+      {
+        "name": "Powdery Mildew",
+        "symptoms": "White powdery coating on leaves",
+        "management": "Spray Wettable sulphur, avoid dense planting"
+      }
+    ],
+    "pests": [
+      {
+        "name": "Whitefly",
+        "damage": "Transmits yellow mosaic virus and sucks sap",
+        "control": "Spray Imidacloprid, use yellow sticky traps"
+      },
+      {
+        "name": "Pod Borer",
+        "damage": "Bores into pods causing seed loss",
+        "control": "Spray Spinosad, use pheromone traps"
+      },
+      {
+        "name": "Aphids",
+        "damage": "Sucks sap causing stunted growth",
+        "control": "Spray neem oil or Dimethoate"
+      }
+    ],
+    "cultivationProcess": [
+      {
+        "step": 1,
+        "title": "Land Preparation",
+        "description": "Plough field lightly with onset of season; harrow to prepare fine, weed-free seedbed for quick germination of small seeds."
+      },
+      {
+        "step": 2,
+        "title": "Seed Selection",
+        "description": "Select certified high-yielding variety seeds resistant to yellow mosaic virus; treat seeds with Rhizobium and fungicide."
+      },
+      {
+        "step": 3,
+        "title": "Sowing or Planting",
+        "description": "Sow seeds at 3-4 cm depth with row spacing of 30 cm using seed drill or broadcasting followed by light covering."
+      },
+      {
+        "step": 4,
+        "title": "Irrigation Management",
+        "description": "Largely rainfed or supplemental irrigation; ensure good drainage to avoid waterlogging which severely affects this crop."
+      },
+      {
+        "step": 5,
+        "title": "Nutrient Management",
+        "description": "Apply phosphorus and starter nitrogen as basal dose; rely on Rhizobium nodulation for subsequent nitrogen requirements."
+      },
+      {
+        "step": 6,
+        "title": "Weed Management",
+        "description": "Conduct one weeding at 15-20 days after sowing; maintain weed-free field during critical early growth period."
+      },
+      {
+        "step": 7,
+        "title": "Pest and Disease Management",
+        "description": "Monitor for whitefly-transmitted yellow mosaic virus closely; remove infected plants and spray insecticides at early infestation."
+      },
+      {
+        "step": 8,
+        "title": "Harvesting",
+        "description": "Harvest when pods turn black and dry while plants still retain some green leaves, typically 60-75 days after sowing, in 2-3 pickings."
+      },
+      {
+        "step": 9,
+        "title": "Post-Harvest Handling",
+        "description": "Dry harvested pods in sun, thresh to separate seeds, clean and store at 10-12% moisture in pest-proof containers."
+      }
+    ],
+    "advantages": [
+      "Very short duration enables multiple cropping",
+      "Nitrogen-fixing improves soil fertility",
+      "Quick returns for farmers",
+      "High nutritional value and easy digestibility"
+    ],
+    "challenges": [
+      "Highly susceptible to yellow mosaic virus",
+      "Sensitive to waterlogging",
+      "Pod shattering causes harvest losses",
+      "Multiple pickings increase labor requirement"
+    ],
+    "suitableStates": [
+      "Rajasthan",
+      "Maharashtra",
+      "Madhya Pradesh",
+      "Andhra Pradesh",
+      "Karnataka",
+      "Uttar Pradesh"
+    ],
+    "intercroppingOptions": [
+      "Maize",
+      "Sugarcane",
+      "Cotton",
+      "Sorghum"
+    ],
+    "storageGuidelines": "Dry seeds to 10-12% moisture before storage; store in cool, dry conditions in pest-proof containers to prevent bruchid beetle infestation.",
+    "image": "/crops/moong.png"
+  }
+]

@@ -1,0 +1,36 @@
+# Environment
+.env
+.env.*
+
+# Node
+node_modules/
+
+# React build
+dist/
+build/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Raw training datasets
+ml-service/data/raw/
+ml-service/data/raw/parquet/
+
+# Processed training datasets
+ml-service/data/processed/
+
+# Notebooks
+ml-service/notebooks/
+
+# Uploads
+uploads/
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
