@@ -19,9 +19,6 @@ __pycache__/
 ml-service/data/raw/
 ml-service/data/raw/parquet/
 
-# Processed training datasets
-ml-service/data/processed/
-
 # Notebooks
 ml-service/notebooks/
 
