@@ -24,9 +24,8 @@ from app.services.price_prediction import predict_price
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173", ## integrating with frontend
-    ],
+    allow_origins=["*"],## integrating with frontend
+    
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
