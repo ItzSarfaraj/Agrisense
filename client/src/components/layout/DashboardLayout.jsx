@@ -3,15 +3,29 @@ import DashboardNavbar from "./DashboardNavbar";
 import { useState } from "react";
 
 const DashboardLayout = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);   // mobile drawer
+  const [isCollapsed, setIsCollapsed] = useState(false);     // desktop collapse
+
   return (
-    <div className="flex">
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+    <div className="min-h-screen bg-green-50">
+      {isMobileOpen && (
+        <div
+          onClick={() => setIsMobileOpen(false)}
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+        />
+      )}
 
-      <div className="flex-1 min-h-screen bg-green-50">
-        <DashboardNavbar setIsSidebarOpen={setIsSidebarOpen} />
+      <Sidebar
+        isMobileOpen={isMobileOpen}
+        setIsMobileOpen={setIsMobileOpen}
+        isCollapsed={isCollapsed}
+        setIsCollapsed={setIsCollapsed}
+      />
 
-        <main className="p-6">{children}</main>
+      {/* margin matches sidebar width: 64 normally, 20 when collapsed */}
+      <div className={`min-h-screen flex flex-col transition-all duration-300 ${isCollapsed ? "md:ml-20" : "md:ml-64"}`}>
+        <DashboardNavbar setIsMobileOpen={setIsMobileOpen} />
+        <main className="p-4 md:p-6 flex-1">{children}</main>
       </div>
     </div>
   );

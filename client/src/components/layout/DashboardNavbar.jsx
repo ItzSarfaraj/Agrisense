@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Bell, Menu, LogOut, User, ChevronDown } from "lucide-react";
 import { UserContext } from "../auth/AuthContext";
 
-const DashboardNavbar = ({ setIsSidebarOpen }) => {
+const DashboardNavbar = ({ setIsMobileOpen }) => {
   const { user, logout } = useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,20 +64,21 @@ const DashboardNavbar = ({ setIsSidebarOpen }) => {
     <nav className="bg-white border-b shadow-sm px-6 py-4">
       <div className="flex items-center justify-between">
         {/* Left Section */}
-        <div
-          onClick={() => setIsSidebarOpen((prev) => !prev)}
-          className="flex items-center gap-4"
-        >
-          <button className="p-2 rounded-lg hover:bg-gray-100">
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => setIsMobileOpen((prev) => !prev)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          >
             <Menu size={22} />
           </button>
 
           <div>
-            <h2 className="text-xl font-semibold text-gray-800">
+            <h2 className="text-lg md:text-xl font-semibold text-gray-800">
               {currentPage.title}
             </h2>
-
-            <p className="text-sm text-gray-500">{currentPage.subtitle}</p>
+            <p className="hidden sm:block text-sm text-gray-500">
+              {currentPage.subtitle}
+            </p>
           </div>
         </div>
 
@@ -86,7 +87,6 @@ const DashboardNavbar = ({ setIsSidebarOpen }) => {
           <button className="p-2 rounded-full hover:bg-gray-100">
             <Bell size={20} />
           </button>
-
 
           {/* Avatar */}
           <div ref={dropdownRef} className="relative">
@@ -106,7 +106,7 @@ const DashboardNavbar = ({ setIsSidebarOpen }) => {
                 <div className="px-4 py-3 border-b border-gray-100">
                   <p className="font-semibold text-gray-800">{user?.name}</p>
 
-                  <p className="text-sm text-gray-500 break-all">
+                  <p className="text-xs text-gray-500 truncate">
                     {user?.email}
                   </p>
                 </div>

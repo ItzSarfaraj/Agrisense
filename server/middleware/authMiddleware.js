@@ -1,16 +1,11 @@
-const jwt = require("jsonwebtoken");
-const User = require("../models/User");
-
 const authMiddleware = async (req, res, next) => {
   try {
-    let token=req.headers.authorization;
+    let token = req.headers.authorization;
 
-    // Check Authorization Header
     if (token && token.startsWith("Bearer")) {
-      token = token.split(" ")[1]; //extract token
+      token = token.split(" ")[1];
     }
 
-    // No Token
     if (!token) {
       return res.status(401).json({
         success: false,
@@ -18,17 +13,19 @@ const authMiddleware = async (req, res, next) => {
       });
     }
 
-    // Verify Token
-    const decoded = jwt.verify(
-      token,
-      process.env.JWT_SECRET
-    );
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // Find User
     req.user = await User.findById(decoded.id).select("-password");
 
-    next();
+    // NEW: handle the case where the user was deleted after the token was issued
+    if (!req.user) {
+      return res.status(401).json({
+        success: false,
+        message: "Not authorized, user no longer exists",
+      });
+    }
 
+    next();
   } catch (error) {
     return res.status(401).json({
       success: false,

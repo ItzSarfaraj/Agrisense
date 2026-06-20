@@ -17,6 +17,7 @@ const {
   createCrop,
   getCropById,
   updateCrop,
+  getAnalytics
 } = require("../controllers/adminController");
 
 router.get("/stats", authMiddleware, adminMiddleware, getDashboardStats);
@@ -29,6 +30,8 @@ router.get(
   adminMiddleware,
   getMonthlyPredictions,
 );
+
+router.get("/analytics", authMiddleware, adminMiddleware, getAnalytics);
 
 router.get("/users", authMiddleware, adminMiddleware, getAllUsers);
 

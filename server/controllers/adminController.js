@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const Prediction = require("../models/Prediction");
+const PricePrediction = require("../models/PricePrediction");
 const Crop = require("../models/Crop");
 
 const getDashboardStats = async (req, res) => {
@@ -290,6 +291,134 @@ const updateCrop = async (req, res) => {
   }
 };
 
+// ---- Analytics ----
+
+// Builds the last `count` months as { year, month, label } going back from today,
+// oldest first — used so charts always show a continuous timeline even for
+// months with zero activity.
+const getLastNMonths = (count = 6) => {
+  const months = [];
+  const now = new Date();
+
+  for (let i = count - 1; i >= 0; i--) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    months.push({
+      year: d.getFullYear(),
+      month: d.getMonth() + 1, // 1-indexed to match Mongo's $month
+      label: d.toLocaleString("default", { month: "short" }),
+    });
+  }
+
+  return months;
+};
+
+// Groups documents by year/month using their createdAt timestamp, then maps
+// the aggregation result onto a continuous list of months (filling gaps with 0).
+const groupByMonth = async (Model, dateField = "createdAt") => {
+  const months = getLastNMonths(6);
+  const earliest = new Date(months[0].year, months[0].month - 1, 1);
+
+  const results = await Model.aggregate([
+    { $match: { [dateField]: { $gte: earliest } } },
+    {
+      $group: {
+        _id: {
+          year: { $year: `$${dateField}` },
+          month: { $month: `$${dateField}` },
+        },
+        count: { $sum: 1 },
+      },
+    },
+  ]);
+
+  return months.map(({ year, month, label }) => {
+    const match = results.find(
+      (r) => r._id.year === year && r._id.month === month
+    );
+    return { month: label, count: match ? match.count : 0 };
+  });
+};
+
+const getAnalytics = async (req, res) => {
+  try {
+    const [
+      totalUsers,
+      totalCrops,
+      totalPredictions,
+      totalPricePredictions,
+      userGrowthRaw,
+      predictionsOverTimeRaw,
+      cropCategoryDistribution,
+      modeSplitRaw,
+      topCropsRaw,
+    ] = await Promise.all([
+      User.countDocuments(),
+      Crop.countDocuments(),
+      Prediction.countDocuments(),
+      PricePrediction.countDocuments(),
+      groupByMonth(User),
+      groupByMonth(Prediction),
+      Crop.aggregate([
+        { $group: { _id: "$category", count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+      ]),
+      Prediction.aggregate([
+        { $group: { _id: "$mode", count: { $sum: 1 } } },
+      ]),
+      PricePrediction.aggregate([
+        { $group: { _id: "$crop", count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+        { $limit: 5 },
+      ]),
+    ]);
+
+    const summary = {
+      totalUsers,
+      totalCrops,
+      totalPredictions,
+      totalPricePredictions,
+    };
+
+    const userGrowth = userGrowthRaw.map((m) => ({
+      month: m.month,
+      users: m.count,
+    }));
+
+    const predictionsOverTime = predictionsOverTimeRaw.map((m) => ({
+      month: m.month,
+      predictions: m.count,
+    }));
+
+    const cropCategories = cropCategoryDistribution.map((c) => ({
+      category: c._id || "Uncategorized",
+      count: c.count,
+    }));
+
+    const modeLabels = { quick: "Quick Mode", soil: "Soil-Based" };
+    const modeSplit = modeSplitRaw.map((m) => ({
+      name: modeLabels[m._id] || m._id,
+      value: m.count,
+    }));
+
+    const topCrops = topCropsRaw.map((c) => ({
+      crop: c._id,
+      count: c.count,
+    }));
+
+    res.json({
+      summary,
+      userGrowth,
+      predictionsOverTime,
+      cropCategoryDistribution: cropCategories,
+      modeSplit,
+      topCrops,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Failed to fetch analytics data" });
+  }
+};
+
 module.exports = {
   getDashboardStats,
   getCropStats,
@@ -301,4 +430,5 @@ module.exports = {
   createCrop,
   getCropById,
   updateCrop,
+  getAnalytics,
 };
