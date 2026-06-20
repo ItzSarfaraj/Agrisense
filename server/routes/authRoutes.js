@@ -25,8 +25,19 @@ router.put("/profile", authMiddleware, updateProfile);
 router.post(
   "/upload",
   authMiddleware,
-  upload.single("image"),
-  uploadProfileImage,
+  (req, res, next) => {
+    upload.single("image")(req, res, (err) => {
+      if (err) {
+        console.error("MULTER ERROR:", err);
+        return res.status(500).json({
+          success: false,
+          message: err.message,
+        });
+      }
+      next();
+    });
+  },
+  uploadProfileImage
 );
 
 router.post("/forgot-password", forgotPassword);

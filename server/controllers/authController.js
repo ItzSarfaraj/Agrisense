@@ -206,7 +206,13 @@ const uploadProfileImage = async (req, res) => {
         message: "User not found",
       });
     }
-
+    console.log("REQ FILE:", req.file);
+    if (!req.file) {
+      return res.status(400).json({
+        success: false,
+        message: "No file received",
+      });
+    }
     user.profileImage = req.file.path;
 
     await user.save();
