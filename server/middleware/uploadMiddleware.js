@@ -6,12 +6,9 @@ const cloudinary = require("../config/cloudinary");
 
 const storage = new CloudinaryStorage({
   cloudinary,
-
-  params: {
+  params: async (req, file) => ({
     folder: "agrisense_profiles",
-
-    allowed_formats: ["jpg", "jpeg", "png", "webp"],
-  },
+  }),
 });
 
 const fileFilter = (req, file, cb) => {

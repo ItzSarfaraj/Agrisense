@@ -215,11 +215,13 @@ const uploadProfileImage = async (req, res) => {
       success: true,
       profileImage: user.profileImage,
     });
-
   } catch (error) {
+    console.error("UPLOAD ERROR:", error);
+
     res.status(500).json({
       success: false,
       message: error.message,
+      stack: error.stack,
     });
   }
 };
@@ -329,5 +331,5 @@ module.exports = {
   updateProfile,
   uploadProfileImage,
   forgotPassword,
-  resetPassword
+  resetPassword,
 };
