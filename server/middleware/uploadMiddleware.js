@@ -1,16 +1,16 @@
 const multer = require("multer");
-const path = require("path");
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/");
-  },
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
-  filename: (req, file, cb) => {
-    cb(
-      null,
-      Date.now() + path.extname(file.originalname)
-    );
+const cloudinary = require("../config/cloudinary");
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+
+  params: {
+    folder: "agrisense_profiles",
+
+    allowed_formats: ["jpg", "jpeg", "png", "webp"],
   },
 });
 
@@ -25,7 +25,9 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
   storage,
   fileFilter,
-  limits: { fileSize: 5*1024*1024} //max 5Mb allowed
+  limits: {
+    fileSize: 5 * 1024 * 1024,
+  },
 });
 
 module.exports = upload;

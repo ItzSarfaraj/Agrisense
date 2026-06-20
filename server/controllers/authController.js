@@ -207,9 +207,7 @@ const uploadProfileImage = async (req, res) => {
       });
     }
 
-    const baseUrl = `${req.protocol}://${req.get("host")}`;
-
-    user.profileImage = `${baseUrl}/uploads/${req.file.filename}`;
+    user.profileImage = req.file.path;
 
     await user.save();
 
@@ -217,6 +215,7 @@ const uploadProfileImage = async (req, res) => {
       success: true,
       profileImage: user.profileImage,
     });
+
   } catch (error) {
     res.status(500).json({
       success: false,
