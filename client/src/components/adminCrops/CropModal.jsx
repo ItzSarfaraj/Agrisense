@@ -8,12 +8,15 @@ const CropModal = ({ crop, onClose }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-3xl p-8 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl"
+        className="bg-white dark:bg-gray-800 rounded-3xl p-8 w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl dark:shadow-black/40"
       >
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold">{crop.name}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">{crop.name}</h2>
 
-          <button onClick={onClose} className="text-2xl text-gray-500">
+          <button
+            onClick={onClose}
+            className="text-2xl text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+          >
             ✕
           </button>
         </div>
@@ -26,34 +29,34 @@ const CropModal = ({ crop, onClose }) => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <p className="text-gray-500">Scientific Name</p>
+            <p className="text-gray-500 dark:text-gray-400">Scientific Name</p>
 
-            <p className="font-semibold">{crop.scientificName}</p>
+            <p className="font-semibold text-gray-900 dark:text-gray-100">{crop.scientificName}</p>
           </div>
 
           <div>
-            <p className="text-gray-500">Category</p>
+            <p className="text-gray-500 dark:text-gray-400">Category</p>
 
-            <p className="font-semibold">{crop.category}</p>
+            <p className="font-semibold text-gray-900 dark:text-gray-100">{crop.category}</p>
           </div>
 
           <div>
-            <p className="text-gray-500">Season</p>
+            <p className="text-gray-500 dark:text-gray-400">Season</p>
 
-            <p className="font-semibold">{crop.season}</p>
+            <p className="font-semibold text-gray-900 dark:text-gray-100">{crop.season}</p>
           </div>
 
           <div>
-            <p className="text-gray-500">Crop Duration</p>
+            <p className="text-gray-500 dark:text-gray-400">Crop Duration</p>
 
-            <p className="font-semibold">{crop.cropDuration}</p>
+            <p className="font-semibold text-gray-900 dark:text-gray-100">{crop.cropDuration}</p>
           </div>
         </div>
 
         <div className="mt-6">
-          <p className="text-gray-500 mb-2">Overview</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-2">Overview</p>
 
-          <p>{crop.overview}</p>
+          <p className="text-gray-700 dark:text-gray-300">{crop.overview}</p>
         </div>
       </div>
     </div>

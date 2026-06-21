@@ -37,6 +37,9 @@ app.use("/api/admin", adminRoutes);
 //feedback routes
 app.use("/api/feedback", feedbackRoutes);
 
+//notification routes
+app.use("/notifications", notificationRoutes);
+
 app.get("/", (req, res) => {
   res.send("AgriSense Backend Running 🚀");
 });

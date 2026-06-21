@@ -83,8 +83,8 @@ const AdminCrops = () => {
   if (loading) {
     return (
       <DashboardLayout>
-        <div className="flex flex-col items-center justify-center py-28 text-gray-500">
-          <Loader2 className="animate-spin mb-3 text-green-600" size={32} />
+        <div className="flex flex-col items-center justify-center py-28 text-gray-500 dark:text-gray-400">
+          <Loader2 className="animate-spin mb-3 text-green-600 dark:text-green-400" size={32} />
           <p className="text-sm sm:text-base font-medium">Loading crops...</p>
         </div>
       </DashboardLayout>
@@ -96,13 +96,13 @@ const AdminCrops = () => {
     return (
       <DashboardLayout>
         <div className="flex flex-col items-center justify-center py-28 text-center px-4">
-          <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 px-5 py-3 rounded-2xl text-sm mb-4 shadow-sm">
+          <div className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-600 dark:text-red-400 px-5 py-3 rounded-2xl text-sm mb-4 shadow-sm">
             <AlertCircle size={18} className="shrink-0" />
             {error}
           </div>
           <button
             onClick={fetchCrops}
-            className="px-6 py-2.5 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 active:scale-95 transition-all shadow-md shadow-green-600/20"
+            className="px-6 py-2.5 rounded-xl bg-green-600 dark:bg-green-700 text-white text-sm font-semibold hover:bg-green-700 dark:hover:bg-green-600 active:scale-95 transition-all shadow-md shadow-green-600/20 dark:shadow-green-900/30"
           >
             Retry
           </button>
@@ -113,9 +113,9 @@ const AdminCrops = () => {
 
   return (
     <DashboardLayout>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 -m-4 md:-m-6 p-4 md:p-6">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-950 -m-4 md:-m-6 p-4 md:p-6">
         {/* Hero */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-green-700 via-emerald-600 to-green-500 rounded-3xl p-5 sm:p-8 text-white shadow-xl shadow-green-900/10 mb-6 sm:mb-8">
+        <div className="relative overflow-hidden bg-gradient-to-r from-green-700 via-emerald-600 to-green-500 dark:from-green-800 dark:via-emerald-800 dark:to-green-700 rounded-3xl p-5 sm:p-8 text-white shadow-xl shadow-green-900/10 dark:shadow-black/30 mb-6 sm:mb-8">
           <div className="pointer-events-none absolute -top-10 -right-10 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
           <div className="pointer-events-none absolute -bottom-16 -left-10 w-56 h-56 bg-white/10 rounded-full blur-2xl" />
 
@@ -127,7 +127,7 @@ const AdminCrops = () => {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
                 Crop Management
               </h1>
-              <p className="mt-1 text-green-100 text-sm sm:text-base">
+              <p className="mt-1 text-green-100 dark:text-green-200/90 text-sm sm:text-base">
                 Manage crop information used by the AgriSense platform.
               </p>
             </div>
@@ -144,13 +144,13 @@ const AdminCrops = () => {
 
         {/* Search + Add Crop */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 sm:mb-8">
-          <div className="w-full md:max-w-md bg-white rounded-2xl shadow-sm border border-green-100 px-1">
+          <div className="w-full md:max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-green-100 dark:border-gray-700 px-1">
             <CropSearch search={search} setSearch={setSearch} />
           </div>
 
           <button
             onClick={() => navigate("/admin/crops/add")}
-            className="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 active:scale-95 transition-all shadow-md shadow-green-600/20 font-semibold"
+            className="flex items-center justify-center gap-2 bg-green-600 dark:bg-green-700 text-white px-6 py-3 rounded-xl hover:bg-green-700 dark:hover:bg-green-600 active:scale-95 transition-all shadow-md shadow-green-600/20 dark:shadow-green-900/30 font-semibold"
           >
             <Plus size={18} />
             Add Crop
@@ -158,14 +158,14 @@ const AdminCrops = () => {
         </div>
 
         {/* Table */}
-        <div className="bg-white rounded-3xl shadow-sm border border-green-100 overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 overflow-hidden">
           {filteredCrops.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center px-4">
-              <div className="bg-green-50 p-4 rounded-full mb-4">
-                <Search size={28} className="text-green-600" />
+              <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-full mb-4">
+                <Search size={28} className="text-green-600 dark:text-green-400" />
               </div>
-              <p className="text-gray-700 font-medium">No crops found</p>
-              <p className="text-gray-400 text-sm mt-1">
+              <p className="text-gray-700 dark:text-gray-300 font-medium">No crops found</p>
+              <p className="text-gray-400 dark:text-gray-500 text-sm mt-1">
                 {search
                   ? "Try a different search term."
                   : "Add a crop to get started."}

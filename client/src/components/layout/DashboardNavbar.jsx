@@ -1,9 +1,10 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { Bell, Menu, LogOut, User, ChevronDown, Sun, Moon } from "lucide-react";
+import { Menu, LogOut, User, ChevronDown, Sun, Moon } from "lucide-react";
 import { UserContext } from "../auth/AuthContext";
 import { ThemeContext } from "../../context/ThemeContext";
+import NotificationBell from "./NotificationBell";
 
 const DashboardNavbar = ({ setIsMobileOpen }) => {
   const { user, logout } = useContext(UserContext);
@@ -95,9 +96,7 @@ const DashboardNavbar = ({ setIsMobileOpen }) => {
             )}
           </button>
 
-          <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-            <Bell size={20} className="text-gray-800 dark:text-gray-200" />
-          </button>
+          <NotificationBell />
 
           {/* Avatar */}
           <div ref={dropdownRef} className="relative">

@@ -1,5 +1,5 @@
 const Feedback = require("../models/Feedback");
-const sendEmail = require("../services/sendEmail");
+const Notification = require("../models/Notification");
 
 const createFeedback = async (req, res) => {
   try {
@@ -112,10 +112,10 @@ const replyToFeedback = async (req, res) => {
       });
     }
 
-    if (!feedback.user?.email) {
+    if (!feedback.user?._id) {
       return res.status(400).json({
         success: false,
-        message: "This feedback has no associated user email",
+        message: "This feedback has no associated user",
       });
     }
 
@@ -132,33 +132,12 @@ const replyToFeedback = async (req, res) => {
 
     await feedback.save();
 
-    const html = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <div style="background: linear-gradient(to right, #15803d, #10b981); padding: 24px; border-radius: 12px 12px 0 0;">
-          <h2 style="color: #ffffff; margin: 0;">AgriSense Support</h2>
-        </div>
-        <div style="background: #ffffff; padding: 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">
-          <p style="color: #374151; font-size: 15px;">
-            Hi ${feedback.user.name || "there"},
-          </p>
-          <p style="color: #374151; font-size: 15px; line-height: 1.6;">
-            Thanks for reaching out about <strong>${feedback.topic}</strong>. Here's our reply:
-          </p>
-          <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin: 16px 0;">
-            <p style="color: #166534; font-size: 15px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${message}</p>
-          </div>
-          <p style="color: #9ca3af; font-size: 13px; margin-top: 24px;">
-            This was sent in response to your message submitted via the AgriSense feedback form. Reply to this email if you have follow-up questions.
-          </p>
-        </div>
-      </div>
-    `;
-
-    await sendEmail(
-      feedback.user.email,
-      `Re: Your ${feedback.topic} to AgriSense`,
-      html,
-    );
+    await Notification.create({
+      user: feedback.user._id,
+      type: "feedback_reply",
+      title: `Reply to your ${feedback.topic}`,
+      message,
+    });
 
     res.status(200).json({
       success: true,

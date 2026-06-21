@@ -99,7 +99,7 @@ const AdminFeedback = () => {
     return (
       <DashboardLayout>
         <div className="flex flex-col items-center justify-center py-28 text-gray-500 dark:text-gray-400">
-          <Loader2 className="animate-spin mb-3 text-green-600" size={32} />
+          <Loader2 className="animate-spin mb-3 text-green-600 dark:text-green-400" size={32} />
           <p className="text-sm sm:text-base font-medium">
             Loading feedback...
           </p>
@@ -112,13 +112,13 @@ const AdminFeedback = () => {
     return (
       <DashboardLayout>
         <div className="flex flex-col items-center justify-center py-28 text-center px-4">
-          <div className="flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 px-5 py-3 rounded-2xl text-sm mb-4 shadow-sm">
+          <div className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/50 text-red-600 dark:text-red-400 px-5 py-3 rounded-2xl text-sm mb-4 shadow-sm">
             <AlertCircle size={18} className="shrink-0" />
             {error}
           </div>
           <button
             onClick={fetchFeedbacks}
-            className="px-6 py-2.5 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 active:scale-95 transition-all shadow-md shadow-green-600/20"
+            className="px-6 py-2.5 rounded-xl bg-green-600 dark:bg-green-700 text-white text-sm font-semibold hover:bg-green-700 dark:hover:bg-green-600 active:scale-95 transition-all shadow-md shadow-green-600/20 dark:shadow-green-900/30"
           >
             Retry
           </button>
@@ -154,24 +154,24 @@ const AdminFeedback = () => {
       : "—";
 
   const statusBadgeClasses = {
-    Pending: "bg-yellow-100 text-yellow-700",
-    Reviewed: "bg-blue-100 text-blue-700",
-    Resolved: "bg-green-100 text-green-700",
+    Pending: "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400",
+    Reviewed: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400",
+    Resolved: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400",
   };
 
   const topicBadgeClasses = {
-    "General Feedback": "bg-green-50 text-green-700",
-    "Bug Report": "bg-red-50 text-red-700",
-    "Feature Request": "bg-purple-50 text-purple-700",
-    "Partnership Inquiry": "bg-blue-50 text-blue-700",
-    Other: "bg-gray-100 text-gray-700",
+    "General Feedback": "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400",
+    "Bug Report": "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400",
+    "Feature Request": "bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400",
+    "Partnership Inquiry": "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400",
+    Other: "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300",
   };
 
   return (
     <DashboardLayout>
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 -m-4 md:-m-6 p-4 md:p-6">
         {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-green-700 via-emerald-600 to-green-500 dark:from-gray-900 dark:via-green-900 dark:to-green-700 rounded-3xl p-5 sm:p-8 text-white mb-6 sm:mb-8 shadow-xl shadow-green-900/10">
+        <div className="relative overflow-hidden bg-gradient-to-r from-green-700 via-emerald-600 to-green-500 dark:from-gray-900 dark:via-green-900 dark:to-green-700 rounded-3xl p-5 sm:p-8 text-white mb-6 sm:mb-8 shadow-xl shadow-green-900/10 dark:shadow-black/30">
           <div className="pointer-events-none absolute -top-10 -right-10 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
           <div className="pointer-events-none absolute -bottom-16 -left-10 w-56 h-56 bg-white/10 rounded-full blur-2xl" />
 
@@ -183,7 +183,7 @@ const AdminFeedback = () => {
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
                 Feedback Management
               </h1>
-              <p className="mt-1 text-green-100 text-sm sm:text-base">
+              <p className="mt-1 text-green-100 dark:text-green-200/90 text-sm sm:text-base">
                 Monitor user satisfaction and track platform improvements.
               </p>
             </div>
@@ -192,55 +192,55 @@ const AdminFeedback = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-6 sm:mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6 shadow-sm border border-green-100">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6">
             <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
               <MessageSquare size={16} />
               <p className="text-xs sm:text-sm">Total</p>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold text-green-600 mt-2">
+            <h2 className="text-2xl sm:text-4xl font-bold text-green-600 dark:text-green-400 mt-2">
               {totalFeedback}
             </h2>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6 shadow-sm border border-green-100">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6">
             <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
               <Clock size={16} />
               <p className="text-xs sm:text-sm">Pending</p>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold text-yellow-500 mt-2">
+            <h2 className="text-2xl sm:text-4xl font-bold text-yellow-500 dark:text-yellow-400 mt-2">
               {pendingCount}
             </h2>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6 shadow-sm border border-green-100">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6">
             <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
               <Eye size={16} />
               <p className="text-xs sm:text-sm">Reviewed</p>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold text-blue-500 mt-2">
+            <h2 className="text-2xl sm:text-4xl font-bold text-blue-500 dark:text-blue-400 mt-2">
               {reviewedCount}
             </h2>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6 shadow-sm border border-green-100">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6">
             <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
               <CheckCircle2 size={16} />
               <p className="text-xs sm:text-sm">Resolved</p>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold text-green-600 mt-2">
+            <h2 className="text-2xl sm:text-4xl font-bold text-green-600 dark:text-green-400 mt-2">
               {resolvedCount}
             </h2>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6 shadow-sm border border-green-100 col-span-2 lg:col-span-1">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm border border-green-100 dark:border-gray-700 p-5 sm:p-6 col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
               <Star size={16} />
               <p className="text-xs sm:text-sm">Avg Rating</p>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold text-orange-500 mt-2 flex items-center gap-1">
+            <h2 className="text-2xl sm:text-4xl font-bold text-orange-500 dark:text-orange-400 mt-2 flex items-center gap-1">
               {averageRating}
               {averageRating !== "—" && (
-                <Star size={20} className="fill-orange-500 text-orange-500" />
+                <Star size={20} className="fill-orange-500 text-orange-500 dark:fill-orange-400 dark:text-orange-400" />
               )}
             </h2>
           </div>
@@ -259,7 +259,7 @@ const AdminFeedback = () => {
           {totalFeedback === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center px-4">
               <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-full mb-4">
-                <MessageSquare size={28} className="text-green-600" />
+                <MessageSquare size={28} className="text-green-600 dark:text-green-400" />
               </div>
               <p className="text-gray-700 dark:text-gray-200 font-medium">No feedback yet</p>
               <p className="text-gray-400 dark:text-gray-500 text-sm mt-1">
@@ -311,7 +311,7 @@ const AdminFeedback = () => {
                       key={feedback._id}
                       className="border-t border-gray-200 dark:border-gray-700 hover:bg-green-50/40 dark:hover:bg-gray-700/50 transition-colors"
                     >
-                      <td className="p-4 font-medium">
+                      <td className="p-4 font-medium text-gray-900 dark:text-gray-100">
                         {feedback.user?.name ? (
                           feedback.user.name
                         ) : (
@@ -330,23 +330,23 @@ const AdminFeedback = () => {
                         <span
                           className={`px-2.5 py-1 rounded-full text-xs font-semibold ${
                             topicBadgeClasses[feedback.topic] ||
-                            "bg-gray-100 text-gray-700"
+                            "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
                           }`}
                         >
                           {feedback.topic}
                         </span>
                       </td>
 
-                      <td className="p-4 text-orange-500 whitespace-nowrap">
+                      <td className="p-4 text-orange-500 dark:text-orange-400 whitespace-nowrap">
                         {typeof feedback.rating === "number" ? (
                           <>
                             {"★".repeat(feedback.rating)}
-                            <span className="text-gray-200">
+                            <span className="text-gray-200 dark:text-gray-600">
                               {"★".repeat(Math.max(0, 5 - feedback.rating))}
                             </span>
                           </>
                         ) : (
-                          <span className="text-gray-300 text-sm">N/A</span>
+                          <span className="text-gray-300 dark:text-gray-600 text-sm">N/A</span>
                         )}
                       </td>
 
@@ -354,7 +354,7 @@ const AdminFeedback = () => {
                         <p className="line-clamp-2">{feedback.message}</p>
                       </td>
 
-                      <td className="p-4 text-gray-600 dark:text-gray-200 whitespace-nowrap text-sm">
+                      <td className="p-4 text-gray-600 dark:text-gray-300 whitespace-nowrap text-sm">
                         {new Date(feedback.createdAt).toLocaleDateString()}
                       </td>
 
@@ -362,7 +362,7 @@ const AdminFeedback = () => {
                         <span
                           className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
                             statusBadgeClasses[feedback.status] ||
-                            "bg-gray-100 text-gray-700"
+                            "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
                           }`}
                         >
                           {feedback.status}
@@ -409,30 +409,31 @@ const AdminFeedback = () => {
       {/* Reply Modal */}
       {replyTarget && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 w-full max-w-lg shadow-2xl border border-gray-100 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 w-full max-w-lg shadow-2xl dark:shadow-black/40 border border-gray-100 dark:border-gray-700">
             <div className="flex items-start justify-between mb-5">
               <div>
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                   Reply to Feedback
                 </h2>
-                <p className="text-sm text-gray-500 mt-1 text-gray-500 dark:text-gray-400">
-                  Sending to{" "}
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  Notifying{" "}
                   <span className="font-medium text-gray-700 dark:text-gray-200">
-                    {replyTarget.user?.email || "unknown email"}
-                  </span>
+                    {replyTarget.user?.name || "this user"}
+                  </span>{" "}
+                  in-app
                 </p>
               </div>
 
               <button
                 onClick={closeReplyModal}
-                className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 flex items-center justify-center transition-all duration-200"
+                className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 dark:hover:text-red-400 flex items-center justify-center transition-all duration-200"
               >
                 <X size={18} />
               </button>
             </div>
 
             <div className="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl p-3 mb-4">
-              <p className="text-xs text-gray-400 mb-1">Original message</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 mb-1">Original message</p>
               <p className="text-sm text-gray-700 dark:text-gray-200 line-clamp-3">
                 {replyTarget.message}
               </p>
@@ -440,7 +441,7 @@ const AdminFeedback = () => {
 
             {replyTarget.reply?.message && (
               <div className="bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800 rounded-xl p-3 mb-4">
-                <p className="text-xs text-green-600 mb-1">
+                <p className="text-xs text-green-600 dark:text-green-400 mb-1">
                   Previously replied on{" "}
                   {new Date(replyTarget.reply.repliedAt).toLocaleString()}
                 </p>
@@ -452,13 +453,13 @@ const AdminFeedback = () => {
               value={replyMessage}
               onChange={(e) => setReplyMessage(e.target.value)}
               placeholder="Write your reply..."
-              className="w-full border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500 resize-none"
+              className="w-full border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-600 resize-none"
             />
 
             <button
               onClick={handleSendReply}
               disabled={sendingReply || !replyMessage.trim()}
-              className="mt-4 w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition"
+              className="mt-4 w-full flex items-center justify-center gap-2 bg-green-600 dark:bg-green-700 hover:bg-green-700 dark:hover:bg-green-600 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition"
             >
               {sendingReply ? (
                 <Loader2 size={18} className="animate-spin" />

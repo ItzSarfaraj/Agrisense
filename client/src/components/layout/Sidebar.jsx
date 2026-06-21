@@ -24,8 +24,7 @@ const Sidebar = ({ isMobileOpen, setIsMobileOpen, isCollapsed, setIsCollapsed })
     { name: "Users", path: "/admin/users", icon: Users },
     { name: "Feedback", path: "/admin/feedback", icon: MessageSquare },
     { name: "Crop Management", path: "/admin/crops", icon: Sprout },
-    { name: "Analytics", path: "/admin/analytics", icon: BarChart3 },
-    { name: "System Status", path: "/admin/system", icon: Database },
+    { name: "Analytics", path: "/admin/analytics", icon: BarChart3 }
   ];
 
   const menuItems = user?.role === "admin" ? adminMenuItems : userMenuItems;

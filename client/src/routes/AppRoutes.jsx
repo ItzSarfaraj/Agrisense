@@ -19,7 +19,6 @@ import EditCrop from "../pages/admin/EditCrop";
 import Feedback from "../pages/Feedback";
 import AdminFeedback from "../pages/admin/AdminFeedback";
 import AdminAnalytics from "../pages/admin/AnalyticsPage";
-import AdminSystemStatus from "../pages/admin/SystemStatusPage";
 import AIInsightsPage from "../pages/AIInsightsPage";
 import MarketPrice from "../pages/MarketPrice";
 import ForgotPassword from "../pages/ForgotPassword";
@@ -135,14 +134,6 @@ const AppRoutes = () => {
         element={
           <AdminRoute>
             <AdminAnalytics />
-          </AdminRoute>
-        }
-      />
-      <Route
-        path="/admin/system"
-        element={
-          <AdminRoute>
-            <AdminSystemStatus />
           </AdminRoute>
         }
       />
