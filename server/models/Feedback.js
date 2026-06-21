@@ -31,10 +31,16 @@ const feedbackSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+
     status: {
       type: String,
       enum: ["Pending", "Reviewed", "Resolved"],
       default: "Pending",
+    },
+
+    reply: {
+      message: { type: String, trim: true },
+      repliedAt: { type: Date },
     },
   },
   {

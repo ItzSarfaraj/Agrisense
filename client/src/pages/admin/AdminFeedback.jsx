@@ -11,6 +11,9 @@ import {
   Eye,
   CheckCircle2,
   Star,
+  Reply,
+  Send,
+  X,
 } from "lucide-react";
 
 const AdminFeedback = () => {
@@ -20,6 +23,11 @@ const AdminFeedback = () => {
 
   // Holds an error message if fetchFeedbacks() fails, so we can show a banner instead of failing silently
   const [error, setError] = useState("");
+
+  // Reply modal state
+  const [replyTarget, setReplyTarget] = useState(null);
+  const [replyMessage, setReplyMessage] = useState("");
+  const [sendingReply, setSendingReply] = useState(false);
 
   useEffect(() => {
     fetchFeedbacks();
@@ -55,6 +63,38 @@ const AdminFeedback = () => {
       fetchFeedbacks();
     } catch (error) {
       toast.error(error.response?.data?.message || "Failed to update status");
+    }
+  };
+
+  const openReplyModal = (feedback) => {
+    setReplyTarget(feedback);
+    setReplyMessage(feedback.reply?.message || "");
+  };
+
+  const closeReplyModal = () => {
+    setReplyTarget(null);
+    setReplyMessage("");
+  };
+
+  const handleSendReply = async () => {
+    if (!replyMessage.trim()) return;
+
+    try {
+      setSendingReply(true);
+
+      const response = await api.patch(
+        `/feedback/${replyTarget._id}/reply`,
+        { message: replyMessage },
+      );
+
+      toast.success(response.data.message);
+
+      closeReplyModal();
+      fetchFeedbacks();
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to send reply");
+    } finally {
+      setSendingReply(false);
     }
   };
 
@@ -106,18 +146,32 @@ const AdminFeedback = () => {
     (feedback) => feedback.status === "Resolved",
   ).length;
 
+  // Only count entries that actually carry a rating (rating is now optional
+  // for non-"General Feedback" topics), otherwise this silently becomes NaN.
+  const ratedFeedbacks = feedbacks.filter(
+    (feedback) => typeof feedback.rating === "number",
+  );
+
   const averageRating =
-    totalFeedback > 0
+    ratedFeedbacks.length > 0
       ? (
-          feedbacks.reduce((sum, feedback) => sum + feedback.rating, 0) /
-          totalFeedback
+          ratedFeedbacks.reduce((sum, feedback) => sum + feedback.rating, 0) /
+          ratedFeedbacks.length
         ).toFixed(1)
-      : 0;
+      : "—";
 
   const statusBadgeClasses = {
     Pending: "bg-yellow-100 text-yellow-700",
     Reviewed: "bg-blue-100 text-blue-700",
     Resolved: "bg-green-100 text-green-700",
+  };
+
+  const topicBadgeClasses = {
+    "General Feedback": "bg-green-50 text-green-700",
+    "Bug Report": "bg-red-50 text-red-700",
+    "Feature Request": "bg-purple-50 text-purple-700",
+    "Partnership Inquiry": "bg-blue-50 text-blue-700",
+    Other: "bg-gray-100 text-gray-700",
   };
 
   return (
@@ -192,7 +246,9 @@ const AdminFeedback = () => {
             </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-orange-500 mt-2 flex items-center gap-1">
               {averageRating}
-              <Star size={20} className="fill-orange-500 text-orange-500" />
+              {averageRating !== "—" && (
+                <Star size={20} className="fill-orange-500 text-orange-500" />
+              )}
             </h2>
           </div>
         </div>
@@ -227,6 +283,10 @@ const AdminFeedback = () => {
                     </th>
 
                     <th className="text-left p-4 font-semibold text-sm">
+                      Topic
+                    </th>
+
+                    <th className="text-left p-4 font-semibold text-sm">
                       Rating
                     </th>
 
@@ -245,6 +305,10 @@ const AdminFeedback = () => {
                     <th className="text-left p-4 font-semibold text-sm">
                       Action
                     </th>
+
+                    <th className="text-left p-4 font-semibold text-sm">
+                      Reply
+                    </th>
                   </tr>
                 </thead>
 
@@ -260,13 +324,37 @@ const AdminFeedback = () => {
                             Unknown user
                           </span>
                         )}
+                        {feedback.user?.email && (
+                          <p className="text-xs text-gray-400 font-normal mt-0.5">
+                            {feedback.user.email}
+                          </p>
+                        )}
+                      </td>
+
+                      <td className="p-4 whitespace-nowrap">
+                        <span
+                          className={`px-2.5 py-1 rounded-full text-xs font-semibold ${
+                            topicBadgeClasses[feedback.topic] ||
+                            "bg-gray-100 text-gray-700"
+                          }`}
+                        >
+                          {feedback.topic}
+                        </span>
                       </td>
 
                       <td className="p-4 text-orange-500 whitespace-nowrap">
-                        {"★".repeat(feedback.rating)}
-                        <span className="text-gray-200">
-                          {"★".repeat(Math.max(0, 5 - feedback.rating))}
-                        </span>
+                        {typeof feedback.rating === "number" ? (
+                          <>
+                            {"★".repeat(feedback.rating)}
+                            <span className="text-gray-200">
+                              {"★".repeat(
+                                Math.max(0, 5 - feedback.rating),
+                              )}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-gray-300 text-sm">N/A</span>
+                        )}
                       </td>
 
                       <td className="p-4 text-gray-700 max-w-xs">
@@ -302,6 +390,20 @@ const AdminFeedback = () => {
                           <option value="Resolved">Resolved</option>
                         </select>
                       </td>
+
+                      <td className="p-4">
+                        <button
+                          onClick={() => openReplyModal(feedback)}
+                          className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition whitespace-nowrap ${
+                            feedback.reply?.message
+                              ? "bg-green-50 text-green-700 hover:bg-green-100"
+                              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                          }`}
+                        >
+                          <Reply size={14} />
+                          {feedback.reply?.message ? "View Reply" : "Reply"}
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -310,6 +412,69 @@ const AdminFeedback = () => {
           )}
         </div>
       </div>
+
+      {/* Reply Modal */}
+      {replyTarget && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-3xl p-6 w-full max-w-lg shadow-2xl">
+            <div className="flex items-start justify-between mb-5">
+              <div>
+                <h2 className="text-xl font-bold">Reply to Feedback</h2>
+                <p className="text-sm text-gray-500 mt-1">
+                  Sending to{" "}
+                  <span className="font-medium text-gray-700">
+                    {replyTarget.user?.email || "unknown email"}
+                  </span>
+                </p>
+              </div>
+
+              <button
+                onClick={closeReplyModal}
+                className="w-9 h-9 rounded-full bg-gray-100 hover:bg-red-50 hover:text-red-600 flex items-center justify-center transition-all duration-200"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="bg-gray-50 border rounded-xl p-3 mb-4">
+              <p className="text-xs text-gray-400 mb-1">Original message</p>
+              <p className="text-sm text-gray-700 line-clamp-3">
+                {replyTarget.message}
+              </p>
+            </div>
+
+            {replyTarget.reply?.message && (
+              <div className="bg-green-50 border border-green-100 rounded-xl p-3 mb-4">
+                <p className="text-xs text-green-600 mb-1">
+                  Previously replied on{" "}
+                  {new Date(replyTarget.reply.repliedAt).toLocaleString()}
+                </p>
+              </div>
+            )}
+
+            <textarea
+              rows="5"
+              value={replyMessage}
+              onChange={(e) => setReplyMessage(e.target.value)}
+              placeholder="Write your reply..."
+              className="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500 resize-none"
+            />
+
+            <button
+              onClick={handleSendReply}
+              disabled={sendingReply || !replyMessage.trim()}
+              className="mt-4 w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition"
+            >
+              {sendingReply ? (
+                <Loader2 size={18} className="animate-spin" />
+              ) : (
+                <Send size={16} />
+              )}
+              {sendingReply ? "Sending..." : "Send Reply"}
+            </button>
+          </div>
+        </div>
+      )}
     </DashboardLayout>
   );
 };
