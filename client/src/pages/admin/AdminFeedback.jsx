@@ -21,10 +21,8 @@ const AdminFeedback = () => {
 
   const [loading, setLoading] = useState(true);
 
-  // Holds an error message if fetchFeedbacks() fails, so we can show a banner instead of failing silently
   const [error, setError] = useState("");
 
-  // Reply modal state
   const [replyTarget, setReplyTarget] = useState(null);
   const [replyMessage, setReplyMessage] = useState("");
   const [sendingReply, setSendingReply] = useState(false);
@@ -98,7 +96,6 @@ const AdminFeedback = () => {
     }
   };
 
-  // ---- Loading state ----
   if (loading) {
     return (
       <DashboardLayout>
@@ -112,7 +109,6 @@ const AdminFeedback = () => {
     );
   }
 
-  // ---- Error state (fetch failed) ----
   if (error) {
     return (
       <DashboardLayout>
@@ -146,8 +142,6 @@ const AdminFeedback = () => {
     (feedback) => feedback.status === "Resolved",
   ).length;
 
-  // Only count entries that actually carry a rating (rating is now optional
-  // for non-"General Feedback" topics), otherwise this silently becomes NaN.
   const ratedFeedbacks = feedbacks.filter(
     (feedback) => typeof feedback.rating === "number",
   );
