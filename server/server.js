@@ -11,6 +11,7 @@ const recommendationRoutes = require("./routes/recommendationRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const feedbackRoutes = require("./routes/feedbackRoutes");
 const priceRoutes = require("./routes/priceRoutes");
+const notificationRoutes = require("./routes/notificationRoutes")
 
 const connectDB = require("./config/db");
 connectDB();
