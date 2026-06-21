@@ -8,9 +8,21 @@ const feedbackSchema = new mongoose.Schema(
       required: true,
     },
 
+    topic: {
+      type: String,
+      enum: [
+        "General Feedback",
+        "Bug Report",
+        "Feature Request",
+        "Partnership Inquiry",
+        "Other",
+      ],
+      default: "General Feedback",
+      required: true,
+    },
+
     rating: {
       type: Number,
-      required: true,
       min: 1,
       max: 5,
     },

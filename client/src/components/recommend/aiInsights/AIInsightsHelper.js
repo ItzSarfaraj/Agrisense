@@ -518,7 +518,7 @@ export const getCropAnalysis = (crop) => {
   const opportunities = [];
   const risks = [];
 
-  // Strengths
+  // ---------------- Strengths ----------------
   if (crop.expected_profit > 100000) {
     strengths.push("High profit potential");
   }
@@ -527,30 +527,73 @@ export const getCropAnalysis = (crop) => {
     strengths.push("Strong market demand");
   }
 
+  const waterScoreForStrength = getWaterScore(details.waterRequirement);
+  if (waterScoreForStrength >= 8) {
+    strengths.push("Low water requirement — cost-efficient irrigation");
+  }
+
+  const durationDaysForStrength = extractDurationDays(details.cropDuration);
+  if (durationDaysForStrength && durationDaysForStrength <= 90) {
+    strengths.push("Short cultivation cycle enables faster returns");
+  }
+
   if (details.advantages?.length) {
     strengths.push(...details.advantages.slice(0, 2));
   }
 
-  // Weaknesses
-  if (details.waterRequirement && details.waterRequirement.match(/\d+/)) {
-    const avgWater =
-      details.waterRequirement
-        .match(/\d+/g)
-        ?.reduce((a, b) => a + Number(b), 0) /
-      details.waterRequirement.match(/\d+/g)?.length;
-
-    if (avgWater > 1500) {
-      weaknesses.push("High water requirement");
+  // ---------------- Weaknesses ----------------
+  // Water requirement — use the same scoring logic as elsewhere, so this
+  // stays consistent with getWaterScore/calculateRisk instead of a separate
+  // one-off numeric threshold.
+  const avgWaterFigure = extractAvgWaterFigure(details.waterRequirement);
+  if (avgWaterFigure !== null && avgWaterFigure > 1000) {
+    weaknesses.push(
+      avgWaterFigure > 1500
+        ? "High water requirement — needs reliable irrigation"
+        : "Moderately high water requirement",
+    );
+  } else if (avgWaterFigure === null) {
+    const waterLabel = (details.waterRequirement || "").toLowerCase();
+    if (waterLabel.includes("high")) {
+      weaknesses.push("High water requirement — needs reliable irrigation");
     }
   }
 
+  // Duration — lowered threshold from 180 to 150 days, and added a
+  // "very long" tier so this fires more often and more usefully.
   const durationDays = extractDurationDays(details.cropDuration);
-
-  if (durationDays && durationDays > 180) {
+  if (durationDays && durationDays > 240) {
+    weaknesses.push("Very long cultivation period ties up land for an extended season");
+  } else if (durationDays && durationDays > 150) {
     weaknesses.push("Long cultivation period");
   }
 
-  // Opportunities
+  // Market demand — a weakness that was previously never checked at all.
+  const demandLabel = (details.marketDemand || "").toLowerCase();
+  if (demandLabel.includes("low")) {
+    weaknesses.push("Limited market demand may affect sale price");
+  }
+
+  // Disease susceptibility — previously only used for risks; surfacing it
+  // here too since disease pressure is a genuine cultivation weakness.
+  if (details.majorDiseases?.length) {
+    weaknesses.push(
+      `Susceptible to ${details.majorDiseases[0]?.name || "common diseases"}`,
+    );
+  }
+
+  // Soil sensitivity, if the data has a narrow soil requirement.
+  if (details.soil?.type && details.soil?.flexibility === "low") {
+    weaknesses.push(`Requires specific soil type: ${details.soil.type}`);
+  }
+
+  // Fallback so the section is never silently empty when truly nothing
+  // stands out — keeps the UI honest instead of leaving a blank panel.
+  if (weaknesses.length === 0) {
+    weaknesses.push("No significant weaknesses identified for this crop");
+  }
+
+  // ---------------- Opportunities ----------------
   if (details.marketDemand) {
     opportunities.push("Favorable market opportunities");
   }
@@ -565,7 +608,7 @@ export const getCropAnalysis = (crop) => {
     );
   }
 
-  // Risks
+  // ---------------- Risks ----------------
   if (details.challenges?.length) {
     risks.push(...details.challenges.slice(0, 3));
   }

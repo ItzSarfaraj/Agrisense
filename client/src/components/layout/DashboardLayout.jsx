@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);     // desktop collapse
 
   return (
-    <div className="min-h-screen bg-green-50">
+    <div className="min-h-screen bg-green-50 dark:bg-gray-950 transition-colors duration-300">
       {isMobileOpen && (
         <div
           onClick={() => setIsMobileOpen(false)}

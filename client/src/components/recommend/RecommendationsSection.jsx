@@ -8,33 +8,34 @@ const RecommendationsSection = ({
   weather,
   advisory,
 }) => {
-  // console.log(recommendations);
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6">
       <div className="mb-4">
-        <h2 className="text-2xl font-semibold">Top Recommended Crops</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
+          Top Recommended Crops
+        </h2>
 
-        <p className="text-sm font-medium text-green-600 mt-1">
+        <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-1">
           {mode === "quick" ? "⚡ Quick Recommendation" : "🧪 Soil Analysis"}
         </p>
 
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
           {recommendations.length} crops found
         </p>
       </div>
 
       {recommendations.length === 0 ? (
-        <div className="flex items-center justify-center h-64 border-2 border-dashed border-gray-200 rounded-xl">
+        <div className="flex items-center justify-center h-64 border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl">
           <div className="text-center">
-            <h3 className="text-lg font-medium text-gray-700">
+            <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300">
               No Recommendations Yet
             </h3>
 
-            <p className="text-gray-500 mt-2">
+            <p className="text-gray-500 dark:text-gray-400 mt-2">
               Select recommendation parameters and click
-              <span className="font-semibold text-green-600">
+              <span className="font-semibold text-green-600 dark:text-green-400">
                 {" "}
                 Get Recommendation
               </span>
@@ -44,7 +45,7 @@ const RecommendationsSection = ({
         </div>
       ) : (
         <>
-          {/* Best Recommendation Banner */}
+          {/* Best Recommendation Banner — fixed green gradient, no change needed */}
           <div className="mb-6 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-2xl p-6 shadow-lg">
             <p className="text-sm uppercase tracking-wide opacity-90">
               Best Recommendation

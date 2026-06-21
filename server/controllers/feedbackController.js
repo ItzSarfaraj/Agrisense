@@ -2,10 +2,27 @@ const Feedback = require("../models/Feedback");
 
 const createFeedback = async (req, res) => {
   try {
+    const { rating, topic, message } = req.body;
+
+    if (!message) {
+      return res.status(400).json({
+        success: false,
+        message: "Message is required",
+      });
+    }
+
+    if (topic === "General Feedback" && !rating) {
+      return res.status(400).json({
+        success: false,
+        message: "Rating is required for general feedback",
+      });
+    }
+
     const feedback = await Feedback.create({
       user: req.user._id,
-      rating: req.body.rating,
-      message: req.body.message,
+      topic: topic || "General Feedback",
+      rating: rating || undefined,
+      message,
     });
 
     res.status(201).json({

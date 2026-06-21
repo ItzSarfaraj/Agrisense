@@ -3,13 +3,13 @@ const CropInsights = ({ crop }) => {
     <div className="grid lg:grid-cols-2 gap-6">
 
       {/* Advantages */}
-      <div className="bg-white rounded-3xl shadow-md p-8">
+      <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-3xl shadow-md dark:shadow-none p-8">
 
-        <p className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+        <p className="text-green-600 dark:text-green-400 font-semibold uppercase tracking-wider text-sm">
           Benefits
         </p>
 
-        <h2 className="text-3xl font-bold mt-2">
+        <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-gray-100">
           Advantages
         </h2>
 
@@ -20,11 +20,11 @@ const CropInsights = ({ crop }) => {
               key={index}
               className="flex gap-3 items-start"
             >
-              <span className="text-green-600 text-xl">
+              <span className="text-green-600 dark:text-green-400 text-xl">
                 ✅
               </span>
 
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
                 {item}
               </p>
             </div>
@@ -35,13 +35,13 @@ const CropInsights = ({ crop }) => {
       </div>
 
       {/* Challenges */}
-      <div className="bg-white rounded-3xl shadow-md p-8">
+      <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-3xl shadow-md dark:shadow-none p-8">
 
-        <p className="text-red-600 font-semibold uppercase tracking-wider text-sm">
+        <p className="text-red-600 dark:text-red-400 font-semibold uppercase tracking-wider text-sm">
           Risks
         </p>
 
-        <h2 className="text-3xl font-bold mt-2">
+        <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-gray-100">
           Challenges
         </h2>
 
@@ -52,11 +52,11 @@ const CropInsights = ({ crop }) => {
               key={index}
               className="flex gap-3 items-start"
             >
-              <span className="text-red-500 text-xl">
+              <span className="text-red-500 dark:text-red-400 text-xl">
                 ⚠️
               </span>
 
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
                 {item}
               </p>
             </div>

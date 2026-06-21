@@ -40,7 +40,7 @@ const CropDetails = () => {
   if (!crop) {
     return (
       <DashboardLayout>
-        <div className="bg-white rounded-3xl p-8 text-center">
+        <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-3xl p-8 text-center text-gray-700 dark:text-gray-300">
           Loading Crop Details...
         </div>
       </DashboardLayout>
@@ -51,15 +51,15 @@ const CropDetails = () => {
     <DashboardLayout>
       <div className="max-w-7xl mx-auto space-y-6">
         <div>
-          <p className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+          <p className="text-green-600 dark:text-green-400 font-semibold uppercase tracking-wider text-sm">
             Crop Knowledge Center
           </p>
 
-          <h1 className="text-4xl font-bold text-gray-800 mt-2">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mt-2">
             Crop Intelligence Report
           </h1>
 
-          <p className="text-gray-500 mt-2 max-w-7xl">
+          <p className="text-gray-500 dark:text-gray-400 mt-2 max-w-7xl">
             Explore detailed cultivation practices, climate requirements,
             fertilizer recommendations, pest management strategies, yield
             potential and market opportunities for recommended crops.
@@ -67,7 +67,7 @@ const CropDetails = () => {
         </div>
         <button
           onClick={() => navigate(-1)}
-          className="bg-white px-4 py-2 rounded-xl shadow-md hover:shadow-lg transition"
+          className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-xl shadow-md dark:shadow-none hover:shadow-lg dark:hover:border-gray-600 transition"
         >
           ← Back
         </button>

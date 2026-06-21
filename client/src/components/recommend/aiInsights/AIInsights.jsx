@@ -36,9 +36,11 @@ const AIInsights = () => {
   if (!recommendations?.length) {
     return (
       <div className="p-8">
-        <h2 className="text-2xl font-bold">No AI Insight Data Found</h2>
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          No AI Insight Data Found
+        </h2>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-500 dark:text-gray-400 mt-2">
           Please generate recommendations first and then click AI Insights.
         </p>
       </div>
@@ -46,7 +48,6 @@ const AIInsights = () => {
   }
 
   const bestCrop = recommendations?.[0];
-
   const cropAnalysis = getCropAnalysis(cropDetails[0]);
 
   const fetchCropDetails = async () => {
@@ -56,7 +57,6 @@ const AIInsights = () => {
       const crops = await Promise.all(
         recommendations.slice(0, 3).map(async (crop) => {
           const response = await api.get(`/crops/${crop.crop.toLowerCase()}`);
-
           return {
             ...crop,
             details: response.data.crop,
@@ -76,10 +76,11 @@ const AIInsights = () => {
   if (error) {
     return (
       <div className="p-8">
-        <div className="bg-red-50 border border-red-200 rounded-3xl p-8">
-          <h2 className="text-xl font-bold text-red-600">AI Insight Error</h2>
-
-          <p className="mt-2 text-gray-700">{error}</p>
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-3xl p-8">
+          <h2 className="text-xl font-bold text-red-600 dark:text-red-400">
+            AI Insight Error
+          </h2>
+          <p className="mt-2 text-gray-700 dark:text-gray-300">{error}</p>
         </div>
       </div>
     );
@@ -94,10 +95,11 @@ const AIInsights = () => {
   if (loading) {
     return (
       <div className="p-8">
-        <div className="bg-white rounded-3xl shadow-md p-10 text-center">
-          <h2 className="text-2xl font-bold">Generating AI Insights...</h2>
-
-          <p className="text-gray-500 mt-2">
+        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-10 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            Generating AI Insights...
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 mt-2">
             Analyzing profitability, weather, risks and market demand.
           </p>
         </div>
@@ -123,9 +125,7 @@ const AIInsights = () => {
 
   const weatherAnalysis = calculateWeatherMatch(weather);
   const profitScore = calculateProfitScore(bestCrop, recommendations);
-
   const soilMatch = calculateSoilMatch(confidence);
-
   const riskAnalysis = calculateRisk(cropDetails[0]);
 
   const handleDownloadReport = () => {
@@ -138,9 +138,10 @@ const AIInsights = () => {
       cropAnalysis,
     });
   };
+
   return (
-    <div className="p-8 bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen">
-      {/* Hero Section */}
+    <div className="p-8 bg-gradient-to-br from-slate-50 to-indigo-50 dark:from-gray-950 dark:to-gray-900 min-h-screen">
+      {/* Hero Section — fixed gradient */}
       <div className="bg-gradient-to-r from-indigo-700 via-purple-700 to-cyan-600 rounded-3xl p-8 text-white mb-8 shadow-xl relative overflow-hidden">
         <div className="absolute top-[-30px] right-8 text-[160px] font-black opacity-10">
           AI
@@ -178,39 +179,18 @@ const AIInsights = () => {
         riskScore={riskAnalysis?.score || 0}
       />
 
-      {/* AI Reasoning */}
       <AIReasoningCard cropDetails={cropDetails} />
-
-      {/* AI Confidence */}
       <AIConfidenceCard confidence={confidence} />
 
       {cropDetails[0] && <CropAnalysisCard crop={cropDetails[0]} />}
       {cropDetails[0] && <AIActionPlanCard crop={cropDetails[0]} />}
-      {/* Weather Suitability */}
-      <WeatherSuitabilityCard
-        weather={weather}
-        weatherMatch={weatherAnalysis}
-      />
 
-      {/* Crop Comparison */}
-      <CropComparisonCard
-        cropDetails={cropDetails}
-        recommendations={recommendations}
-      />
-
-      {/* AI Decision Analysis */}
+      <WeatherSuitabilityCard weather={weather} weatherMatch={weatherAnalysis} />
+      <CropComparisonCard cropDetails={cropDetails} recommendations={recommendations} />
       <AIComparisonAnalysisCard cropDetails={cropDetails} />
-
-      {/* District Intelligence */}
       <DistrictIntelligenceCard cropDetails={cropDetails} weather={weather} />
-
-      {/* Risk Analysis */}
       <RiskAnalysisCard bestCrop={bestCrop} cropDetails={cropDetails} />
-
-      {/* AI Verdict */}
       <AIVerdictCard bestCrop={bestCrop} />
-
-      {/* AI Summary */}
       <AISummaryCard bestCrop={bestCrop} />
     </div>
   );

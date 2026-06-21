@@ -37,8 +37,8 @@ const RelatedCrops = ({ cropName }) => {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-3xl shadow-md p-8">
-        <h2 className="text-3xl font-bold mb-6">
+      <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-3xl shadow-md dark:shadow-none p-8">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
           Related Crops
         </h2>
 
@@ -46,14 +46,14 @@ const RelatedCrops = ({ cropName }) => {
           {[1, 2, 3, 4].map((item) => (
             <div
               key={item}
-              className="border rounded-2xl overflow-hidden animate-pulse"
+              className="border dark:border-gray-700 rounded-2xl overflow-hidden animate-pulse"
             >
-              <div className="h-40 bg-gray-200"></div>
+              <div className="h-40 bg-gray-200 dark:bg-gray-700"></div>
 
               <div className="p-4">
-                <div className="h-5 bg-gray-200 rounded mb-3"></div>
+                <div className="h-5 bg-gray-200 dark:bg-gray-700 rounded mb-3"></div>
 
-                <div className="h-4 bg-gray-200 rounded w-24"></div>
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24"></div>
               </div>
             </div>
           ))}
@@ -64,12 +64,12 @@ const RelatedCrops = ({ cropName }) => {
 
   if (!related.length) {
     return (
-      <div className="bg-white rounded-3xl shadow-md p-8">
-        <h2 className="text-3xl font-bold mb-4">
+      <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-3xl shadow-md dark:shadow-none p-8">
+        <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
           Related Crops
         </h2>
 
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-gray-400">
           No related crops available.
         </p>
       </div>
@@ -77,18 +77,18 @@ const RelatedCrops = ({ cropName }) => {
   }
 
   return (
-    <div className="bg-white rounded-3xl shadow-md p-8">
+    <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-3xl shadow-md dark:shadow-none p-8">
 
       <div className="mb-6">
-        <p className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+        <p className="text-green-600 dark:text-green-400 font-semibold uppercase tracking-wider text-sm">
           Explore More
         </p>
 
-        <h2 className="text-3xl font-bold mt-2">
+        <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-gray-100">
           Related Crops
         </h2>
 
-        <p className="text-gray-500 mt-2">
+        <p className="text-gray-500 dark:text-gray-400 mt-2">
           Similar crops from the same category.
         </p>
       </div>
@@ -103,7 +103,7 @@ const RelatedCrops = ({ cropName }) => {
                 `/crops/${crop.name.toLowerCase()}`
               )
             }
-            className="cursor-pointer bg-white border rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className="cursor-pointer bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-xl dark:hover:border-gray-600 hover:-translate-y-1 transition-all duration-300"
           >
 
             <img
@@ -121,15 +121,15 @@ const RelatedCrops = ({ cropName }) => {
 
             <div className="p-4">
 
-              <h3 className="text-xl font-bold text-gray-800">
+              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                 {crop.name}
               </h3>
 
-              <p className="text-sm text-gray-500 mt-1">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                 {crop.category}
               </p>
 
-              <button className="mt-4 text-green-600 font-semibold text-sm">
+              <button className="mt-4 text-green-600 dark:text-green-400 font-semibold text-sm">
                 View Details →
               </button>
 

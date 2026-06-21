@@ -10,8 +10,6 @@ import HistoryPage from "../pages/HistoryPage";
 import CropDetails from "../pages/CropDetails";
 import CropLibrary from "../pages/CropLibrary";
 import About from "../pages/About";
-import Contact from "../pages/Contact";
-
 import AdminRoute from "./AdminRoute";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import AdminUsers from "../pages/admin/AdminUsers";
@@ -169,7 +167,6 @@ const AppRoutes = () => {
       <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/feedback" element={<Feedback />} />
       <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     </Routes>

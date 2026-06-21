@@ -41,15 +41,15 @@ const CropLibrary = () => {
 
         {/* Header */}
         <div>
-          <p className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+          <p className="text-green-600 dark:text-green-400 font-semibold uppercase tracking-wider text-sm">
             Crop Knowledge Center
           </p>
 
-          <h1 className="text-4xl font-bold text-gray-800 mt-2">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mt-2">
             Crop Library
           </h1>
 
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-500 dark:text-gray-400 mt-2">
             Browse all available crop intelligence reports,
             cultivation guides, diseases, fertilizers and
             market insights.
@@ -57,7 +57,7 @@ const CropLibrary = () => {
         </div>
 
         {/* Search */}
-        <div className="bg-white rounded-2xl shadow-md p-5">
+        <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-2xl shadow-md dark:shadow-none p-5">
 
           <input
             type="text"
@@ -66,13 +66,13 @@ const CropLibrary = () => {
             onChange={(e) =>
               setSearch(e.target.value)
             }
-            className="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-600"
           />
 
         </div>
 
         {/* Stats */}
-        <div className="text-gray-500">
+        <div className="text-gray-500 dark:text-gray-400">
           {filteredCrops.length} crops available
         </div>
 
@@ -87,7 +87,7 @@ const CropLibrary = () => {
                   `/crops/${crop.name.toLowerCase()}`
                 )
               }
-              className="cursor-pointer bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="cursor-pointer bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-2xl shadow-md dark:shadow-none overflow-hidden hover:shadow-xl dark:hover:border-gray-600 hover:-translate-y-1 transition-all duration-300"
             >
 
               <img
@@ -105,15 +105,15 @@ const CropLibrary = () => {
 
               <div className="p-4">
 
-                <h3 className="text-xl font-bold text-gray-800">
+                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                   {crop.name}
                 </h3>
 
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                   {crop.category}
                 </p>
 
-                <button className="mt-4 text-green-600 font-semibold text-sm">
+                <button className="mt-4 text-green-600 dark:text-green-400 font-semibold text-sm">
                   View Report →
                 </button>
 

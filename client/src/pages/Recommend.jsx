@@ -14,11 +14,11 @@ const Recommend = () => {
   return (
     <DashboardLayout>
       <div className="mb-6 px-6">
-        <h1 className="text-3xl font-bold text-gray-800">
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
           Crop Recommendation
         </h1>
 
-        <p className="text-gray-500 mt-1">
+        <p className="text-gray-500 dark:text-gray-400 mt-1">
           Get AI-powered crop recommendations for your farm.
         </p>
       </div>

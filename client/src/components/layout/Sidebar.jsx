@@ -16,8 +16,7 @@ const Sidebar = ({ isMobileOpen, setIsMobileOpen, isCollapsed, setIsCollapsed })
     { name: "History", path: "/history", icon: History },
     { name: "Crop Library", path: "/crops", icon: BookOpen },
     { name: "Feedback", path: "/feedback", icon: MessageSquare },
-    { name: "About Us", path: "/about", icon: Info },
-    { name: "Contact", path: "/contact", icon: Phone },
+    { name: "About Us", path: "/about", icon: Info }
   ];
 
   const adminMenuItems = [

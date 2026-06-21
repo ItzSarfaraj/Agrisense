@@ -32,9 +32,9 @@ const WeatherCard = () => {
 
   if (!weather) {
     return (
-      <div className="bg-white rounded-3xl p-5 shadow-md animate-pulse">
-        <div className="h-6 bg-gray-200 rounded w-40 mb-4"></div>
-        <div className="h-20 bg-gray-200 rounded"></div>
+      <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 shadow-md animate-pulse">
+        <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded w-40 mb-4"></div>
+        <div className="h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
       </div>
     );
   }

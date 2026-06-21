@@ -7,7 +7,7 @@ import {
   savePrediction,
 } from "../api/priceApi";
 import DashboardLayout from "../components/layout/DashboardLayout";
- 
+
 const MarketPrice = () => {
   const [formData, setFormData] = useState({
     crop: "",
@@ -56,6 +56,7 @@ const MarketPrice = () => {
     try {
       setLoading(true);
       setPrice(null);
+      setError("");
       //   console.log("Submitting:", formData);
       const response = await predictPrice({
         ...formData,
@@ -66,12 +67,12 @@ const MarketPrice = () => {
       setPrice(response.predicted_price);
 
       await savePrediction({
-         crop: formData.crop,
-         state: formData.state,
-         district: formData.district,
-         month: formData.month,
-         predictedPrice: response.predicted_price,
-       });
+        crop: formData.crop,
+        state: formData.state,
+        district: formData.district,
+        month: formData.month,
+        predictedPrice: response.predicted_price,
+      });
 
       setError("");
     } catch (error) {
@@ -145,17 +146,20 @@ const MarketPrice = () => {
     "December",
   ];
 
+  const inputClasses =
+    "w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 p-3 rounded focus:outline-none focus:ring-2 focus:ring-green-500 dark:focus:ring-green-600";
+
   return (
     <DashboardLayout>
       <div className="max-w-4xl mx-auto p-6">
-        <h1 className="text-3xl font-bold text-green-700 mb-2">
+        <h1 className="text-3xl font-bold text-green-700 dark:text-green-400 mb-2">
           Market Price Predictor
         </h1>
-        <p className="text-gray-500 mb-6">
+        <p className="text-gray-500 dark:text-gray-400 mb-6">
           Predict expected market price using historical mandi data.
         </p>
 
-        <div className="bg-white rounded-2xl shadow-md p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-none dark:border dark:border-gray-700 p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="relative">
               <input
@@ -163,15 +167,15 @@ const MarketPrice = () => {
                 placeholder="Search Crop"
                 value={cropQuery}
                 onChange={handleCropSearch}
-                className="w-full border p-3 rounded"
+                className={inputClasses}
               />
 
               {showSuggestions && filteredCrops.length > 0 && (
-                <div className=" absolute z-50 w-full bg-white border rounded shadow-lg mt-1 max-h-60 overflow-y-auto">
+                <div className="absolute z-50 w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded shadow-lg mt-1 max-h-60 overflow-y-auto">
                   {filteredCrops.map((crop) => (
                     <div
                       key={crop}
-                      className=" p-3 cursor-pointer hover:bg-gray-100"
+                      className="p-3 cursor-pointer text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700"
                       onClick={async () => {
                         try {
                           setCropQuery(crop);
@@ -205,7 +209,7 @@ const MarketPrice = () => {
             <select
               value={formData.state}
               onChange={handleStateChange}
-              className="w-full border p-3 rounded"
+              className={inputClasses}
             >
               <option value="">Select State</option>
 
@@ -224,7 +228,7 @@ const MarketPrice = () => {
                   district: e.target.value,
                 })
               }
-              className="w-full border p-3 rounded"
+              className={inputClasses}
             >
               <option value="">Select District</option>
 
@@ -243,7 +247,7 @@ const MarketPrice = () => {
                   month: Number(e.target.value),
                 })
               }
-              className="w-full border p-3 rounded"
+              className={inputClasses}
             >
               <option value="">Select Month</option>
 
@@ -256,7 +260,8 @@ const MarketPrice = () => {
 
             <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium py-3 rounded-lg transition"
+              disabled={loading}
+              className="w-full bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-500 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-medium py-3 rounded-lg transition"
             >
               {loading ? "Predicting..." : "Predict Price"}
             </button>
@@ -264,52 +269,74 @@ const MarketPrice = () => {
         </div>
 
         {price && (
-          <div className="mt-6 bg-white rounded-2xl shadow-md p-6">
+          <div className="mt-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-none dark:border dark:border-gray-700 p-6">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-xl font-bold">Predicted Price</h2>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                  Predicted Price
+                </h2>
 
-                <p className="text-gray-500">Market Modal Price</p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Market Modal Price
+                </p>
               </div>
 
               <div className="text-right">
-                <p className="text-4xl font-bold text-green-600">
+                <p className="text-4xl font-bold text-green-600 dark:text-green-400">
                   ₹ {Number(price).toLocaleString()}
                 </p>
 
-                <p className="text-sm text-gray-500">per quintal</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  per quintal
+                </p>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mt-6">
               <div>
-                <p className="text-gray-500 text-sm">Crop</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  Crop
+                </p>
 
-                <p className="font-medium">{formData.crop}</p>
+                <p className="font-medium text-gray-900 dark:text-gray-100">
+                  {formData.crop}
+                </p>
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm">State</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  State
+                </p>
 
-                <p className="font-medium">{formData.state}</p>
+                <p className="font-medium text-gray-900 dark:text-gray-100">
+                  {formData.state}
+                </p>
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm">District</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  District
+                </p>
 
-                <p className="font-medium">{formData.district}</p>
+                <p className="font-medium text-gray-900 dark:text-gray-100">
+                  {formData.district}
+                </p>
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm">Month</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  Month
+                </p>
 
-                <p className="font-medium">{months[formData.month - 1]}</p>
+                <p className="font-medium text-gray-900 dark:text-gray-100">
+                  {months[formData.month - 1]}
+                </p>
               </div>
             </div>
           </div>
         )}
         {error && (
-          <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4 text-red-600">
+          <div className="mt-4 rounded-lg border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20 p-4 text-red-600 dark:text-red-400">
             {error}
           </div>
         )}
