@@ -74,25 +74,25 @@ const Dashboard = () => {
 
   return (
     <DashboardLayout>
-      <div className="p-6 space-y-6">
+      <div className="p-4 sm:p-6 space-y-6">
         {/* Hero — kept as-is, green gradient stays fixed in both modes */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-green-700 via-green-600 to-emerald-500 rounded-3xl p-8 shadow-xl">
+        <div className="relative overflow-hidden bg-gradient-to-r from-green-700 via-green-600 to-emerald-500 rounded-3xl p-5 sm:p-8 shadow-xl">
           <div className="absolute -top-10 -right-10 w-48 h-48 bg-white/10 rounded-full"></div>
           <div className="absolute right-32 bottom-0 w-24 h-24 bg-white/10 rounded-full"></div>
 
           <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div>
-              <h1 className="text-4xl font-bold text-white">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
                 👋 Welcome back, {user?.name}
               </h1>
-              <p className="text-green-100 mt-2 text-lg">
+              <p className="text-green-100 mt-2 text-sm sm:text-lg">
                 Smart farming decisions powered by data.
               </p>
 
-              <div className="flex gap-4 mt-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
                 <Link
                   to="/recommend"
-                  className="flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition"
+                  className="flex items-center justify-center gap-2 bg-white text-green-700 px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition w-full sm:w-auto"
                 >
                   <PlusCircle size={18} />
                   New Recommendation
@@ -100,7 +100,7 @@ const Dashboard = () => {
 
                 <Link
                   to="/history"
-                  className="flex items-center gap-2 bg-green-700/30 border border-green-300 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700/50 transition"
+                  className="flex items-center justify-center gap-2 bg-green-700/30 border border-green-300 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700/50 transition w-full sm:w-auto"
                 >
                   <History size={18} />
                   View History
@@ -117,9 +117,9 @@ const Dashboard = () => {
                   )}&background=16a34a&color=fff`
                 }
                 alt={user?.name}
-                className="w-24 h-24 rounded-full border-4 border-white/30 object-cover"
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white/30 object-cover"
               />
-              <p className="text-white font-semibold mt-3 text-lg">{user?.name}</p>
+              <p className="text-white font-semibold mt-3 text-base sm:text-lg">{user?.name}</p>
               <p className="text-green-100 text-sm capitalize">{user?.role}</p>
               <p className="text-green-100 text-xs mt-1">
                 Member since {new Date(user?.createdAt).toLocaleDateString("en-IN")}
@@ -131,7 +131,7 @@ const Dashboard = () => {
         <WeatherCard />
 
         {/* Stats — gradient cards: keep colored gradients, just darken border + adjust text */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-5 gap-5">
           <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-800 dark:to-gray-900 border border-green-200 dark:border-gray-700 rounded-2xl shadow-md p-5 hover:shadow-lg transition">
             <div className="flex justify-between items-start">
               <div>
@@ -194,12 +194,12 @@ const Dashboard = () => {
         </div>
 
         {/* Recent Activity */}
-        <div className="bg-gradient-to-br from-white to-green-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-green-100 dark:border-gray-700 shadow-md p-6">
+        <div className="bg-gradient-to-br from-white to-green-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl border border-green-100 dark:border-gray-700 shadow-md p-4 sm:p-6">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-100">
               Recent Activity
             </h2>
-            <span className="text-sm text-gray-500 dark:text-gray-400">
+            <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               Last {stats.recentPredictions.length} Predictions
             </span>
           </div>
@@ -212,24 +212,24 @@ const Dashboard = () => {
               return (
                 <div
                   key={prediction._id}
-                  className="flex justify-between items-center p-4 rounded-xl bg-white/70 dark:bg-gray-700/50 border border-green-100 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-700 hover:shadow-md transition-all"
+                  className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 p-4 rounded-xl bg-white/70 dark:bg-gray-700/50 border border-green-100 dark:border-gray-600 hover:bg-green-50 dark:hover:bg-gray-700 hover:shadow-md transition-all"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 min-w-0">
                     <img
                       src={`/crops/${crop?.toLowerCase()}.png`}
                       alt={crop}
                       onError={(e) => {
                         e.target.src = "/crops/default.png";
                       }}
-                      className="w-14 h-14 rounded-lg object-cover border dark:border-gray-600"
+                      className="w-14 h-14 rounded-lg object-cover border dark:border-gray-600 shrink-0"
                     />
 
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <p className="font-bold text-lg capitalize text-gray-800 dark:text-gray-100">
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="font-bold text-lg capitalize text-gray-800 dark:text-gray-100 break-words">
                           {crop}
                         </p>
-                        <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-semibold shrink-0">
                           Top Pick
                         </span>
                       </div>
@@ -246,9 +246,9 @@ const Dashboard = () => {
                     </div>
                   </div>
 
-                  <div className="text-right">
+                  <div className="flex sm:flex-col items-center justify-between sm:items-end gap-2">
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
                         prediction.mode === "soil"
                           ? "bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300"
                           : "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300"
@@ -256,7 +256,7 @@ const Dashboard = () => {
                     >
                       {prediction.mode === "soil" ? "Soil Mode" : "Quick Mode"}
                     </span>
-                    <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
+                    <p className="text-sm text-gray-400 dark:text-gray-500 sm:mt-2">
                       {new Date(prediction.createdAt).toLocaleDateString("en-IN")}
                     </p>
                   </div>
@@ -267,12 +267,12 @@ const Dashboard = () => {
         </div>
 
         {/* Recent Price Predictions */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-4 sm:p-6">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-100">
               Recent Price Predictions
             </h2>
-            <span className="text-sm text-gray-500 dark:text-gray-400">
+            <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               Last {priceHistory.length}
             </span>
           </div>
@@ -283,7 +283,7 @@ const Dashboard = () => {
             </div>
           ) : (
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full min-w-[600px]">
                 <thead>
                   <tr className="border-b dark:border-gray-700">
                     <th className="text-left py-3 text-gray-700 dark:text-gray-300">Crop</th>
