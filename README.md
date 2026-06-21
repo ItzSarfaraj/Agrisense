@@ -126,6 +126,41 @@ AgriSense supports two recommendation modes.
 
 ---
 
+# 🔔 Notification & Communication System
+
+AgriSense includes a two-way communication system between users and administrators.
+
+## User Features
+
+Users can:
+
+* Submit feedback
+* Suggest new features
+* Report issues
+* Ask farming-related queries
+* Track admin responses
+
+## Admin Features
+
+Administrators can:
+
+* View all user feedback
+* Reply to user queries
+* Manage suggestions and reports
+* Update feedback status
+
+## Real-Time Notification Experience
+
+When an admin replies:
+
+1. The reply is stored in the database.
+2. A notification is generated for the user.
+3. The user can view the notification from the notification bell.
+4. Users can read admin responses directly inside the platform.
+
+This enables seamless communication between platform administrators and farmers.
+
+
 # 🌦️ Weather Advisory System
 
 Provides weather intelligence for better farming decisions.
@@ -297,6 +332,33 @@ Provides platform-wide analytics.
 
 ---
 
+# 🌙 Dark Mode Support
+
+AgriSense provides a modern dark mode experience across the platform.
+
+### Supported Pages
+
+* Dashboard
+* Profile
+* Crop Recommendation
+* Crop Library
+* Prediction History
+* Feedback System
+* Admin Dashboard
+* User Management
+* Analytics
+* Crop Management
+
+### Benefits
+
+* Improved readability
+* Reduced eye strain
+* Better accessibility
+* Modern user experience
+
+Theme preference is preserved across sessions for a consistent experience.
+
+
 ## 👥 User Management
 
 Admin can:
@@ -307,15 +369,7 @@ Admin can:
 
 ---
 
-## 📝 Feedback Management
-
-Admin can:
-
-* Review Feedback
-* Monitor Suggestions
-* Track User Issues
-
----
+ 
 
 ## 📈 Platform Monitoring
 
@@ -503,12 +557,14 @@ Agrisense
 
 * Cloudinary Integration
 * AI Chat Assistant
-* Fertilizer Recommendation
+* Fertilizer Recommendation Engine
 * Disease Detection using Deep Learning
 * Real-Time Weather Alerts
 * Government Scheme Recommendations
 * Mobile Application
 * Advanced Profit Analytics
+* Voice-Based Farmer Assistant
+* Multilingual Support
 
 ---
 
@@ -527,6 +583,70 @@ This project demonstrates:
 * Agricultural Intelligence Systems
 
 ---
+
+# 📸 Application Screenshots
+
+
+## Landing Page
+
+![Landing Page](./screenshots/landing-page.png)
+
+## Dashboard
+
+![Dashboard](./screenshots/user-dashboard.png)
+
+## Crop Recommendation
+
+![Crop Recommendation](./screenshots/recommend-page.png)
+
+## Recommendation Output
+
+![Recommendation Output](./screenshots/recommendation-output.png)
+
+## Market Price Predictor
+
+![Market Price Predictor](./screenshots/pricePredictor-page.png)
+
+## AI Insight Report
+
+![AI Insight Report](./screenshots/AI-Insight.png)
+
+## History Page
+
+![History Page](./screenshots/history-page.png)
+
+## Crop Libraray
+
+![Crop Libraray](./screenshots/crop-libraray.png)
+
+## User Feedback
+
+![User Feedback](./screenshots/feedback-page.png)
+
+## Admin Dashboard
+
+![Admin Dashboard](./screenshots/admin-dashboard.png)
+
+## Admin User Management
+
+![Admin User Management](./screenshots/admin-user-management.png)
+
+## Admin Analytics Dashboard
+
+![Admin Analytics Dashboard](./screenshots/admin-analytics-dashboard.png)
+
+## Admin Crop Management
+
+![Admin Crop Management](./screenshots/admin-crop-management.png)
+
+## Admin Add Crop
+
+![Admin Add Crop](./screenshots/admin-addCrop.png)
+
+## Admin Feedback Management
+
+![Admin Feedback Management](./screenshots/admin-feedback-management.png)
+
 
 # 👨‍💻 Author
 
