@@ -39,7 +39,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/feedback", feedbackRoutes);
 
 //notification routes
-app.use("/notifications", notificationRoutes);
+app.use("api/notifications", notificationRoutes);
 
 app.get("/", (req, res) => {
   res.send("AgriSense Backend Running 🚀");
