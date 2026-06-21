@@ -25,8 +25,8 @@ const SystemStatus = () => {
   ];
 
   return (
-    <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-6">
-      <h2 className="text-2xl font-bold mb-6">System Status</h2>
+    <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 p-6">
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">System Status</h2>
 
       <div className="space-y-4">
         {services.map((service) => {
@@ -35,18 +35,18 @@ const SystemStatus = () => {
           return (
             <div
               key={service.name}
-              className="flex items-center justify-between"
+              className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700 last:border-0"
             >
-              <div className="flex items-center gap-3">
-                <Icon size={20} className="text-green-600" />
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/20">
+                <Icon size={20} className="text-green-600 dark:text-green-400" />
 
-                <span>{service.name}</span>
+                <span className="text-gray-800 dark:text-gray-200">{service.name}</span>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/20">
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
 
-                <span className="text-green-600 font-medium">
+                <span className="text-green-600 dark:text-green-400 font-medium">
                   {service.status}
                 </span>
               </div>

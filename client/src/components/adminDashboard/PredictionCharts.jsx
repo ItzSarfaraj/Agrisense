@@ -37,45 +37,63 @@ const PredictionCharts = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-6 mt-8">
       {/* Top Crops */}
-      <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-6">
-        <h2 className="text-2xl font-bold mb-6">Top Recommended Crops</h2>
+      <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 p-6">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Top Recommended Crops
+        </h2>
 
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={cropStats}>
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
 
-              <XAxis dataKey="crop" />
+              <XAxis dataKey="crop" stroke="#9ca3af" />
 
-              <YAxis />
+              <YAxis stroke="#9ca3af" />
 
-              <Tooltip />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#1f2937",
+                  border: "1px solid #374151",
+                  borderRadius: "12px",
+                  color: "#fff",
+                }}
+              />
 
-              <Bar dataKey="count" fill="#16a34a" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="count" fill="#22c55e" radius={[8, 8, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
 
       {/* Monthly Trend */}
-      <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-6">
-        <h2 className="text-2xl font-bold mb-6">Monthly Prediction Trend</h2>
+      <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 p-6">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Monthly Prediction Trend
+        </h2>
 
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={monthlyStats}>
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
 
-              <XAxis dataKey="month" />
+              <XAxis dataKey="month" stroke="#9ca3af" />
 
-              <YAxis />
+              <YAxis stroke="#9ca3af" />
 
-              <Tooltip />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#1f2937",
+                  border: "1px solid #374151",
+                  borderRadius: "12px",
+                  color: "#fff",
+                }}
+              />
 
               <Line
                 type="monotone"
                 dataKey="count"
-                stroke="#16a34a"
+                stroke="#22c55e"
                 strokeWidth={3}
               />
             </LineChart>
