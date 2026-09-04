@@ -5,13 +5,17 @@ import App from "./App";
 import "./index.css";
 import AuthProvider from "./components/auth/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import { AgriSenseProvider } from "./context/AgriSenseContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <ThemeProvider>
-        <App />
+        <AgriSenseProvider>
+          <App />
+        </AgriSenseProvider>
       </ThemeProvider>
+
       <Toaster
         position="top-right"
         toastOptions={{

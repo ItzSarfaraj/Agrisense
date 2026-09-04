@@ -23,15 +23,13 @@ import AIInsightsPage from "../pages/AIInsightsPage";
 import MarketPrice from "../pages/MarketPrice";
 import ForgotPassword from "../pages/ForgotPassword";
 import ResetPassword from "../pages/ResetPassword";
+import ChatbotPage from "../pages/ChatbotPage";
 
 const AppRoutes = () => {
   return (
-    // <div className="h-screen bg-green-600 text-white flex items-center justify-center text-5xl font-bold">
-    //   AgriSense
-    // </div>
-
     <Routes>
       <Route path="/" element={<LandingPage />} />
+
       <Route
         path="/dashboard"
         element={
@@ -49,6 +47,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/price-predictor"
         element={
@@ -57,6 +56,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/insights"
         element={
@@ -65,6 +65,16 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
+      <Route
+        path="/chatbot"
+        element={
+          <ProtectedRoute>
+            <ChatbotPage />
+          </ProtectedRoute>
+        }
+      />
+
       <Route
         path="/profile"
         element={
@@ -73,6 +83,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/history"
         element={
@@ -81,6 +92,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/admin"
         element={
@@ -89,6 +101,7 @@ const AppRoutes = () => {
           </AdminRoute>
         }
       />
+
       <Route
         path="/admin/users"
         element={
@@ -97,6 +110,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/admin/crops"
         element={
@@ -105,6 +119,7 @@ const AppRoutes = () => {
           </AdminRoute>
         }
       />
+
       <Route
         path="/admin/crops/add"
         element={
@@ -113,6 +128,7 @@ const AppRoutes = () => {
           </AdminRoute>
         }
       />
+
       <Route
         path="/admin/crops/edit/:id"
         element={
@@ -121,6 +137,7 @@ const AppRoutes = () => {
           </AdminRoute>
         }
       />
+
       <Route
         path="/admin/feedback"
         element={
@@ -129,6 +146,7 @@ const AppRoutes = () => {
           </AdminRoute>
         }
       />
+
       <Route
         path="/admin/analytics"
         element={
@@ -137,6 +155,7 @@ const AppRoutes = () => {
           </AdminRoute>
         }
       />
+
       <Route
         path="/crops"
         element={
@@ -145,6 +164,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+
       <Route
         path="/crops/:cropName"
         element={
@@ -153,8 +173,8 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
 
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/feedback" element={<Feedback />} />
       <Route path="/about" element={<About />} />

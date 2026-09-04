@@ -13,6 +13,8 @@ const feedbackRoutes = require("./routes/feedbackRoutes");
 const priceRoutes = require("./routes/priceRoutes");
 const notificationRoutes = require("./routes/notificationRoutes")
 
+const chatbotRoutes = require("./routes/chatbotRoutes");
+
 const connectDB = require("./config/db");
 connectDB();
 
@@ -30,6 +32,7 @@ app.use("/api/crops", cropRoutes);
 app.use("/api/weather", weatherRoutes);
 app.use("/api/recommendations", recommendationRoutes);
 app.use("/api/price", priceRoutes);
+app.use("/api/chat", chatbotRoutes);
 
 
 //admin routes

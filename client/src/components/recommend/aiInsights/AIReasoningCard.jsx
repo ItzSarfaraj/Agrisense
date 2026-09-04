@@ -1,17 +1,24 @@
-import { getReasoning } from "./AIInsightsHelper";
+const AIReasoningCard = ({ reasoning }) => {
+  if (!reasoning?.length) return null;
 
-const AIReasoningCard = ({ cropDetails }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-6 mb-6">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
-        🧠 AI Reasoning
-      </h2>
+    <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-8 mt-8">
+      <div className="flex items-center gap-3 mb-6">
+        <span className="text-3xl">🧠</span>
 
-      <div className="space-y-3">
-        {getReasoning(cropDetails[0]).map((reason, index) => (
-          <div key={index} className="flex items-start gap-3">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          AI Reasoning
+        </h2>
+      </div>
+
+      <div className="space-y-4">
+        {reasoning.map((item, index) => (
+          <div
+            key={index}
+            className="flex gap-3 text-gray-700 dark:text-gray-300"
+          >
             <span>✅</span>
-            <p className="text-gray-700 dark:text-gray-300">{reason}</p>
+            <p>{item}</p>
           </div>
         ))}
       </div>

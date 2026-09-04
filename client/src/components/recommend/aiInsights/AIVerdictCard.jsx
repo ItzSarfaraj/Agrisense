@@ -1,13 +1,18 @@
-const AIVerdictCard = ({ bestCrop }) => {
-  return (
-    <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-6 text-white mb-6">
-      <h2 className="text-2xl font-bold mb-3">🎯 AI Verdict</h2>
+const AIVerdictCard = ({ verdict }) => {
+  if (!verdict) return null;
 
-      <p className="leading-relaxed">
-        Based on profitability, weather conditions, cultivation requirements,
-        and market demand, AI strongly recommends
-        <span className="font-bold"> {bestCrop?.crop}</span> as the most
-        suitable crop.
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-8 mt-8">
+      <div className="flex items-center gap-3 mb-4">
+        <span className="text-3xl">🎯</span>
+
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          AI Verdict
+        </h2>
+      </div>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+        {verdict}
       </p>
     </div>
   );

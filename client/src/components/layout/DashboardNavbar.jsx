@@ -1,7 +1,13 @@
 import { useContext, useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { Menu, LogOut, User, ChevronDown, Sun, Moon } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import {
+  Menu,
+  LogOut,
+  User,
+  ChevronDown,
+  Sun,
+  Moon,
+} from "lucide-react";
 import { UserContext } from "../auth/AuthContext";
 import { ThemeContext } from "../../context/ThemeContext";
 import NotificationBell from "./NotificationBell";
@@ -9,13 +15,20 @@ import NotificationBell from "./NotificationBell";
 const DashboardNavbar = ({ setIsMobileOpen }) => {
   const { user, logout } = useContext(UserContext);
   const { isDark, toggleTheme } = useContext(ThemeContext);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const dropdownRef = useRef(null);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     };
@@ -26,9 +39,6 @@ const DashboardNavbar = ({ setIsMobileOpen }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -60,80 +70,105 @@ const DashboardNavbar = ({ setIsMobileOpen }) => {
   };
 
   return (
-    <nav className="sticky top-0 z-30 bg-white dark:bg-gray-900 border-b dark:border-gray-700 shadow-sm px-6 py-4 transition-colors duration-300">
+    <nav className="sticky top-0 z-30 border-b bg-white px-6 py-4 shadow-sm transition-colors duration-300 dark:border-gray-700 dark:bg-gray-900">
       <div className="flex items-center justify-between">
-        {/* Left Section */}
         <div className="flex items-center gap-4">
           <button
+            type="button"
             onClick={() => setIsMobileOpen((prev) => !prev)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800 md:hidden"
+            aria-label="Open menu"
           >
-            <Menu size={22} className="text-gray-800 dark:text-gray-200" />
+            <Menu
+              size={22}
+              className="text-gray-800 dark:text-gray-200"
+              aria-hidden="true"
+            />
           </button>
 
           <div>
-            <h2 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-100">
+            <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 md:text-xl">
               {currentPage.title}
             </h2>
-            <p className="hidden sm:block text-sm text-gray-500 dark:text-gray-400">
+
+            <p className="hidden text-sm text-gray-500 dark:text-gray-400 sm:block">
               {currentPage.subtitle}
             </p>
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="flex items-center gap-4">
-          {/* Dark Mode Toggle */}
+        <div className="flex items-center gap-3 sm:gap-4">
           <button
+            type="button"
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            className="rounded-full p-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
             aria-label="Toggle dark mode"
           >
             {isDark ? (
-              <Sun size={20} className="text-yellow-400" />
+              <Sun
+                size={20}
+                className="text-yellow-400"
+                aria-hidden="true"
+              />
             ) : (
-              <Moon size={20} className="text-gray-700" />
+              <Moon
+                size={20}
+                className="text-gray-700 dark:text-gray-300"
+                aria-hidden="true"
+              />
             )}
           </button>
 
           <NotificationBell />
 
-          {/* Avatar */}
           <div ref={dropdownRef} className="relative">
             <button
+              type="button"
               onClick={() => setIsOpen((prev) => !prev)}
               className="flex items-center gap-2"
+              aria-label="Open profile menu"
             >
-              <div className="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-semibold">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-600 font-semibold text-white">
                 {user?.name?.charAt(0).toUpperCase()}
               </div>
-              <ChevronDown size={18} className="text-gray-800 dark:text-gray-200" />
+
+              <ChevronDown
+                size={18}
+                className="text-gray-800 dark:text-gray-200"
+                aria-hidden="true"
+              />
             </button>
 
             {isOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-lg border dark:border-gray-700 z-50">
-                <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
-                  <p className="font-semibold text-gray-800 dark:text-gray-100">{user?.name}</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+              <div className="absolute right-0 z-50 mt-2 w-48 rounded-xl border bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
+                <div className="border-b border-gray-100 px-4 py-3 dark:border-gray-700">
+                  <p className="font-semibold text-gray-800 dark:text-gray-100">
+                    {user?.name}
+                  </p>
+
+                  <p className="truncate text-xs text-gray-500 dark:text-gray-400">
                     {user?.email}
                   </p>
                 </div>
+
                 <button
+                  type="button"
                   onClick={() => {
                     setIsOpen(false);
                     navigate("/profile");
                   }}
-                  className="w-full flex items-center gap-2 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-100"
+                  className="flex w-full items-center gap-2 px-4 py-3 text-gray-800 hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-700"
                 >
-                  <User size={18} />
+                  <User size={18} aria-hidden="true" />
                   Profile
                 </button>
 
                 <button
+                  type="button"
                   onClick={handleLogout}
-                  className="w-full flex items-center gap-2 px-4 py-3 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20"
+                  className="flex w-full items-center gap-2 px-4 py-3 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20"
                 >
-                  <LogOut size={18} />
+                  <LogOut size={18} aria-hidden="true" />
                   Logout
                 </button>
               </div>
