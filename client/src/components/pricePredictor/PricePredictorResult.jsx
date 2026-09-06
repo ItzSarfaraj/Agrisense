@@ -35,9 +35,9 @@ const PricePredictorResult = ({
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-end gap-3">
             <div className="text-right">
-              <p className="text-4xl font-black tracking-tight text-emerald-600 dark:text-emerald-400 sm:text-5xl">
+              <p className="text-3xl font-black tracking-tight text-emerald-600 dark:text-emerald-400 sm:text-5xl">
                 ₹ {Number(price).toLocaleString("en-IN")}
               </p>
 
@@ -50,7 +50,7 @@ const PricePredictorResult = ({
               type="button"
               onClick={isSpeaking ? onStopSpeaking : onSpeak}
               disabled={!speechSupported}
-              className={`flex h-11 w-11 items-center justify-center rounded-xl transition ${
+              className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition ${
                 isSpeaking
                   ? "bg-red-500 text-white"
                   : "bg-emerald-50 text-emerald-600 hover:bg-emerald-100 dark:bg-emerald-900/30 dark:text-emerald-400"

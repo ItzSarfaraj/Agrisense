@@ -57,22 +57,16 @@ const CropDoctorImageGrid = ({
                 type="button"
                 onClick={() => onRemove(item.id)}
                 aria-label={`Remove crop photo ${index + 1}`}
-                className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-black/60 text-white opacity-0 backdrop-blur-sm transition group-hover:opacity-100 hover:bg-red-600 focus:opacity-100"
+                className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-black/60 text-white opacity-100 backdrop-blur-sm transition hover:bg-red-600 focus:opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
               >
                 <X size={14} />
               </button>
             </div>
 
             <div className="mt-1.5 flex min-w-0 items-center gap-1 px-1">
-              <FileImage
-                size={11}
-                className="shrink-0 text-emerald-500"
-              />
+              <FileImage size={11} className="shrink-0 text-emerald-500" />
 
-              <p
-                className="truncate text-[10px] text-gray-400"
-                title={item.file.name}
-              >
+              <p className="truncate text-[10px] text-gray-400" title={item.file.name}>
                 {item.file.name}
               </p>
             </div>

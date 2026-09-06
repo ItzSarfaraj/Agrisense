@@ -40,8 +40,10 @@ const LandingPage = () => {
               {/* Short Description */}
               <p className="mt-5 sm:mt-6 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Empowering farmers with AI-driven crop recommendations, profit
-                forecasting, market price prediction, weather insights, and
-                smart farming analytics in one platform.
+                forecasting, market price prediction, weather insights, and a
+                GenAI assistant that can diagnose crop health, explain
+                recommendations, and answer farming questions in your own
+                language.
               </p>
 
               {/* Features */}
@@ -56,7 +58,13 @@ const LandingPage = () => {
                   ☁️ Weather Insights
                 </span>
                 <span className="bg-purple-100 text-purple-700 px-3.5 py-2 rounded-full text-xs sm:text-sm font-medium">
-                  🤖 AI Advisory
+                  🤖 GenAI Crop Advisory & Insights
+                </span>
+                <span className="bg-teal-100 text-teal-700 px-3.5 py-2 rounded-full text-xs sm:text-sm font-medium">
+                  🩺 AI Crop Doctor
+                </span>
+                <span className="bg-rose-100 text-rose-700 px-3.5 py-2 rounded-full text-xs sm:text-sm font-medium">
+                  💬 Multilingual AI Chatbot
                 </span>
               </div>
 
@@ -100,7 +108,7 @@ const LandingPage = () => {
       {/* Stats Section */}
       <section className="bg-white py-10 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
             <div className="bg-green-50 rounded-2xl p-5 sm:p-6 text-center hover:shadow-md transition-shadow duration-200">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-700">30+</h2>
               <p className="text-gray-600 mt-2 text-xs sm:text-sm lg:text-base">Supported Crops</p>
@@ -116,7 +124,12 @@ const LandingPage = () => {
               <p className="text-gray-600 mt-2 text-xs sm:text-sm lg:text-base">Recommendation Modes</p>
             </div>
 
-            <div className="bg-yellow-50 rounded-2xl p-5 sm:p-6 text-center hover:shadow-md transition-shadow duration-200">
+            <div className="bg-teal-50 rounded-2xl p-5 sm:p-6 text-center hover:shadow-md transition-shadow duration-200">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal-700">4</h2>
+              <p className="text-gray-600 mt-2 text-xs sm:text-sm lg:text-base">GenAI-Powered Tools</p>
+            </div>
+
+            <div className="col-span-2 sm:col-span-1 bg-yellow-50 rounded-2xl p-5 sm:p-6 text-center hover:shadow-md transition-shadow duration-200">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-700">Real-Time</h2>
               <p className="text-gray-600 mt-2 text-xs sm:text-sm lg:text-base">Weather Data</p>
             </div>

@@ -127,7 +127,7 @@ const PricePredictorForm = ({
                 value={formData.state}
                 onChange={onStateChange}
                 disabled={!formData.crop}
-                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-12 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
               >
                 <option value="">{text.selectState}</option>
 
@@ -140,7 +140,7 @@ const PricePredictorForm = ({
 
               <ChevronDown
                 size={17}
-                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"
+                className="pointer-events-none absolute right-12 top-1/2 -translate-y-1/2 text-gray-400"
               />
 
               <VoiceInputButton
@@ -166,7 +166,7 @@ const PricePredictorForm = ({
                 value={formData.district}
                 onChange={onDistrictChange}
                 disabled={!formData.state}
-                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-12 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
               >
                 <option value="">{text.selectDistrict}</option>
 
@@ -179,7 +179,7 @@ const PricePredictorForm = ({
 
               <ChevronDown
                 size={17}
-                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"
+                className="pointer-events-none absolute right-12 top-1/2 -translate-y-1/2 text-gray-400"
               />
 
               <VoiceInputButton
@@ -204,7 +204,7 @@ const PricePredictorForm = ({
               <select
                 value={formData.month}
                 onChange={onMonthChange}
-                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-12 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
               >
                 <option value="">{text.selectMonth}</option>
 
@@ -217,7 +217,7 @@ const PricePredictorForm = ({
 
               <ChevronDown
                 size={17}
-                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"
+                className="pointer-events-none absolute right-12 top-1/2 -translate-y-1/2 text-gray-400"
               />
 
               <VoiceInputButton

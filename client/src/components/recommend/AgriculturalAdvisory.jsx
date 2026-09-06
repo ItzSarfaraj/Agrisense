@@ -6,8 +6,8 @@ const AgriculturalAdvisory = ({ advisory }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-md p-6">
       <div className="flex items-center gap-3 mb-5">
-        <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-xl">
-          <AlertTriangle size={22} className="text-green-600 dark:text-green-400" />
+        <div className="bg-amber-100 dark:bg-amber-900/30 p-2 rounded-xl">
+          <AlertTriangle size={22} className="text-amber-600 dark:text-amber-400" />
         </div>
 
         <div>
@@ -25,10 +25,9 @@ const AgriculturalAdvisory = ({ advisory }) => {
         {advisory.map((item, index) => (
           <div
             key={index}
-            className="flex items-start gap-3 bg-green-50 dark:bg-gray-700/50 rounded-xl p-4"
+            className="flex items-start gap-3 bg-amber-50 dark:bg-gray-700/50 rounded-xl p-4"
           >
-            <span className="text-green-600 dark:text-green-400 font-bold">•</span>
-
+            <span className="text-amber-600 dark:text-amber-400 font-bold">•</span>
             <p className="text-gray-700 dark:text-gray-300">{item}</p>
           </div>
         ))}

@@ -1,6 +1,18 @@
 const formatProfit = (value) => {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) {
+    return "—";
+  }
+
   if (value >= 100000) {
     return `₹${(value / 100000).toFixed(2)} Lakh`;
+  }
+
+  return `₹${value.toLocaleString()}`;
+};
+
+const formatRupee = (value) => {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) {
+    return "—";
   }
 
   return `₹${value.toLocaleString()}`;
@@ -18,7 +30,7 @@ const CropCard = ({
   return (
     <div
       onClick={onClick}
-      className={`rounded-2xl p-2 bg-white dark:bg-gray-800 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+      className={`rounded-2xl p-5 bg-white dark:bg-gray-800 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
         rank === 1
           ? "border-2 border-green-500 shadow-md"
           : "border border-gray-200 dark:border-gray-700"
@@ -33,7 +45,7 @@ const CropCard = ({
             onError={(e) => {
               e.target.src = "/crops/default.png";
             }}
-            className="w-16 h-16 rounded-xl object-cover border dark:border-gray-600"
+            className="w-16 h-16 rounded-xl object-cover border dark:border-gray-600 shrink-0"
           />
 
           <div>
@@ -41,7 +53,7 @@ const CropCard = ({
               {crop}
             </h3>
 
-            {confidence !== undefined && (
+            {confidence !== undefined ? (
               <div className="mt-2">
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                   <div
@@ -54,16 +66,16 @@ const CropCard = ({
                   Suitability Score: {confidence}%
                 </p>
               </div>
-            )}
-
-            {confidence === undefined && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">Recommended Crop</p>
+            ) : (
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Recommended Crop
+              </p>
             )}
           </div>
         </div>
 
         <div
-          className={`px-3 py-1 rounded-full text-sm font-bold ${
+          className={`shrink-0 px-3 py-1 rounded-full text-sm font-bold ${
             rank === 1
               ? "bg-green-600 text-white"
               : "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300"
@@ -86,14 +98,20 @@ const CropCard = ({
 
       {/* Range */}
       <div className="bg-green-50 dark:bg-gray-700/50 border border-green-100 dark:border-gray-600 rounded-xl p-4 mb-4">
-        <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Profit Range</p>
+        <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Profit Range
+        </p>
 
         <div className="flex justify-between items-center">
           <div>
             <p className="text-xs text-gray-500 dark:text-gray-400">Minimum</p>
 
             <p className="font-semibold text-gray-800 dark:text-gray-100">
-              ₹{Math.max(0, profit_per_hectare.min).toLocaleString()}
+              {formatRupee(
+                profit_per_hectare?.min != null
+                  ? Math.max(0, profit_per_hectare.min)
+                  : null,
+              )}
             </p>
           </div>
 
@@ -103,7 +121,7 @@ const CropCard = ({
             <p className="text-xs text-gray-500 dark:text-gray-400">Maximum</p>
 
             <p className="font-semibold text-gray-800 dark:text-gray-100">
-              ₹{profit_per_hectare.max.toLocaleString()}
+              {formatRupee(profit_per_hectare?.max)}
             </p>
           </div>
         </div>
@@ -111,10 +129,12 @@ const CropCard = ({
 
       {/* Per Acre */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-xl p-4">
-        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Per Acre Estimate</p>
+        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          Per Acre Estimate
+        </p>
 
         <p className="text-xl font-bold text-blue-700 dark:text-blue-400 mt-2">
-          ₹{profit_per_acre.expected.toLocaleString()}
+          {formatRupee(profit_per_acre?.expected)}
         </p>
       </div>
 

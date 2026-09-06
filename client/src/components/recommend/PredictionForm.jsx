@@ -22,9 +22,7 @@ const PredictionForm = ({
   const { isDark } = useContext(ThemeContext);
 
   const [selectedState, setSelectedState] = useState("");
-
   const [selectedDistrict, setSelectedDistrict] = useState("");
-
   const [season, setSeason] = useState("");
 
   const [N, setN] = useState("");
@@ -36,18 +34,9 @@ const PredictionForm = ({
 
   const seasonOptions = useMemo(
     () => [
-      {
-        value: "Kharif",
-        label: "Kharif · Monsoon · Jun–Oct",
-      },
-      {
-        value: "Rabi",
-        label: "Rabi · Winter · Nov–Apr",
-      },
-      {
-        value: "Zaid",
-        label: "Zaid · Summer · Mar–Jun",
-      },
+      { value: "Kharif", label: "Kharif · Monsoon · Jun–Oct" },
+      { value: "Rabi", label: "Rabi · Winter · Nov–Apr" },
+      { value: "Zaid", label: "Zaid · Summer · Mar–Jun" },
     ],
     [],
   );
@@ -55,11 +44,7 @@ const PredictionForm = ({
   const states = indiaData.states;
 
   const stateOptions = useMemo(
-    () =>
-      states.map((item) => ({
-        value: item.state,
-        label: item.state,
-      })),
+    () => states.map((item) => ({ value: item.state, label: item.state })),
     [states],
   );
 
@@ -67,11 +52,7 @@ const PredictionForm = ({
     states.find((item) => item.state === selectedState)?.districts || [];
 
   const districtOptions = useMemo(
-    () =>
-      districts.map((district) => ({
-        value: district,
-        label: district,
-      })),
+    () => districts.map((district) => ({ value: district, label: district })),
     [districts],
   );
 
@@ -105,27 +86,18 @@ const PredictionForm = ({
       backgroundColor: isDark ? "#1f2937" : "#ffffff",
       borderColor: state.isFocused ? "#16a34a" : isDark ? "#374151" : "#d1d5db",
       boxShadow: state.isFocused ? "0 0 0 3px rgba(22,163,74,.12)" : "none",
-      "&:hover": {
-        borderColor: "#16a34a",
-      },
+      "&:hover": { borderColor: "#16a34a" },
     }),
-
     singleValue: (base) => ({
       ...base,
       color: isDark ? "#f3f4f6" : "#111827",
       fontWeight: 600,
     }),
-
-    input: (base) => ({
-      ...base,
-      color: isDark ? "#f3f4f6" : "#111827",
-    }),
-
+    input: (base) => ({ ...base, color: isDark ? "#f3f4f6" : "#111827" }),
     placeholder: (base) => ({
       ...base,
       color: isDark ? "#9ca3af" : "#6b7280",
     }),
-
     menu: (base) => ({
       ...base,
       backgroundColor: isDark ? "#1f2937" : "#ffffff",
@@ -133,7 +105,6 @@ const PredictionForm = ({
       overflow: "hidden",
       zIndex: 50,
     }),
-
     option: (base, state) => ({
       ...base,
       padding: "12px 14px",
@@ -162,7 +133,6 @@ const PredictionForm = ({
 
     try {
       setLoading(true);
-
       toastId = toast.loading("Generating prediction...");
 
       if (!selectedState || !selectedDistrict || !season) {
@@ -213,13 +183,10 @@ const PredictionForm = ({
       }
 
       const recommendations = response.data.recommendations;
-
       const currentWeather = response.data.weather;
-
       const currentAdvisory = response.data.advisory || [];
 
       setRecommendations(recommendations);
-
       setWeather(currentWeather);
       setAdvisory(currentAdvisory);
 
@@ -230,12 +197,7 @@ const PredictionForm = ({
         mode,
         soil:
           mode === "soil"
-            ? {
-                N: Number(N),
-                P: Number(P),
-                K: Number(K),
-                pH: Number(pH),
-              }
+            ? { N: Number(N), P: Number(P), K: Number(K), pH: Number(pH) }
             : null,
         weather: currentWeather,
         advisory: currentAdvisory,
@@ -274,7 +236,7 @@ const PredictionForm = ({
       <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative p-6 md:p-8">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-8">
+        <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between gap-5 mb-8">
           <div>
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 dark:text-green-400 mb-2">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -290,7 +252,7 @@ const PredictionForm = ({
             </p>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 px-4 py-3 rounded-2xl bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-sm font-semibold">
+          <div className="hidden sm:flex self-start md:self-auto shrink-0 items-center gap-2 px-4 py-3 rounded-2xl bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800/40 text-green-700 dark:text-green-300 text-sm font-semibold shadow-sm">
             🧠 ML-powered analysis
           </div>
         </div>

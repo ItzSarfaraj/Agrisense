@@ -54,11 +54,7 @@ const MarketPrice = () => {
     <DashboardLayout>
       <div className="min-h-full bg-gradient-to-br from-emerald-50/70 via-white to-green-50/50 px-4 py-6 dark:from-gray-950 dark:via-gray-950 dark:to-emerald-950/10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
-          <PricePredictorHeader
-            text={text}
-            language={language}
-            onLanguageChange={handleLanguageChange}
-          />
+          <PricePredictorHeader text={text} />
 
           <div className="mt-6">
             <PricePredictorForm

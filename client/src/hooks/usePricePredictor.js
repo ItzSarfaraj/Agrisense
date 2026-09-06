@@ -30,8 +30,7 @@ const UI_TEXT = {
   "en-IN": {
     badge: "Market Intelligence",
     title: "Market Price Predictor",
-    subtitle:
-      "Estimate the expected market price using historical mandi data.",
+    subtitle: "Estimate the expected market price using historical mandi data.",
     crop: "Crop",
     state: "State",
     district: "District",
@@ -88,9 +87,7 @@ const getInitialLanguage = () => {
 
   const saved = localStorage.getItem("agrisense-language");
 
-  return SUPPORTED_LANGUAGES.some(
-    (item) => item.code === saved,
-  )
+  return SUPPORTED_LANGUAGES.some((item) => item.code === saved)
     ? saved
     : "en-IN";
 };
@@ -115,8 +112,7 @@ const usePricePredictor = () => {
   const [language, setLanguage] = useState(getInitialLanguage);
   const [translatedResult, setTranslatedResult] = useState("");
 
-  const text =
-    UI_TEXT[language] || UI_TEXT["en-IN"];
+  const text = UI_TEXT[language] || UI_TEXT["en-IN"];
 
   const {
     isSupported: speechSupported,
@@ -199,10 +195,7 @@ const usePricePredictor = () => {
         setDistricts([]);
         setError("");
 
-        const data = await getDistricts(
-          crop,
-          state,
-        );
+        const data = await getDistricts(crop, state);
 
         setDistricts(data.districts || []);
       } catch (loadError) {
@@ -214,10 +207,7 @@ const usePricePredictor = () => {
   );
 
   useEffect(() => {
-    localStorage.setItem(
-      "agrisense-language",
-      language,
-    );
+    localStorage.setItem("agrisense-language", language);
   }, [language]);
 
   useEffect(() => {
@@ -256,9 +246,7 @@ const usePricePredictor = () => {
       }
 
       const matches = allCrops.filter((crop) =>
-        crop
-          .toLowerCase()
-          .includes(value.toLowerCase()),
+        crop.toLowerCase().includes(value.toLowerCase()),
       );
 
       setFilteredCrops(matches.slice(0, 8));
@@ -313,37 +301,27 @@ const usePricePredictor = () => {
           state: formData.state,
           district: formData.district,
           month: formData.month,
-          predictedPrice:
-            response.predicted_price,
+          predictedPrice: response.predicted_price,
         });
       } catch (submitError) {
         console.error(submitError);
 
-        setError(
-          submitError?.response?.data?.error ||
-            text.error,
-        );
+        setError(submitError?.response?.data?.error || text.error);
       } finally {
         setLoading(false);
       }
     },
-    [
-      formData,
-      language,
-      stopSpeaking,
-      stopVoice,
-      text.error,
-    ],
+    [formData, language, stopSpeaking, stopVoice, text.error],
   );
 
   const englishResultText = useMemo(() => {
-    if (!price) return "";
+    if (price === null || price === undefined) return "";
 
     return `The predicted market price for ${formData.crop} in ${formData.district}, ${formData.state} for ${MONTHS[formData.month - 1]} is approximately ${Number(price).toLocaleString("en-IN")} rupees per quintal.`;
   }, [price, formData]);
 
   const handleSpeak = useCallback(async () => {
-    if (!speechSupported || !price) return;
+    if (!speechSupported || price === null || price === undefined) return;
 
     stopSpeaking();
 
@@ -358,35 +336,28 @@ const usePricePredictor = () => {
     }
 
     try {
-      const selectedLanguage =
-        SUPPORTED_LANGUAGES.find(
-          (item) => item.code === language,
-        );
-
-      const targetLanguage =
-        selectedLanguage?.label || "English";
-
-      const response = await api.post(
-        "/chat",
-        {
-          message: `Translate this agriculture market price statement into ${targetLanguage}. Preserve the crop name, location, month, number and unit exactly. Return only the translated statement:\n\n${englishResultText}`,
-          history: [],
-          context: {
-            feature: "market-price",
-            crop: formData.crop,
-            state: formData.state,
-            district: formData.district,
-            month: formData.month,
-            predictedPrice: price,
-          },
-          language: targetLanguage,
-          languageCode: language,
-        },
+      const selectedLanguage = SUPPORTED_LANGUAGES.find(
+        (item) => item.code === language,
       );
 
-      const translated =
-        response.data.response ||
-        englishResultText;
+      const targetLanguage = selectedLanguage?.label || "English";
+
+      const response = await api.post("/chat", {
+        message: `Translate this agriculture market price statement into ${targetLanguage}. Preserve the crop name, location, month, number and unit exactly. Return only the translated statement:\n\n${englishResultText}`,
+        history: [],
+        context: {
+          feature: "market-price",
+          crop: formData.crop,
+          state: formData.state,
+          district: formData.district,
+          month: formData.month,
+          predictedPrice: price,
+        },
+        language: targetLanguage,
+        languageCode: language,
+      });
+
+      const translated = response.data.response || englishResultText;
 
       setTranslatedResult(translated);
 
@@ -423,8 +394,7 @@ const usePricePredictor = () => {
     [stopSpeaking],
   );
 
-  const isSpeaking =
-    speakingId === "market-price-result";
+  const isSpeaking = speakingId === "market-price-result";
 
   return {
     formData,

@@ -24,7 +24,6 @@ const TreatmentReport = ({
     () => [
       "diagnosis",
       "images",
-      "summary",
       "immediate",
       "fertilizer",
       "treatment",
@@ -39,13 +38,7 @@ const TreatmentReport = ({
   );
 
   const [expanded, setExpanded] = useState(
-    () =>
-      new Set([
-        "diagnosis",
-        "summary",
-        "immediate",
-        "fertilizer",
-      ]),
+    () => new Set(["diagnosis", "immediate", "fertilizer"]),
   );
 
   if (!report) {
@@ -185,13 +178,8 @@ const TreatmentReport = ({
         <div className="space-y-3 p-4 sm:p-5">
           <ReportSection
             id="diagnosis"
-            title={text.summary}
-            icon={
-              <Stethoscope
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            title={text.diagnosis}
+            icon={<Stethoscope size={17} aria-hidden="true" />}
             expanded={isExpanded("diagnosis")}
             onToggle={() => toggleSection("diagnosis")}
           >
@@ -205,49 +193,20 @@ const TreatmentReport = ({
             id="images"
             title={text.images}
             icon={
-              <span
-                aria-hidden="true"
-                className="text-sm"
-              >
+              <span aria-hidden="true" className="text-sm">
                 📷
               </span>
             }
             expanded={isExpanded("images")}
             onToggle={() => toggleSection("images")}
           >
-            <TreatmentReportImages
-              images={sourceImages}
-              title={text.images}
-            />
-          </ReportSection>
-
-          <ReportSection
-            id="summary"
-            title={text.summary}
-            icon={
-              <CheckCircle2
-                size={17}
-                aria-hidden="true"
-              />
-            }
-            expanded={isExpanded("summary")}
-            onToggle={() => toggleSection("summary")}
-          >
-            <ReportListContent
-              items={report.diagnosis?.why}
-              accent="emerald"
-            />
+            <TreatmentReportImages images={sourceImages} title={text.images} />
           </ReportSection>
 
           <ReportSection
             id="immediate"
             title={text.immediate}
-            icon={
-              <CheckCircle2
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            icon={<CheckCircle2 size={17} aria-hidden="true" />}
             expanded={isExpanded("immediate")}
             onToggle={() => toggleSection("immediate")}
           >
@@ -261,10 +220,7 @@ const TreatmentReport = ({
             id="fertilizer"
             title={text.fertilizer}
             icon={
-              <span
-                aria-hidden="true"
-                className="text-sm"
-              >
+              <span aria-hidden="true" className="text-sm">
                 🌱
               </span>
             }
@@ -332,17 +288,13 @@ const TreatmentReport = ({
 
               <ReportListContent
                 title={text.fertilizerCategories}
-                items={
-                  report.fertilizer_guidance?.fertilizer_categories
-                }
+                items={report.fertilizer_guidance?.fertilizer_categories}
                 accent="green"
               />
 
               <ReportListContent
                 title={text.avoid}
-                items={
-                  report.fertilizer_guidance?.what_to_avoid
-                }
+                items={report.fertilizer_guidance?.what_to_avoid}
                 accent="amber"
               />
 
@@ -359,57 +311,39 @@ const TreatmentReport = ({
           <ReportSection
             id="treatment"
             title={text.treatment}
-            icon={
-              <Stethoscope
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            icon={<Stethoscope size={17} aria-hidden="true" />}
             expanded={isExpanded("treatment")}
             onToggle={() => toggleSection("treatment")}
           >
             <div className="space-y-3">
-              {(report.treatment_steps || []).map(
-                (step, index) => (
-                  <div
-                    key={`${step.step}-${index}`}
-                    className="rounded-2xl border border-gray-100 bg-gray-50/60 p-4 dark:border-gray-800 dark:bg-gray-950/40 print:break-inside-avoid"
-                  >
-                    <div className="flex gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-xs font-bold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300">
-                        {step.step}
-                      </div>
+              {(report.treatment_steps || []).map((step, index) => (
+                <div
+                  key={`${step.step}-${index}`}
+                  className="rounded-2xl border border-gray-100 bg-gray-50/60 p-4 dark:border-gray-800 dark:bg-gray-950/40 print:break-inside-avoid"
+                >
+                  <div className="flex gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-xs font-bold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300">
+                      {step.step}
+                    </div>
 
-                      <div className="min-w-0 flex-1">
-                        <h4 className="text-xs font-bold text-gray-900 dark:text-white sm:text-sm">
-                          {step.title}
-                        </h4>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="text-xs font-bold text-gray-900 dark:text-white sm:text-sm">
+                        {step.title}
+                      </h4>
 
-                        <p className="mt-2 text-xs leading-5 text-gray-600 dark:text-gray-300">
-                          {step.action}
-                        </p>
+                      <p className="mt-2 text-xs leading-5 text-gray-600 dark:text-gray-300">
+                        {step.action}
+                      </p>
 
-                        <div className="mt-4 grid gap-2 sm:grid-cols-3">
-                          <MiniInfo
-                            label={text.why}
-                            value={step.why}
-                          />
-
-                          <MiniInfo
-                            label={text.timing}
-                            value={step.timing}
-                          />
-
-                          <MiniInfo
-                            label={text.monitor}
-                            value={step.monitoring}
-                          />
-                        </div>
+                      <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                        <MiniInfo label={text.why} value={step.why} />
+                        <MiniInfo label={text.timing} value={step.timing} />
+                        <MiniInfo label={text.monitor} value={step.monitoring} />
                       </div>
                     </div>
                   </div>
-                ),
-              )}
+                </div>
+              ))}
             </div>
           </ReportSection>
 
@@ -417,10 +351,7 @@ const TreatmentReport = ({
             id="flowchart"
             title={text.flowchart}
             icon={
-              <span
-                aria-hidden="true"
-                className="text-sm"
-              >
+              <span aria-hidden="true" className="text-sm">
                 🔀
               </span>
             }
@@ -436,21 +367,14 @@ const TreatmentReport = ({
           <ReportSection
             id="monitoring"
             title={text.improvement}
-            icon={
-              <CheckCircle2
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            icon={<CheckCircle2 size={17} aria-hidden="true" />}
             expanded={isExpanded("monitoring")}
             onToggle={() => toggleSection("monitoring")}
           >
             <div className="grid gap-3 lg:grid-cols-2">
               <ReportListContent
                 title={text.improvement}
-                items={
-                  report.monitoring_plan?.improvement_signs
-                }
+                items={report.monitoring_plan?.improvement_signs}
                 accent="emerald"
               />
 
@@ -466,10 +390,7 @@ const TreatmentReport = ({
             id="followup"
             title={text.followUp}
             icon={
-              <span
-                aria-hidden="true"
-                className="text-sm"
-              >
+              <span aria-hidden="true" className="text-sm">
                 📊
               </span>
             }
@@ -485,30 +406,17 @@ const TreatmentReport = ({
           <ReportSection
             id="prevention"
             title={text.prevention}
-            icon={
-              <ShieldCheck
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            icon={<ShieldCheck size={17} aria-hidden="true" />}
             expanded={isExpanded("prevention")}
             onToggle={() => toggleSection("prevention")}
           >
-            <ReportListContent
-              items={report.prevention}
-              accent="teal"
-            />
+            <ReportListContent items={report.prevention} accent="teal" />
           </ReportSection>
 
           <ReportSection
             id="expert"
             title={text.expert}
-            icon={
-              <Stethoscope
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            icon={<Stethoscope size={17} aria-hidden="true" />}
             expanded={isExpanded("expert")}
             onToggle={() => toggleSection("expert")}
           >
@@ -537,19 +445,11 @@ const TreatmentReport = ({
           <ReportSection
             id="safety"
             title={text.safety}
-            icon={
-              <ShieldCheck
-                size={17}
-                aria-hidden="true"
-              />
-            }
+            icon={<ShieldCheck size={17} aria-hidden="true" />}
             expanded={isExpanded("safety")}
             onToggle={() => toggleSection("safety")}
           >
-            <ReportListContent
-              items={report.safety}
-              accent="orange"
-            />
+            <ReportListContent items={report.safety} accent="orange" />
           </ReportSection>
 
           <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/20 print:break-inside-avoid">
@@ -569,14 +469,7 @@ const TreatmentReport = ({
   );
 };
 
-const ReportSection = ({
-  id,
-  title,
-  icon,
-  expanded,
-  onToggle,
-  children,
-}) => {
+const ReportSection = ({ id, title, icon, expanded, onToggle, children }) => {
   return (
     <section
       className="overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm transition-all dark:border-gray-800 dark:bg-gray-900 print:break-inside-avoid"
@@ -620,19 +513,13 @@ const ReportSection = ({
   );
 };
 
-const SummaryCard = ({
-  label,
-  value,
-  accent = "emerald",
-  capitalize = false,
-}) => {
+const SummaryCard = ({ label, value, accent = "emerald", capitalize = false }) => {
   const accents = {
     emerald:
       "border-emerald-100 bg-emerald-50/70 dark:border-emerald-900/40 dark:bg-emerald-950/20",
     amber:
       "border-amber-100 bg-amber-50/70 dark:border-amber-900/40 dark:bg-amber-950/20",
-    blue:
-      "border-blue-100 bg-blue-50/70 dark:border-blue-900/40 dark:bg-blue-950/20",
+    blue: "border-blue-100 bg-blue-50/70 dark:border-blue-900/40 dark:bg-blue-950/20",
   };
 
   const dots = {
@@ -642,15 +529,9 @@ const SummaryCard = ({
   };
 
   return (
-    <div
-      className={`rounded-2xl border p-4 ${accents[accent]}`}
-    >
+    <div className={`rounded-2xl border p-4 ${accents[accent]}`}>
       <div className="flex items-center gap-2">
-        <span
-          aria-hidden="true"
-          className={`h-2 w-2 rounded-full ${dots[accent]}`}
-        />
-
+        <span aria-hidden="true" className={`h-2 w-2 rounded-full ${dots[accent]}`} />
         <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-gray-400">
           {label}
         </p>
@@ -667,28 +548,18 @@ const SummaryCard = ({
   );
 };
 
-const ReportListContent = ({
-  title,
-  items = [],
-  accent = "emerald",
-}) => {
+const ReportListContent = ({ title, items = [], accent = "emerald" }) => {
   if (!items?.length) {
     return null;
   }
 
   const bullets = {
-    emerald:
-      "bg-emerald-500 ring-emerald-100 dark:ring-emerald-950",
-    green:
-      "bg-green-500 ring-green-100 dark:ring-green-950",
-    amber:
-      "bg-amber-500 ring-amber-100 dark:ring-amber-950",
-    blue:
-      "bg-blue-500 ring-blue-100 dark:ring-blue-950",
-    teal:
-      "bg-teal-500 ring-teal-100 dark:ring-teal-950",
-    orange:
-      "bg-orange-500 ring-orange-100 dark:ring-orange-950",
+    emerald: "bg-emerald-500 ring-emerald-100 dark:ring-emerald-950",
+    green: "bg-green-500 ring-green-100 dark:ring-green-950",
+    amber: "bg-amber-500 ring-amber-100 dark:ring-amber-950",
+    blue: "bg-blue-500 ring-blue-100 dark:ring-blue-950",
+    teal: "bg-teal-500 ring-teal-100 dark:ring-teal-950",
+    orange: "bg-orange-500 ring-orange-100 dark:ring-orange-950",
   };
 
   return (
@@ -709,7 +580,6 @@ const ReportListContent = ({
               aria-hidden="true"
               className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ring-4 ${bullets[accent]}`}
             />
-
             <span>{item}</span>
           </li>
         ))}
@@ -723,7 +593,6 @@ const MiniInfo = ({ label, value }) => (
     <p className="text-[9px] font-bold uppercase tracking-wider text-gray-400">
       {label}
     </p>
-
     <p className="mt-1.5 text-[11px] leading-5 text-gray-600 dark:text-gray-300">
       {value || "—"}
     </p>
