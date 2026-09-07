@@ -33,8 +33,6 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
 
-      # ---------------- CLIENT ----------------
-
       - name: Build and push client
         run: |
           docker build \
@@ -45,8 +43,6 @@ jobs:
           docker push \
             $ECR_REGISTRY/agrisense-client:latest
 
-      # ---------------- SERVER ----------------
-
       - name: Build and push server
         run: |
           docker build \
@@ -55,8 +51,6 @@ jobs:
 
           docker push \
             $ECR_REGISTRY/agrisense-server:latest
-
-      # ---------------- ML ----------------
 
       - name: Build and push ML service
         run: |
@@ -67,7 +61,11 @@ jobs:
           docker push \
             $ECR_REGISTRY/agrisense-ml:latest
 
-      # ---------------- GENAI ----------------
+      - name: Create GenAI Google credentials
+        env:
+          GOOGLE_AWS_CREDENTIALS: ${{ secrets.GOOGLE_AWS_CREDENTIALS }}
+        run: |
+          printf '%s' "$GOOGLE_AWS_CREDENTIALS" > genai-service/google-aws-credentials.json
 
       - name: Build and push GenAI service
         run: |
@@ -77,8 +75,6 @@ jobs:
 
           docker push \
             $ECR_REGISTRY/agrisense-genai:latest
-
-      # ---------------- ECS ----------------
 
       - name: Deploy Client
         run: |
@@ -111,8 +107,6 @@ jobs:
             --service agrisense-genai \
             --force-new-deployment \
             --region $AWS_REGION
-
-      # ---------------- WAIT ----------------
 
       - name: Wait for ECS deployments
         run: |
