@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import api from "../api/axios";
+import generateId from "../components/common/generateId";
 
 const useChatbot = ({
   chatContext,
@@ -58,7 +59,7 @@ const useChatbot = ({
         setMessages((previous) => [
           ...previous,
           {
-            id: crypto.randomUUID(),
+            id: generateId(),
             role: "assistant",
             content:
               response.data.response ||
@@ -73,7 +74,7 @@ const useChatbot = ({
           setMessages((previous) => [
             ...previous,
             {
-              id: crypto.randomUUID(),
+              id: generateId(),
               role: "assistant",
               content: "Stopped.",
             },
@@ -91,7 +92,7 @@ const useChatbot = ({
         setMessages((previous) => [
           ...previous,
           {
-            id: crypto.randomUUID(),
+            id: generateId(),
             role: "assistant",
             content:
               "Sorry, I couldn't process your question right now. Please try again.",
@@ -135,7 +136,7 @@ const useChatbot = ({
       setMessages((previous) => [
         ...previous,
         {
-          id: crypto.randomUUID(),
+          id: generateId(),
           role: "user",
           content: message,
         },

@@ -14,6 +14,7 @@ import CropDoctorImageGrid from "./CropDoctorImageGrid";
 import CropDoctorDetails from "./CropDoctorDetails";
 import CropDoctorResult from "./result/CropDoctorResult";
 import useSpeechRecognition from "../../../hooks/useSpeechRecognition";
+import generateId from "../../common/generateId";
 
 const MAX_IMAGES = 5;
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
@@ -176,7 +177,7 @@ const CropDoctorMode = ({
 
       if (validFiles.length) {
         const preparedImages = validFiles.map((file) => ({
-          id: crypto.randomUUID(),
+          id: generateId(),
           file,
           preview: URL.createObjectURL(file),
         }));

@@ -31,3 +31,18 @@ coverage/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local AWS / ECS configuration
+ecs-client-task.json
+ecs-execution-trust-policy.json
+ecs-genai-task.json
+ecs-ml-task.json
+ecs-server-task.json
+ecs-trust-policy.json
+genai-task.json
+server-task-register.json
+server-task.json
+
+# GitHub Actions AWS IAM setup
+github-actions-permissions.json
+github-actions-trust-policy.json
