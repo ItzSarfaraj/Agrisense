@@ -13,10 +13,11 @@ env:
   AWS_REGION: ap-south-1
   AWS_ACCOUNT_ID: "820381490998"
   ECS_CLUSTER: agrisense-cluster
+  ECR_REGISTRY: 820381490998.dkr.ecr.ap-south-1.amazonaws.com
 
 jobs:
-  deploy-client:
-    name: Deploy Client
+  deploy:
+    name: Build and Deploy AgriSense
     runs-on: ubuntu-latest
 
     steps:
@@ -32,9 +33,9 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build and push client image
-        env:
-          ECR_REGISTRY: ${{ env.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com
+      # ---------------- CLIENT ----------------
+
+      - name: Build and push client
         run: |
           docker build \
             --build-arg VITE_API_URL=http://agrisense-alb-1672199196.ap-south-1.elb.amazonaws.com/api \
@@ -44,7 +45,42 @@ jobs:
           docker push \
             $ECR_REGISTRY/agrisense-client:latest
 
-      - name: Deploy client to ECS
+      # ---------------- SERVER ----------------
+
+      - name: Build and push server
+        run: |
+          docker build \
+            -t $ECR_REGISTRY/agrisense-server:latest \
+            ./server
+
+          docker push \
+            $ECR_REGISTRY/agrisense-server:latest
+
+      # ---------------- ML ----------------
+
+      - name: Build and push ML service
+        run: |
+          docker build \
+            -t $ECR_REGISTRY/agrisense-ml:latest \
+            ./ml-service
+
+          docker push \
+            $ECR_REGISTRY/agrisense-ml:latest
+
+      # ---------------- GENAI ----------------
+
+      - name: Build and push GenAI service
+        run: |
+          docker build \
+            -t $ECR_REGISTRY/agrisense-genai:latest \
+            ./genai-service
+
+          docker push \
+            $ECR_REGISTRY/agrisense-genai:latest
+
+      # ---------------- ECS ----------------
+
+      - name: Deploy Client
         run: |
           aws ecs update-service \
             --cluster $ECS_CLUSTER \
@@ -52,7 +88,39 @@ jobs:
             --force-new-deployment \
             --region $AWS_REGION
 
+      - name: Deploy Server
+        run: |
+          aws ecs update-service \
+            --cluster $ECS_CLUSTER \
+            --service agrisense-server \
+            --force-new-deployment \
+            --region $AWS_REGION
+
+      - name: Deploy ML
+        run: |
+          aws ecs update-service \
+            --cluster $ECS_CLUSTER \
+            --service agrisense-ml \
+            --force-new-deployment \
+            --region $AWS_REGION
+
+      - name: Deploy GenAI
+        run: |
+          aws ecs update-service \
+            --cluster $ECS_CLUSTER \
+            --service agrisense-genai \
+            --force-new-deployment \
+            --region $AWS_REGION
+
+      # ---------------- WAIT ----------------
+
+      - name: Wait for ECS deployments
+        run: |
           aws ecs wait services-stable \
             --cluster $ECS_CLUSTER \
-            --services agrisense-client \
+            --services \
+              agrisense-client \
+              agrisense-server \
+              agrisense-ml \
+              agrisense-genai \
             --region $AWS_REGION
