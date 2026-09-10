@@ -93,6 +93,7 @@ def _build_credentials():
             "service_account_impersonation_url"
         ),
         aws_security_credentials_supplier=ECSCredentialsSupplier(),
+        scopes=["https://www.googleapis.com/auth/cloud-platform"],
     )
 
 
