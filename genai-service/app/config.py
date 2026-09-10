@@ -6,12 +6,14 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 from google.auth import aws
+import google.auth
 
 
 load_dotenv()
 
 
 GOOGLE_CLOUD_PROJECT = os.getenv("GOOGLE_CLOUD_PROJECT")
+
 GOOGLE_CLOUD_LOCATION = os.getenv(
     "GOOGLE_CLOUD_LOCATION",
     "global",
@@ -36,20 +38,11 @@ if not GOOGLE_CLOUD_PROJECT:
 
 class ECSCredentialsSupplier(aws.AwsSecurityCredentialsSupplier):
     """
-    Fetches AWS credentials directly from the ECS task metadata
-    endpoint (169.254.170.2) at the exact moment Google's auth
-    library needs to sign a request.
+    Fetch fresh AWS credentials directly from the ECS task
+    metadata endpoint whenever Google authentication needs them.
 
-    This replaces the old approach of polling ECS every 5 minutes
-    in a background thread and stuffing the result into
-    os.environ. That approach had a race condition: AWS can
-    rotate/invalidate the task role's session token on its own
-    schedule, independent of the 5-minute timer, so a request could
-    occasionally be signed with a token that AWS had already
-    invalidated moments earlier ("ExpiredToken" errors).
-
-    Fetching on demand, every time, eliminates that window
-    entirely — there is no stale copy to accidentally use.
+    This prevents stale ECS task credentials from being reused
+    during Google Workload Identity Federation.
     """
 
     def get_aws_security_credentials(self, context, request):
@@ -59,14 +52,15 @@ class ECSCredentialsSupplier(aws.AwsSecurityCredentialsSupplier):
 
         if not relative_uri:
             raise RuntimeError(
-                "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI not set. "
-                "This supplier only works inside an ECS task."
+                "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI not set."
             )
 
         endpoint = f"http://169.254.170.2{relative_uri}"
 
         with urllib.request.urlopen(endpoint, timeout=5) as response:
-            creds = json.loads(response.read().decode())
+            creds = json.loads(
+                response.read().decode()
+            )
 
         return aws.AwsSecurityCredentials(
             creds["AccessKeyId"],
@@ -77,31 +71,68 @@ class ECSCredentialsSupplier(aws.AwsSecurityCredentialsSupplier):
     def get_aws_region(self, context, request):
         return os.environ.get(
             "AWS_REGION",
-            os.environ.get("AWS_DEFAULT_REGION", "ap-south-1"),
+            os.environ.get(
+                "AWS_DEFAULT_REGION",
+                "ap-south-1",
+            ),
         )
 
 
 def _build_credentials():
-    with open(GOOGLE_APPLICATION_CREDENTIALS) as f:
-        info = json.load(f)
+    """
+    Build credentials differently depending on where the
+    GenAI service is running.
 
-    return aws.Credentials(
-        audience=info["audience"],
-        subject_token_type=info["subject_token_type"],
-        token_url=info["token_url"],
-        service_account_impersonation_url=info.get(
-            "service_account_impersonation_url"
-        ),
-        aws_security_credentials_supplier=ECSCredentialsSupplier(),
-        scopes=["https://www.googleapis.com/auth/cloud-platform"],
+    AWS ECS:
+        ECS task role → AWS WIF → Google Vertex AI
+
+    Local Docker:
+        Local Google ADC → Google Vertex AI
+    """
+
+    # ---------------------------------------------------------
+    # AWS ECS / Fargate
+    # ---------------------------------------------------------
+    if os.getenv("AWS_CONTAINER_CREDENTIALS_RELATIVE_URI"):
+
+        with open(GOOGLE_APPLICATION_CREDENTIALS) as f:
+            info = json.load(f)
+
+        return aws.Credentials(
+            audience=info["audience"],
+            subject_token_type=info["subject_token_type"],
+            token_url=info["token_url"],
+            service_account_impersonation_url=info.get(
+                "service_account_impersonation_url"
+            ),
+            aws_security_credentials_supplier=(
+                ECSCredentialsSupplier()
+            ),
+            scopes=[
+                "https://www.googleapis.com/auth/cloud-platform"
+            ],
+        )
+
+    # ---------------------------------------------------------
+    # Local development / Docker
+    # ---------------------------------------------------------
+    credentials, project = google.auth.default(
+        scopes=[
+            "https://www.googleapis.com/auth/cloud-platform"
+        ]
     )
+
+    return credentials
+
+
+credentials = _build_credentials()
 
 
 client = genai.Client(
     vertexai=True,
     project=GOOGLE_CLOUD_PROJECT,
     location=GOOGLE_CLOUD_LOCATION,
-    credentials=_build_credentials(),
+    credentials=credentials,
 )
 
 
