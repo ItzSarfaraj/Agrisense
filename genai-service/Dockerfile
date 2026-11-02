@@ -5,13 +5,22 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-COPY requirements.txt .
+COPY requirements.txt requirements-gemini.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Google libraries are only needed for LLM_PROVIDER=gemini.
+# Build with:  docker build --build-arg INSTALL_GEMINI=true ...
+ARG INSTALL_GEMINI=false
+RUN if [ "$INSTALL_GEMINI" = "true" ]; then \
+      pip install --no-cache-dir -r requirements-gemini.txt; \
+    fi
+
 COPY app ./app
-COPY google-aws-credentials.json ./google-aws-credentials.json
-COPY entrypoint.py ./entrypoint.py
+
+# google-aws-credentials.json* matches zero or one file, so the build also
+# works when the file does not exist (Ollama / OpenAI-compatible setups).
+COPY entrypoint.py google-aws-credentials.json* ./
 
 EXPOSE 8000
 

@@ -4,6 +4,11 @@ const FormData = require("form-data");
 const GENAI_SERVICE_URL =
   process.env.GENAI_SERVICE_URL;
 
+// Local models on a CPU can be slow. Raise this (milliseconds) in the
+// server .env if Crop Doctor or the treatment report time out.
+const GENAI_TIMEOUT_MS =
+  Number(process.env.GENAI_TIMEOUT_MS) || 180000;
+
 const sendChatMessage = async (data) => {
   const response = await axios.post(
     `${GENAI_SERVICE_URL}/chat`,
@@ -45,7 +50,7 @@ const sendCropDoctorAnalysis = async ({
       headers: form.getHeaders(),
       maxContentLength: 25 * 1024 * 1024,
       maxBodyLength: 25 * 1024 * 1024,
-      timeout: 180000,
+      timeout: GENAI_TIMEOUT_MS,
     },
   );
 
@@ -65,7 +70,7 @@ const translateCropDoctorAnalysis = async ({
       language_code: languageCode || "en-IN",
     },
     {
-      timeout: 120000,
+      timeout: GENAI_TIMEOUT_MS,
     },
   );
 
@@ -89,7 +94,7 @@ const generateCropDoctorTreatmentReport = async ({
       language_code: languageCode || "en-IN",
     },
     {
-      timeout: 180000,
+      timeout: GENAI_TIMEOUT_MS,
     },
   );
 

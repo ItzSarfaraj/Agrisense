@@ -3,7 +3,7 @@ const generateId = () => {
     typeof crypto !== "undefined" &&
     typeof crypto.randomUUID === "function"
   ) {
-    return generateId();
+    return crypto.randomUUID();
   }
 
   return `${Date.now()}-${Math.random()
