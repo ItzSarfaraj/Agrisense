@@ -48,11 +48,17 @@ LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama").strip().lower()
 
 # Model names. LLM_VISION_MODEL falls back to LLM_MODEL, which is right when
 # one multimodal model (for example gemma4:e4b) does both text and images.
-LLM_MODEL = os.getenv("LLM_MODEL", "agrisense-llm")
+_DEFAULT_MODELS = {
+    "ollama": "agrisense-llm",
+    "openai": "gpt-4o-mini",
+    "openai_compatible": "gpt-4o-mini",
+    "openai-compatible": "gpt-4o-mini",
+}
+LLM_MODEL = os.getenv("LLM_MODEL") or _DEFAULT_MODELS.get(LLM_PROVIDER, "agrisense-llm")
 LLM_VISION_MODEL = os.getenv("LLM_VISION_MODEL") or LLM_MODEL
 
 # Seconds to wait for one model call. Local CPU models can be slow.
-LLM_TIMEOUT = _float("LLM_TIMEOUT", 900.0)
+LLM_TIMEOUT = _float("LLM_TIMEOUT", 900.0 if LLM_PROVIDER == "ollama" else 120.0)
 
 # Photos are shrunk before they reach the model. Phone photos are huge and a
 # CPU-only machine would spend minutes encoding them. 0 disables resizing.
@@ -94,7 +100,7 @@ OLLAMA_NUM_THREAD = _int("OLLAMA_NUM_THREAD", 0)
 OLLAMA_THINK = os.getenv("OLLAMA_THINK", "false").strip().lower()
 
 # ---- OpenAI-compatible hosted APIs ---------------------------------------
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.groq.com/openai/v1").rstrip("/")
+OPENAI_BASE_URL = (os.getenv("OPENAI_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 # Some providers do not support response_format=json_object. Set false for them.
 OPENAI_JSON_MODE = _bool("OPENAI_JSON_MODE", True)

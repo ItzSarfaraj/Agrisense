@@ -1,4 +1,7 @@
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+import io
+from fastapi.concurrency import run_in_threadpool
+from app import config
 
 from app.schemas import (
     ChatInput,
@@ -21,6 +24,46 @@ from app.services.weather_advisory_service import generate_weather_advisory
 
 app = FastAPI(title="AgriSense GenAI API", version="1.0.0")
 
+print(
+    "GenAI config: "
+    f"provider={config.LLM_PROVIDER} model={config.LLM_MODEL} "
+    f"vision_model={config.LLM_VISION_MODEL} "
+    + (f"base_url={config.OPENAI_BASE_URL} api_key_set={bool(config.OPENAI_API_KEY)}"
+       if config.LLM_PROVIDER.startswith("openai") else "")
+)
+
+
+def to_http_error(error: Exception, fallback: str) -> HTTPException:
+    name = type(error).__name__
+    status = getattr(error, "status_code", None)
+    print(f"GenAI provider error [{name}] status={status}: {error}")
+
+    if status in (401, 403):
+        return HTTPException(503, "The AI provider rejected the API key. Check OPENAI_API_KEY and OPENAI_BASE_URL.")
+    if status == 429 or "RateLimit" in name:
+        return HTTPException(503, "The AI provider refused the request: rate limit or no credits left. Check the billing balance of the API key.")
+    if status == 404:
+        return HTTPException(503, "The AI model was not found. Check LLM_MODEL / LLM_VISION_MODEL.")
+    if status == 400:
+        return HTTPException(502, "The AI provider rejected the request. The model may not support images. Check LLM_VISION_MODEL.")
+    if isinstance(error, ValueError):
+        return HTTPException(502, "The AI returned an answer in an unexpected format. Please try again.")
+    if "Timeout" in name:
+        return HTTPException(504, "The AI model took too long to answer.")
+    if "Connection" in name or "Cannot reach" in str(error):
+        return HTTPException(503, "Cannot reach the AI provider.")
+    return HTTPException(500, fallback)
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "AgriSense GenAI API Running",
+        "provider": config.LLM_PROVIDER,
+        "model": config.LLM_MODEL,
+        "vision_model": config.LLM_VISION_MODEL,
+    }
+
 
 @app.get("/")
 def root():
@@ -38,7 +81,7 @@ def weather_advisory(data: WeatherAdvisoryInput):
     except Exception as error:
         print(f"GenAI error: {error}")
 
-        raise HTTPException(
+        raise to_http_error(
             status_code=500,
             detail="Failed to generate weather advisory",
         )
@@ -55,7 +98,7 @@ def recommendation_insights(data: RecommendationInsightsInput):
     except Exception as error:
         print(f"GenAI insights error: {error}")
 
-        raise HTTPException(
+        raise to_http_error(
             status_code=500,
             detail="Failed to generate recommendation insights",
         )
@@ -73,7 +116,7 @@ def chat(data: ChatInput):
     except Exception as error:
         print(f"Chatbot error: {error}")
 
-        raise HTTPException(
+        raise to_http_error(
             status_code=500,
             detail="Failed to generate chatbot response",
         )
@@ -123,6 +166,15 @@ async def crop_doctor(
                     detail="Each image must be 5 MB or smaller",
                 )
 
+            try:
+                from PIL import Image
+                with Image.open(io.BytesIO(data)) as picture:
+                    picture.verify()
+            except ImportError:
+                pass
+            except Exception:
+                raise HTTPException(status_code=400, detail=f"{image.filename or 'A file'} is not a valid image")
+
             image_data.append(
                 {
                     "data": data,
@@ -141,7 +193,8 @@ async def crop_doctor(
                 detail="Total image size must be 20 MB or smaller",
             )
 
-        analysis = generate_crop_doctor_analysis(
+        analysis = await run_in_threadpool(
+            generate_crop_doctor_analysis,
             images=image_data,
             crop=crop,
             symptoms=symptoms.strip(),
@@ -159,7 +212,7 @@ async def crop_doctor(
     except Exception as error:
         print(f"Crop Doctor error: {error}")
 
-        raise HTTPException(
+        raise to_http_error(
             status_code=500,
             detail="Failed to analyze crop images",
         )
@@ -195,7 +248,7 @@ def crop_doctor_translate(data: dict):
     except Exception as error:
         print(f"Crop Doctor translation error: {error}")
 
-        raise HTTPException(
+        raise to_http_error(
             status_code=500,
             detail="Failed to translate Crop Doctor analysis",
         )
@@ -237,7 +290,7 @@ def crop_doctor_treatment_report(data: dict):
             f"Crop Doctor treatment report error: {error}"
         )
 
-        raise HTTPException(
+        raise to_http_error(
             status_code=500,
             detail="Failed to generate treatment report",
         )

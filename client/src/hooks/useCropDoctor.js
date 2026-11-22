@@ -21,6 +21,8 @@ const useCropDoctor = ({ selectedLanguage, stopSpeaking }) => {
     symptoms: "",
   });
 
+  const [error, setError] = useState("");
+
   const translationRef = useRef(0);
   const reportRef = useRef(0);
 
@@ -73,6 +75,7 @@ const useCropDoctor = ({ selectedLanguage, stopSpeaking }) => {
       stopSpeaking?.();
 
       setAnalyzing(true);
+      setError("");
       setAnalysis(null);
       setTreatmentReport(null);
       setSourceImages(images);
@@ -100,7 +103,9 @@ const useCropDoctor = ({ selectedLanguage, stopSpeaking }) => {
 
         formData.append("language_code", requestLanguage.code);
 
-        const response = await api.post("/chat/crop-doctor", formData);
+        const response = await api.post("/chat/crop-doctor", formData, {
+          timeout: 150000,
+        });
 
         const result = response.data.analysis || null;
 
@@ -111,22 +116,12 @@ const useCropDoctor = ({ selectedLanguage, stopSpeaking }) => {
           error.response?.data || error.message,
         );
 
-        setAnalysis({
-          summary: "I couldn't analyze the crop images right now.",
-          image_quality: "poor",
-          observations: [],
-          possible_conditions: [],
-          severity: "unclear",
-          immediate_actions: [
-            "Please try again with a clear image of the affected plant.",
-          ],
-          treatment_guidance: [],
-          prevention: [],
-          expert_help:
-            "If the problem continues or appears severe, consult a qualified agricultural expert.",
-          disclaimer:
-            "AI image analysis can be inaccurate and should be confirmed by a qualified agricultural expert when necessary.",
-        });
+        setError(
+          error.response?.data?.message ||
+            (error.code === "ECONNABORTED"
+              ? "The analysis took too long. Please try again."
+              : "Could not analyze the images. Please try again."),
+        );
       } finally {
         setAnalyzing(false);
       }
@@ -206,6 +201,7 @@ const useCropDoctor = ({ selectedLanguage, stopSpeaking }) => {
     reportRef.current += 1;
 
     setAnalysis(null);
+    setError("");
     setTreatmentReport(null);
     setReportGenerating(false);
     setTranslating(false);
@@ -217,6 +213,7 @@ const useCropDoctor = ({ selectedLanguage, stopSpeaking }) => {
   return {
     analysis,
     analyzing,
+    error,
     translating,
     treatmentReport,
     reportGenerating,

@@ -77,6 +77,7 @@ const Chatbot = () => {
     analysis: cropDoctorAnalysis,
     analyzing: cropDoctorAnalyzing,
     translating: cropDoctorTranslating,
+    error: cropDoctorError,
     treatmentReport: cropDoctorTreatmentReport,
     reportGenerating: cropDoctorReportGenerating,
     sourceImages: cropDoctorSourceImages,
@@ -240,6 +241,7 @@ const Chatbot = () => {
                 onAnalyze={handleCropDoctorAnalyze}
                 onNewAnalysis={handleCropDoctorNewAnalysis}
                 analysis={cropDoctorAnalysis}
+                error={cropDoctorError}
                 resetKey={cropDoctorResetKey}
                 analyzing={cropDoctorAnalyzing}
                 translating={cropDoctorTranslating}

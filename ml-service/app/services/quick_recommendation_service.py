@@ -1,4 +1,4 @@
-from app.data_loader import crops_df
+from app.data_loader import crops_df,resolve_location
 
 import joblib
 
@@ -17,6 +17,7 @@ def get_quick_recommendations(
     season
 ):
 
+    state, district = resolve_location(state, district)
     candidate_rows = crops_df[
         (crops_df["state"].str.lower() == state.lower()) &
         (crops_df["district"].str.lower() == district.lower()) &

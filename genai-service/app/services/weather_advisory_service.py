@@ -14,7 +14,7 @@ Weather conditions:
 Temperature: {weather.get("temperature", "Not available")} °C
 Humidity: {weather.get("humidity", "Not available")} %
 Condition: {weather.get("condition", "Not available")}
-Wind speed: {weather.get("windSpeed", "Not available")} km/h
+Wind speed: {weather.get("windSpeed", "Not available")} m/s
 Rainfall: {weather.get("rainfall", "Not available")} mm
 
 Return ONLY valid JSON using exactly this structure:

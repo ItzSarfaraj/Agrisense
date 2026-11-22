@@ -33,27 +33,14 @@ const AIInsights = () => {
   const [cropDetails, setCropDetails] = useState([]);
   const [genaiInsights, setGenaiInsights] = useState(null);
 
-  if (!recommendations?.length) {
-    return (
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 p-6 md:p-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-md border border-gray-200 dark:border-gray-800 p-8 md:p-10">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-              No AI Insight Data Found
-            </h2>
-
-            <p className="text-gray-500 dark:text-gray-400 mt-2">
-              Please generate recommendations first and then click AI Insights.
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  const bestCrop = recommendations[0];
+  const hasData = Boolean(recommendations?.length);
+  const bestCrop = recommendations?.[0];
 
   useEffect(() => {
+    if (!hasData) {
+      return;
+    }
+
     const fetchInsights = async () => {
       try {
         setLoading(true);
@@ -62,7 +49,7 @@ const AIInsights = () => {
         const crops = await Promise.all(
           recommendations.slice(0, 3).map(async (crop) => {
             const response = await api.get(
-              `/crops/${crop.crop.toLowerCase()}`,
+              `/crops/${encodeURIComponent(crop.crop.toLowerCase())}`,
             );
 
             return {
@@ -93,7 +80,10 @@ const AIInsights = () => {
           error.response?.data || error.message,
         );
 
-        setError("Unable to generate AI insights.");
+        setError(
+          error.response?.data?.message ||
+            "Unable to generate AI insights.",
+        );
       } finally {
         setLoading(false);
       }
@@ -101,6 +91,7 @@ const AIInsights = () => {
 
     fetchInsights();
   }, [
+    hasData,
     recommendations,
     weather,
     advisory,
@@ -108,6 +99,24 @@ const AIInsights = () => {
     district,
     season,
   ]);
+
+  if (!hasData) {
+    return (
+      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 p-6 md:p-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-md border border-gray-200 dark:border-gray-800 p-8 md:p-10">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              No AI Insight Data Found
+            </h2>
+
+            <p className="text-gray-500 dark:text-gray-400 mt-2">
+              Please generate recommendations first and then click AI Insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (error) {
     return (

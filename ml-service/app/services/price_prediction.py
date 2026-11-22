@@ -79,14 +79,5 @@ def predict_price(crop,state,district,month): ## create model input and transfor
 
     return round(prediction, 2)
 
-print(
-    predict_price(
-        "Rice",
-        "Uttar Pradesh",
-        "Gorakhpur",
-        11
-    )
-)
-
 
     
