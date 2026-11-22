@@ -13,6 +13,7 @@ const sendChatMessage = async (data) => {
   const response = await axios.post(
     `${GENAI_SERVICE_URL}/chat`,
     data,
+    {timeout: GENAI_TIMEOUT_MS}
   );
 
   return response.data;

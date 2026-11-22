@@ -25,6 +25,7 @@ const CropDoctorMode = ({
   onAnalyze,
   onNewAnalysis,
   analysis = null,
+  error="",
   resetKey = 0,
   analyzing = false,
   translating = false,
@@ -316,6 +317,7 @@ const CropDoctorMode = ({
   }
 
   const activeStep = images.length === 0 ? 1 : crop || symptoms ? 3 : 2;
+  const visibleErrors = error ? [error, ...errors] : errors;
 
   return (
     <section className="relative min-h-0 flex-1 overflow-y-auto px-3 py-4 sm:px-5 sm:py-5 lg:px-7">
@@ -324,7 +326,7 @@ const CropDoctorMode = ({
 
         <CropDoctorSteps activeStep={activeStep} />
 
-        {errors.length > 0 && (
+        {visibleErrors.length > 0 && (
           <div className="flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 dark:border-red-900/50 dark:bg-red-950/20">
             <AlertCircle
               size={17}
@@ -333,7 +335,7 @@ const CropDoctorMode = ({
             />
 
             <div className="space-y-1">
-              {errors.map((error, index) => (
+              {visibleErrors.map((error, index) => (
                 <p
                   key={`${error}-${index}`}
                   className="text-xs font-medium text-red-700 dark:text-red-300"

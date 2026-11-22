@@ -6,6 +6,7 @@
  */
 
 const Crop = require("../models/Crop");
+const escapeRegex = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 // Get all crops
 const getAllCrops = async (req, res) => {
@@ -31,10 +32,7 @@ const getCropByName = async (req, res) => {
   try {
     const crop = await Crop.findOne({
       name: {
-        $regex: new RegExp(
-          `^${req.params.name}$`,
-          "i"
-        ),
+        $regex: new RegExp(`^${escapeRegex(req.params.name)}$`, "i"),
       },
     });
 
@@ -61,7 +59,7 @@ const getRelatedCrops = async (req, res) => {
   try {
     const crop = await Crop.findOne({
       name: {
-        $regex: new RegExp(`^${req.params.name}$`, "i"),
+        $regex: new RegExp(`^${escapeRegex(req.params.name)}$`, "i"),
       },
     });
 
@@ -94,5 +92,5 @@ const getRelatedCrops = async (req, res) => {
 module.exports = {
   getAllCrops,
   getCropByName,
-  getRelatedCrops
+  getRelatedCrops,
 };

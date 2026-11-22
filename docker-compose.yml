@@ -48,10 +48,10 @@ services:
       - path: ./genai-service/.env
         required: false
     environment:
-      LLM_PROVIDER: ${LLM_PROVIDER:-ollama}
+       
       # Ollama runs natively on the host (better speed, no extra RAM in Docker)
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
-      LLM_MODEL: ${LLM_MODEL:-agrisense-llm}
+       
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:

@@ -206,7 +206,6 @@ const uploadProfileImage = async (req, res) => {
         message: "User not found",
       });
     }
-    console.log("REQ FILE:", req.file);
     if (!req.file) {
       return res.status(400).json({
         success: false,
@@ -227,7 +226,6 @@ const uploadProfileImage = async (req, res) => {
     res.status(500).json({
       success: false,
       message: error.message,
-      stack: error.stack,
     });
   }
 };

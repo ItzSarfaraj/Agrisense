@@ -1,6 +1,6 @@
 import joblib
 import numpy as np
-from app.data_loader import get_conditions
+from app.data_loader import get_conditions,resolve_location
 from app.services.profit_service import (
     prepare_profit_features,
     predict_profit
@@ -15,6 +15,7 @@ crop_encoder = joblib.load(
 )
 
 def get_soil_recommendations(state,district,season,N,P,K,pH):
+    state, district = resolve_location(state, district)
     conditions = get_conditions(
     state,
     district,

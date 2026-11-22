@@ -36,6 +36,7 @@ const getWeatherByCoordinates = async (
     ),
     humidity: data.main.humidity,
     windSpeed: data.wind.speed,
+    rainfall: data.rain?.["1h"] ?? 0,
     condition: data.weather[0].main,
     description:
       data.weather[0].description,
