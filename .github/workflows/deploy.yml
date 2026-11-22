@@ -2,119 +2,164 @@ name: Deploy AgriSense
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "screenshots/**"
+  workflow_dispatch:
 
 permissions:
   id-token: write
   contents: read
 
+# Never run two deployments at once.
+concurrency:
+  group: deploy-agrisense
+  cancel-in-progress: false
+
 env:
   AWS_REGION: ap-south-1
-  AWS_ACCOUNT_ID: "820381490998"
-  ECS_CLUSTER: agrisense-cluster
+  AWS_ROLE_ARN: arn:aws:iam::820381490998:role/AgriSenseGitHubActionsRole
   ECR_REGISTRY: 820381490998.dkr.ecr.ap-south-1.amazonaws.com
+  ECS_CLUSTER: agrisense-cluster
+  ALB_NAME: agrisense-alb
 
 jobs:
-  deploy:
-    name: Build and Deploy AgriSense
+  # 1. Cheap checks first, so a broken commit never reaches AWS.
+  checks:
+    name: Checks
     runs-on: ubuntu-latest
-
+    timeout-minutes: 15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
+      - uses: actions/setup-node@v4
         with:
-          role-to-assume: arn:aws:iam::820381490998:role/AgriSenseGitHubActionsRole
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            client/package-lock.json
+            server/package-lock.json
+
+      - name: Client builds
+        working-directory: client
+        env:
+          VITE_API_URL: http://example.invalid/api
+        run: |
+          npm ci
+          npm run build
+
+      - name: Server code has no syntax errors
+        working-directory: server
+        run: |
+          npm ci --omit=dev
+          find . -name '*.js' -not -path './node_modules/*' -print0 | xargs -0 -n1 node --check
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Python services have no syntax errors
+        run: python -m compileall -q genai-service/app ml-service/app
+
+  # 2. Build the four images in parallel and push them to ECR.
+  build:
+    name: Build ${{ matrix.service }}
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - service: client
+            context: ./client
+            repo: agrisense-client
+          - service: server
+            context: ./server
+            repo: agrisense-server
+          - service: ml
+            context: ./ml-service
+            repo: agrisense-ml
+          - service: genai
+            context: ./genai-service
+            repo: agrisense-genai
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Login to Amazon ECR
-        uses: aws-actions/amazon-ecr-login@v2
+      - uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build and push client
+      - uses: docker/setup-buildx-action@v3
+
+      # The React app has the API address baked in at build time, so look up
+      # the current load balancer instead of hard-coding an address.
+      - name: Find the load balancer address
+        if: matrix.service == 'client'
+        id: alb
         run: |
-          docker build \
-            --build-arg VITE_API_URL=http://agrisense-alb-1672199196.ap-south-1.elb.amazonaws.com/api \
-            -t $ECR_REGISTRY/agrisense-client:latest \
-            ./client
+          dns=$(aws elbv2 describe-load-balancers --names "$ALB_NAME" --query 'LoadBalancers[0].DNSName' --output text) || {
+            echo "::error::Load balancer $ALB_NAME not found. Create it first (deployment step 5)."
+            exit 1
+          }
+          echo "api_url=http://$dns/api" >> "$GITHUB_OUTPUT"
 
-          docker push \
-            $ECR_REGISTRY/agrisense-client:latest
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.context }}
+          push: true
+          provenance: false
+          tags: |
+            ${{ env.ECR_REGISTRY }}/${{ matrix.repo }}:latest
+            ${{ env.ECR_REGISTRY }}/${{ matrix.repo }}:${{ github.sha }}
+          build-args: |
+            ${{ matrix.service == 'client' && format('VITE_API_URL={0}', steps.alb.outputs.api_url) || '' }}
+          cache-from: type=gha,scope=${{ matrix.service }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.service }}
 
-      - name: Build and push server
+  # 3. Tell ECS to start fresh tasks from the new images, then test the site.
+  deploy:
+    name: Deploy to ECS
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Start new deployments
         run: |
-          docker build \
-            -t $ECR_REGISTRY/agrisense-server:latest \
-            ./server
+          for s in client server ml genai; do
+            aws ecs update-service --cluster "$ECS_CLUSTER" --service "agrisense-$s" --force-new-deployment --no-cli-pager > /dev/null
+            echo "deployment started: agrisense-$s"
+          done
 
-          docker push \
-            $ECR_REGISTRY/agrisense-server:latest
-
-      - name: Build and push ML service
+      - name: Is the app switched on?
+        id: state
         run: |
-          docker build \
-            -t $ECR_REGISTRY/agrisense-ml:latest \
-            ./ml-service
+          desired=$(aws ecs describe-services --cluster "$ECS_CLUSTER" --services agrisense-server --query 'services[0].desiredCount' --output text)
+          echo "desired=$desired" >> "$GITHUB_OUTPUT"
+          if [ "$desired" = "0" ]; then
+            echo "::notice::Services are scaled to 0, so the new images are in ECR but no tasks were started."
+          fi
 
-          docker push \
-            $ECR_REGISTRY/agrisense-ml:latest
-
-      - name: Create GenAI Google credentials
-        env:
-          GOOGLE_AWS_CREDENTIALS: ${{ secrets.GOOGLE_AWS_CREDENTIALS }}
+      - name: Wait until the services are stable
+        if: steps.state.outputs.desired != '0'
         run: |
-          printf '%s' "$GOOGLE_AWS_CREDENTIALS" > genai-service/google-aws-credentials.json
+          aws ecs wait services-stable --cluster "$ECS_CLUSTER" --services agrisense-client agrisense-server agrisense-ml agrisense-genai
 
-      - name: Build and push GenAI service
+      - name: Smoke test the live site
+        if: steps.state.outputs.desired != '0'
         run: |
-          docker build \
-            -t $ECR_REGISTRY/agrisense-genai:latest \
-            ./genai-service
-
-          docker push \
-            $ECR_REGISTRY/agrisense-genai:latest
-
-      - name: Deploy Client
-        run: |
-          aws ecs update-service \
-            --cluster $ECS_CLUSTER \
-            --service agrisense-client \
-            --force-new-deployment \
-            --region $AWS_REGION
-
-      - name: Deploy Server
-        run: |
-          aws ecs update-service \
-            --cluster $ECS_CLUSTER \
-            --service agrisense-server \
-            --force-new-deployment \
-            --region $AWS_REGION
-
-      - name: Deploy ML
-        run: |
-          aws ecs update-service \
-            --cluster $ECS_CLUSTER \
-            --service agrisense-ml \
-            --force-new-deployment \
-            --region $AWS_REGION
-
-      - name: Deploy GenAI
-        run: |
-          aws ecs update-service \
-            --cluster $ECS_CLUSTER \
-            --service agrisense-genai \
-            --force-new-deployment \
-            --region $AWS_REGION
-
-      - name: Wait for ECS deployments
-        run: |
-          aws ecs wait services-stable \
-            --cluster $ECS_CLUSTER \
-            --services \
-              agrisense-client \
-              agrisense-server \
-              agrisense-ml \
-              agrisense-genai \
-            --region $AWS_REGION
+          dns=$(aws elbv2 describe-load-balancers --names "$ALB_NAME" --query 'LoadBalancers[0].DNSName' --output text)
+          site=$(curl -s -o /dev/null -w '%{http_code}' --retry 5 --retry-delay 10 "http://$dns/")
+          api=$(curl -s -o /dev/null -w '%{http_code}' -X POST "http://$dns/api/recommendations/insights")
+          echo "site=$site (expected 200), api without login=$api (expected 401)"
+          [ "$site" = "200" ] && [ "$api" = "401" ]

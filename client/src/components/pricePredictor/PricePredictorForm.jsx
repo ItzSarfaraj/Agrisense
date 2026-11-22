@@ -127,8 +127,7 @@ const PricePredictorForm = ({
                 value={formData.state}
                 onChange={onStateChange}
                 disabled={!formData.crop}
-                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-              >
+                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:bg-gray-900"              >
                 <option value="">{text.selectState}</option>
 
                 {states.map((state) => (
@@ -166,8 +165,7 @@ const PricePredictorForm = ({
                 value={formData.district}
                 onChange={onDistrictChange}
                 disabled={!formData.state}
-                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-              >
+                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:bg-gray-900"              >
                 <option value="">{text.selectDistrict}</option>
 
                 {districts.map((district) => (
@@ -204,8 +202,7 @@ const PricePredictorForm = ({
               <select
                 value={formData.month}
                 onChange={onMonthChange}
-                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-              >
+                className="h-14 w-full appearance-none rounded-2xl border border-gray-200 bg-gray-50 px-4 pr-20 text-sm font-medium text-gray-900 outline-none transition focus:border-emerald-500 focus:bg-white focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:bg-gray-900"              >
                 <option value="">{text.selectMonth}</option>
 
                 {MONTHS.map((month, index) => (

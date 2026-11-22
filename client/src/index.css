@@ -17,3 +17,7 @@
   --chart-tooltip-border: #374151;
   --chart-tooltip-text: #f3f4f6;
 }
+
+.dark select {
+  color-scheme: dark;
+}
